@@ -1,0 +1,11 @@
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.25em;
+  text-align: center;
+  margin: 0 10px;
+  font-weight: 600;
+  color: #333333;
+}
