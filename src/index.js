@@ -1,11 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import './index.css';
 import Home from 'scenes/Home';
 
 const App = () => (
-  <Home />
+  <Router>
+    <Switch>
+      <Route path="/">
+        <Home />
+      </Route>
+    </Switch>
+  </Router>
 )
 
 ReactDOM.render(
