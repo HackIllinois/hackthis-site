@@ -1,23 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import './index.css';
+import styles from './style.module.scss';
+import logo from 'assets/logo.svg';
 import Home from 'scenes/Home';
 
 const App = () => (
   <Router>
+    <header className={styles.navbar}>
+      <img className={styles.logo} src={logo} alt="HackIllinois Logo" />
+      <nav></nav>
+    </header>
+
     <Switch>
       <Route path="/">
         <Home />
       </Route>
     </Switch>
   </Router>
-)
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
 );
+
+export default App;
