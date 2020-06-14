@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 
 import styles from './style.module.scss';
 import background from 'assets/home/background.svg';
+import mobileBackground from 'assets/home/mobile_background.svg';
 import pencil from 'assets/home/pencil.svg';
 import paper from 'assets/home/paper.svg';
 import calculator from 'assets/home/calculator.svg';
@@ -11,7 +12,7 @@ import paintTools from 'assets/home/paint_tools.svg';
 import titration from 'assets/home/titration.svg';
 
 const decorations = [
-  { asset: background, style: { top: 0, right: 0 } },
+  // { asset: background, style: { top: 0, right: 0 } },
   { asset: pencil, style: { top: 452, right: 492 } },
   { asset: paper, style: { top: 140, right: 883 } },
   { asset: calculator, style: { top: 89, right: 674 } },
@@ -19,7 +20,7 @@ const decorations = [
   { asset: notebook, style: { top: 206, right: 293 } },
   { asset: paintTools, style: { top: 116, right: 55 } },
   { asset: titration, style: { top: 381, right: 145 } },
-]
+];
 
 const dots = [
   { top: 150, right: 1049, width: 25, height: 12 },
@@ -33,37 +34,67 @@ const dots = [
   { top: 306, right: 39, width: 18, height: 18 },
   { top: 688, right: 171, width: 33, height: 33 },
   { top: 565, right: -19, width: 76, height: 36 },
-]
+];
 
-const Home = () => (
-  <main className={styles.home}>
-    <section className={styles.top}>
-      <div className={styles.content}>
-        <h3 className={styles.presents}>HackIllinois Presents</h3>
-        <h1 className={styles.title}>HackThis</h1>
-        <h2 className={styles.tagline}>this.hack = education</h2>
-        <p className={styles.dates}>August 7 - August 15, 2020</p>
-      </div>
+const mobileDecorations = [
+  // { asset: mobileBackground, style: { top: 0, right: 0 } },
+  { asset: pencil, style: { top: 275, right: 278, /*transform: 'rotate(-4.47deg)'*/ } },
+  // { asset: paper, style: {}}
+];
+const Home = () => {
+  const [backgroundWidth, setBackgroundWidth] = useState(0);
+  const [backgroundHeight, setBackgroundHeight] = useState(0);
 
-      <div className={styles.decorations}>
-        {/* <img className={styles.background} src={background} alt="" />
-        <img className={styles.pencil} src={pencil} alt="" />
-        <img className={styles.pencil} src={paper} alt="" />
-        <img className={styles.pencil} src={calculator} alt="" />
-        <img className={styles.pencil} src={globe} alt="" />
-        <img className={styles.pencil} src={notebook} alt="" />
-        <img className={styles.pencil} src={paintTools} alt="" />
-        <img className={styles.pencil} src={titration} alt="" /> */}
-        {decorations.map(({ asset, style }) => (
-          <img className={styles.decoration} src={asset} alt="" style={style} />
-        ))}
+  const backgroundRef = useCallback(img => {
+    if (img !== null) {
+      img.addEventListener('load', () => {
+        setBackgroundWidth(img.offsetWidth);
+        setBackgroundHeight(img.offsetHeight);
+      });
+    }
+  });
+  
+  const backgroundStyleVariables = {
+    '--background-width': `${backgroundWidth}px`,
+    '--background-height': `${backgroundHeight}px`,
+  }
 
-        {dots.map(style => (
-          <div className={styles.dot} style={style} />
-        ))}
-      </div>
-    </section>
-  </main>
-);
+  return (
+    <main className={styles.home} style={backgroundStyleVariables}>
+      <section className={styles.top}>
+        <div className={styles.content}>
+          <h3 className={styles.presents}>HackIllinois Presents</h3>
+          <h1 className={styles.title}>HackThis</h1>
+          <h2 className={styles.tagline}>this.hack = education</h2>
+          <p className={styles.dates}>August 7 - August 15, 2020</p>
+        </div>
+
+        <div className={styles['decoration-container']}>
+          <div className={styles.spacer} />
+
+          <div className={styles.decorations}>
+            <img src={background} alt="" ref={backgroundRef}/>
+
+            {decorations.map(({ asset, style }) => (
+              <img className={styles.decoration} src={asset} alt="" style={style} />
+            ))}
+
+            {dots.map(style => (
+              <div className={styles.dot} style={style} />
+            ))}
+          </div>
+        </div>
+
+        <div className={styles['mobile-decorations']}>
+          <img src={mobileBackground} alt="" />
+
+          {mobileDecorations.map(({ asset, style }) => (
+            <img className={styles.decoration} src={asset} alt="" style={style} />
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}
 
 export default Home;

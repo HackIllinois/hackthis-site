@@ -1,8 +1,12 @@
 .home {
+  $mobile-breakpoint: 700px;
+  --background-width: 0px;
+  --background-height: 0px;
+
   .top {
     --decoration-vertical-shift: 0px;
     --content-vertical-shift: 0px;
-    --font-size: 1em;
+    --content-size: 1;
     --decoration-size: 1;
     width: 100%;
     position: relative;
@@ -16,28 +20,28 @@
     }
 
     @media screen and (max-width: 1300px) {
-      --font-size: .9em;
+      --content-size: .9;
     }
 
     @media screen and (max-width: 1250px) {
       --decoration-vertical-shift: 0;
       --content-vertical-shift: -50px;
-      --font-size: .8em;
+      --content-size: .8;
       --decoration-size: .82;
     }
 
-    @media screen and (max-width: 1100px) {
-      --decoration-vertical-shift: 0;
-      --content-vertical-shift: -90px;
-      --font-size: .7em;
-      --decoration-size: .736;
-    }
+    // @media screen and (max-width: 1100px) {
+    //   --decoration-vertical-shift: 0;
+    //   --content-vertical-shift: -90px;
+    //   --content-size: .7;
+    //   --decoration-size: .736;
+    // }
     
 
     .content {
       margin-top: calc(370px + var(--content-vertical-shift));
       margin-left: 82px;
-      font-size: var(--font-size);
+      font-size: calc(var(--content-size) * 1em);
       position: relative;
       z-index: 5;
 
@@ -45,7 +49,7 @@
         text-transform: uppercase;
         font-size: 2.25em;
         font-weight: 600;
-        margin-bottom: 60px;
+        margin-bottom: calc(var(--content-size) * 60px);
       }
 
       .title {
@@ -69,21 +73,49 @@
       }
     }
 
-    .decorations {
+    .decoration-container {
       position: absolute;
-      top: var(--decoration-vertical-shift);
-      right: 0;
-      zoom: var(--decoration-size);
-      user-select: none;
-
-      .decoration {
-        position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      @media screen and (max-width: $mobile-breakpoint) {
+        display: none;
       }
 
-      .dot {
+      .spacer {
+        flex: 1;
+        min-width: 227px;
+      }
+
+      .decorations {
+        position: relative;
+        margin-top: var(--decoration-vertical-shift);
+        transform: scale(var(--decoration-size));
+        transform-origin: top right;
+        margin-left: calc(-1 * (1 - var(--content-size)) * var(--background-width));
+        margin-bottom: calc(-1 * (1 - var(--content-size)) * var(--background-height));
+        user-select: none;
+  
+        .decoration {
+          position: absolute;
+        }
+  
+        .dot {
+          position: absolute;
+          background-color: #F9C669; /* TODO: Declare all color palette colors as constants and replace */
+          border-radius: 1000px;
+        }
+      }
+    }
+
+    .mobile-decorations {
+      position: absolute;
+      top: 0;
+      display: none;
+      
+      .decoration {
         position: absolute;
-        background-color: #F9C669; /* TODO: Declare all color palette colors as constants and replace */
-        border-radius: 1000px;
       }
     }
   }
