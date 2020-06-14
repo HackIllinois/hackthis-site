@@ -12,20 +12,34 @@
     @media screen and (max-height: 780px) {
       --decoration-vertical-shift: -25px;
       --content-vertical-shift: -25px;
+      --decoration-size: .95;
     }
 
-    // IPAD:
-    // --decoration-vertical-shift: 0;
-    // --content-vertical-shift: -90px;
-    // --font-size: .7em;
-    // --decoration-size: .74;
+    @media screen and (max-width: 1300px) {
+      --font-size: .9em;
+    }
 
+    @media screen and (max-width: 1250px) {
+      --decoration-vertical-shift: 0;
+      --content-vertical-shift: -50px;
+      --font-size: .8em;
+      --decoration-size: .82;
+    }
+
+    @media screen and (max-width: 1100px) {
+      --decoration-vertical-shift: 0;
+      --content-vertical-shift: -90px;
+      --font-size: .7em;
+      --decoration-size: .736;
+    }
+    
 
     .content {
       margin-top: calc(370px + var(--content-vertical-shift));
       margin-left: 82px;
-      // font-size: calc(var(--size));
       font-size: var(--font-size);
+      position: relative;
+      z-index: 5;
 
       .presents {
         text-transform: uppercase;
@@ -60,6 +74,7 @@
       top: var(--decoration-vertical-shift);
       right: 0;
       zoom: var(--decoration-size);
+      user-select: none;
 
       .decoration {
         position: absolute;
