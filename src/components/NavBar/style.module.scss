@@ -1,0 +1,35 @@
+@import 'constants.scss';
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 45px;
+  z-index: 10;
+
+  .logoMobile {
+    display: none;
+    transform-origin: left top;
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: 27px 20px;
+
+    .logo {
+      display: none;
+    }
+
+    .logoMobile {
+      display: inline;
+      transform: scale(1.25);
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 27px 10px;
+
+    .logoMobile {
+      transform: scale(1);
+    }
+  }
+}
