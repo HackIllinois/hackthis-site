@@ -1,23 +1,39 @@
+@import 'constants.scss';
+
 .home {
-  $mobile-breakpoint: 700px;
   --background-width: 0px;
   --background-height: 0px;
+  position: relative;
 
   .top {
     --decoration-vertical-shift: 0px;
     --content-vertical-shift: 0px;
     --content-size: 1;
     --decoration-size: 1;
+    --mobile-decoration-size: 1;
     width: 100%;
     position: relative;
     min-height: 100vh;
     overflow-x: hidden;
 
     @media screen and (max-height: 780px) {
-      --decoration-vertical-shift: -25px;
+      --decoration-vertical-shift: -20px;
       --content-vertical-shift: -25px;
       --decoration-size: .95;
     }
+
+    @media screen and (max-height: 720px) {
+      --content-vertical-shift: -60px;
+      --content-size: .9;
+      --decoration-size: .85;
+    }
+
+    @media screen and (max-height: 640px) {
+      --content-vertical-shift: -100px;
+      --content-size: .9;
+      --decoration-size: .77;
+    }
+    
 
     @media screen and (max-width: 1300px) {
       --content-size: .9;
@@ -30,13 +46,45 @@
       --decoration-size: .82;
     }
 
-    // @media screen and (max-width: 1100px) {
-    //   --decoration-vertical-shift: 0;
-    //   --content-vertical-shift: -90px;
-    //   --content-size: .7;
-    //   --decoration-size: .736;
-    // }
+    @media screen and (max-width: 1000px) {
+      --decoration-vertical-shift: 0;
+      --content-vertical-shift: -90px;
+      --content-size: .7;
+      --decoration-size: .7;
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      --mobile-decoration-size: 1.93;
+      --content-vertical-shift: 310px;
+    }
     
+    @media screen and (max-width: 700px) {
+      --mobile-decoration-size: 1.7;
+      --content-vertical-shift: 260px;
+    }
+
+    @media screen and (max-width: 600px) {
+      --mobile-decoration-size: 1.44;
+      --content-vertical-shift: 170px;
+    }
+
+    @media screen and (max-width: 500px) {
+      --mobile-decoration-size: 1.2;
+      --content-vertical-shift: 90px;
+      --content-size: .7
+    }
+
+    @media screen and (max-width: 400px) {
+      --mobile-decoration-size: 1;
+      --content-vertical-shift: 20px;
+      --content-size: .6
+    }
+
+    @media screen and (max-width: 350px) {
+      --mobile-decoration-size: .95;
+      --content-vertical-shift: -20px;
+      --content-size: .52;
+    }
 
     .content {
       margin-top: calc(370px + var(--content-vertical-shift));
@@ -44,6 +92,10 @@
       font-size: calc(var(--content-size) * 1em);
       position: relative;
       z-index: 5;
+      @media screen and (max-width: $mobile-breakpoint) {
+        text-align: center;
+        margin-left: 0;
+      }
 
       .presents {
         text-transform: uppercase;
@@ -80,7 +132,8 @@
       width: 100%;
       display: flex;
       @media screen and (max-width: $mobile-breakpoint) {
-        display: none;
+        top: -9999px;
+        left: -9999px;
       }
 
       .spacer {
@@ -93,8 +146,8 @@
         margin-top: var(--decoration-vertical-shift);
         transform: scale(var(--decoration-size));
         transform-origin: top right;
-        margin-left: calc(-1 * (1 - var(--content-size)) * var(--background-width));
-        margin-bottom: calc(-1 * (1 - var(--content-size)) * var(--background-height));
+        margin-left: calc(-1 * (1 - var(--decoration-size)) * var(--background-width));
+        margin-bottom: calc(-1 * (1 - var(--decoration-size)) * var(--background-height));
         user-select: none;
   
         .decoration {
@@ -113,9 +166,23 @@
       position: absolute;
       top: 0;
       display: none;
+      @media screen and (max-width: $mobile-breakpoint) {
+        display: block;
+        top: -15px;
+        left: 50%;
+        transform: scale(var(--mobile-decoration-size)) translateX(-50%);
+        transform-origin: top left;
+      }
       
       .decoration {
         position: absolute;
+        transform-origin: top left;
+      }
+
+      .dot {
+        position: absolute;
+        background-color: #F9C669;
+        border-radius: 1000px;
       }
     }
   }
