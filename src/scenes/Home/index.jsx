@@ -90,11 +90,11 @@ const Home = () => {
             <img src={background} alt="" onLoad={e => setBackgroundDimensions(e.target)}/>
 
             {decorations.map(({ asset, style }) => (
-              <img className={styles.decoration} src={asset} alt="" style={style} />
+              <img className={styles.decoration} src={asset} alt="" style={style} key={asset}/>
             ))}
 
             {dots.map(style => (
-              <div className={styles.dot} style={style} />
+              <div className={styles.dot} style={style} key={Object.values(style).join(' ')} />
             ))}
           </div>
         </div>
@@ -103,11 +103,11 @@ const Home = () => {
           <img src={mobileBackground} alt="" />
 
           {mobileDecorations.map(({ asset, style }) => (
-            <img className={styles.decoration} src={asset} alt="" style={style} />
+            <img className={styles.decoration} src={asset} alt="" style={style} key={asset} />
           ))}
 
           {mobileDots.map(style => (
-            <div className={styles.dot} style={style} />
+            <div className={styles.dot} style={style} key={Object.values(style).join(' ')} />
           ))}
         </div>
       </section>

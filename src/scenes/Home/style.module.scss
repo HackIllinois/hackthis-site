@@ -155,7 +155,7 @@
         transform: scale(var(--decoration-size));
         transform-origin: top right;
         margin-left: calc(-1 * (1 - var(--decoration-size)) * var(--background-width));
-        margin-bottom: min(calc(-1 * (1 - var(--decoration-size)) * var(--background-height)), 0px);
+        margin-bottom: min(calc(-1 * (1 - var(--decoration-size)) * var(--background-height)), -1px);
         user-select: none;
   
         .decoration {
