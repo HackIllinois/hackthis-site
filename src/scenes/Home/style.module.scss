@@ -11,10 +11,17 @@
     --content-size: 1;
     --decoration-size: 1;
     --mobile-decoration-size: 1;
+    --mobile-decoration-vertical-shift: 0px;
+
     width: 100%;
     position: relative;
     min-height: 100vh;
     overflow-x: hidden;
+
+    @media screen and (min-height: 950px) {
+      --decoration-size: 1.15;
+      --content-size: 1.15;
+    }
 
     @media screen and (max-height: 780px) {
       --decoration-vertical-shift: -20px;
@@ -33,7 +40,7 @@
       --content-size: .9;
       --decoration-size: .77;
     }
-    
+
 
     @media screen and (max-width: 1300px) {
       --content-size: .9;
@@ -56,6 +63,7 @@
     @media screen and (max-width: $mobile-breakpoint) {
       --mobile-decoration-size: 1.93;
       --content-vertical-shift: 310px;
+      --mobile-decoration-vertical-shift: -30px;
     }
     
     @media screen and (max-width: 700px) {
@@ -147,7 +155,7 @@
         transform: scale(var(--decoration-size));
         transform-origin: top right;
         margin-left: calc(-1 * (1 - var(--decoration-size)) * var(--background-width));
-        margin-bottom: calc(-1 * (1 - var(--decoration-size)) * var(--background-height));
+        margin-bottom: min(calc(-1 * (1 - var(--decoration-size)) * var(--background-height)), 0px);
         user-select: none;
   
         .decoration {
@@ -166,6 +174,8 @@
       position: absolute;
       top: 0;
       display: none;
+      margin-top: var(--mobile-decoration-vertical-shift);
+
       @media screen and (max-width: $mobile-breakpoint) {
         display: block;
         top: -15px;
