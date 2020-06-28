@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 
 import styles from './style.module.scss';
@@ -6,6 +6,8 @@ import topLeftBackground from 'assets/registration/top_left.svg';
 import bottomRightBackground from 'assets/registration/bottom_right.svg';
 import pencil from 'assets/registration/pencil.svg';
 import desk from 'assets/registration/desk.svg';
+
+import SectionIndicator from './SectionIndicator';
 
 const topLeftDots = [
   { top: -8, left: 142, width: 29, height: 29 },
@@ -24,7 +26,10 @@ const bottomRightDots = [
   { bottom: -8, right: 132, width: 28, height: 28 },
 ]
 
+const sections = [];
+
 const Registration = () => {
+  const [currentSection, setCurrentSection] = useState(0);
 
   return (
     <div className={styles.registration}>
@@ -45,6 +50,10 @@ const Registration = () => {
           <div className={styles.dot} style={style} key={Object.values(style).join(' ')} />
         ))}
       </div>
+
+      <SectionIndicator className={styles['section-indicator']} currentSection={currentSection}/>
+
+      {sections[currentSection]}
     </div>
   )
 }
