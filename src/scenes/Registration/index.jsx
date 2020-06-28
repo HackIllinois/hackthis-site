@@ -6,8 +6,10 @@ import topLeftBackground from 'assets/registration/top_left.svg';
 import bottomRightBackground from 'assets/registration/bottom_right.svg';
 import pencil from 'assets/registration/pencil.svg';
 import desk from 'assets/registration/desk.svg';
+import arrowNext from 'assets/registration/arrow_next.svg';
 
 import SectionIndicator from './SectionIndicator';
+import Welcome from './sections/Welcome';
 
 const topLeftDots = [
   { top: -8, left: 142, width: 29, height: 29 },
@@ -26,11 +28,14 @@ const bottomRightDots = [
   { bottom: -8, right: 132, width: 28, height: 28 },
 ]
 
-const sections = [];
+const sections = [
+  Welcome
+];
 
 const Registration = () => {
-  const [currentSection, setCurrentSection] = useState(0);
+  const [sectionIndex, setSectionIndex] = useState(0);
 
+  const CurrentSection = sections[sectionIndex];
   return (
     <div className={styles.registration}>
       <div className={clsx(styles['top-left'], styles['decorations'])}>
@@ -51,9 +56,16 @@ const Registration = () => {
         ))}
       </div>
 
-      <SectionIndicator className={styles['section-indicator']} currentSection={currentSection}/>
+      <SectionIndicator className={styles['section-indicator']} sectionIndex={sectionIndex} />
 
-      {sections[currentSection]}
+      <div className={styles['section-container']}>
+        {CurrentSection && <CurrentSection />}
+
+        <button className={clsx(styles.button, styles.next)} onClick={() => setSectionIndex(sectionIndex + 1)}>
+          NEXT
+          <img className={styles['right-icon']} src={arrowNext} alt=">"/>
+        </button>
+      </div>
     </div>
   )
 }

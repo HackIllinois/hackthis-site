@@ -23,15 +23,49 @@
     }
 
     .dot {
-        position: absolute;
-        background-color: #F9C669;
-        border-radius: 1000px;
-      }
+      position: absolute;
+      background-color: #F9C669;
+      border-radius: 1000px;
+    }
   }
 
   .section-indicator {
     width: 60%;
-    margin-left: 20%;
-    margin-top: 75px;
+    position: absolute;
+    left: 20%;
+    top: 75px;
+  }
+
+  .section-container {
+    position: relative;
+    margin-top: 200px;
+    margin-left: 250px;
+    width: 825px;
+    padding: 1px; // to prevent margin collapse
+
+    .button {
+      background-color: #F15C4B;
+      color: white;
+      padding: 6px 14px;
+      font-weight: 600;
+      font-size: 1em;
+      font-family: inherit;
+      border: none;
+      border-radius: 1000px;
+      display: flex;
+      align-items: center;
+      outline: none;
+      cursor: pointer;
+
+      .right-icon {
+        margin-left: 10px;
+      }
+
+      &.next {
+        position: absolute;
+        top: 400px;
+        right: 50px;
+      }
+    }
   }
 }
