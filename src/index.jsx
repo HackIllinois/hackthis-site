@@ -4,10 +4,13 @@ import { BrowserRouter as Router, Switch, Route, useLocation } from 'react-route
 import ReactGA from 'react-ga';
 
 import './index.css';
-import Home from 'scenes/Home';
 import StaticFileRedirect from 'components/StaticFileRedirect';
+import Home from 'scenes/Home';
+import Registration from 'scenes/Registration';
 
-ReactGA.initialize('UA-169912882-1');
+ReactGA.initialize('UA-169912882-1', {
+  testMode: process.env.NODE_ENV !== 'production'
+});
 
 // Note: Moved <Router> from App to ReactDOM.render due to https://github.com/ReactTraining/react-router/issues/7015#issuecomment-548420654
 const App = () => {
@@ -19,6 +22,10 @@ const App = () => {
 
   return (
     <Switch>
+      <Route path="/registration">
+        <Registration />
+      </Route>
+
       <Route path="/sponsor">
         <StaticFileRedirect to="/documents/sponsorship.pdf" />
       </Route>

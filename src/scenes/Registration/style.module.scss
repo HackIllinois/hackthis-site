@@ -1,0 +1,31 @@
+.registration {
+  .decorations {
+    position: absolute;
+    overflow: hidden;
+
+    &.top-left {
+      left: 0;
+      top: 0;
+    }
+
+    &.bottom-right {
+      right: 0;
+      bottom: 0;
+      padding-left: 39px;
+    }
+
+    .background {
+      display: block;
+    }
+
+    .decoration {
+      position: absolute;
+    }
+
+    .dot {
+        position: absolute;
+        background-color: #F9C669;
+        border-radius: 1000px;
+      }
+  }
+}
