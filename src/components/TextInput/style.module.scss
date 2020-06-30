@@ -1,0 +1,17 @@
+.text-input {
+  display: block;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  font-size: 1.25em;
+  font-weight: 500;
+  border-bottom: 1px solid #B8B8B8;
+  width: 100%;
+  padding: 5px 0;
+  margin: var(--field-margin, 25px) 0;
+
+  &::placeholder {
+    color: #525051;
+    font-size: 0.8em;
+  }
+}

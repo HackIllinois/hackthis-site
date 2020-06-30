@@ -1,0 +1,21 @@
+.race-demographics {
+  h1 {
+    font-weight: 500;
+    font-size: 2em;
+  }
+
+  .container {
+    display: flex;
+
+    .left {
+      white-space: nowrap;
+    }
+
+    .right {
+      padding-left: 60px;
+      padding-right: 175px;
+      padding-top: 50px;
+      box-sizing: border-box;
+    }
+  }
+}

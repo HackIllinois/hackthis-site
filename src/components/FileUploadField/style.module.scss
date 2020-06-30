@@ -1,0 +1,23 @@
+.file-upload {
+  margin-top: 16px;
+
+  label {
+    border: 2px solid #F15D4B;
+    border-radius: 50ch;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    margin-right: 8px;
+    padding: 5px 12px;
+    color: #F15D4B;
+  }
+
+  .filename {
+    color: #F15D4B;
+    font-size: .875em;
+  }
+
+  input {
+    display: none;
+  }
+}

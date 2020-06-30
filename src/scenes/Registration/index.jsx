@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
+import { Formik, Form } from 'formik';
 
 import styles from './style.module.scss';
 import topLeftBackground from 'assets/registration/top_left.svg';
@@ -10,6 +11,11 @@ import arrowNext from 'assets/registration/arrow_next.svg';
 
 import SectionIndicator from './SectionIndicator';
 import Welcome from './sections/Welcome';
+import PersonalInfo from "./sections/PersonalInfo";
+import RaceDemographics from "./sections/RaceDemographics";
+import Education from './sections/Education';
+import Experience from './sections/Experience';
+import Finish from './sections/Finish';
 
 const topLeftDots = [
   { top: -8, left: 142, width: 29, height: 29 },
@@ -29,11 +35,16 @@ const bottomRightDots = [
 ]
 
 const sections = [
-  Welcome
+  Welcome,
+  PersonalInfo,
+  RaceDemographics,
+  Education,
+  Experience,
+  Finish,
 ];
 
 const Registration = () => {
-  const [sectionIndex, setSectionIndex] = useState(0);
+  const [sectionIndex, setSectionIndex] = useState(2);
 
   const CurrentSection = sections[sectionIndex];
   return (
@@ -56,16 +67,46 @@ const Registration = () => {
         ))}
       </div>
 
-      <SectionIndicator className={styles['section-indicator']} sectionIndex={sectionIndex} />
+      <SectionIndicator
+        className={styles['section-indicator']}
+        sectionIndex={sectionIndex}
+        setSectionIndex={setSectionIndex}
+        numSections={sections.length}
+      />
 
-      <div className={styles['section-container']}>
-        {CurrentSection && <CurrentSection />}
+      <Formik
+        initialValues={{}}
+        onSubmit={() => {
+          setSectionIndex(sectionIndex + 1);
+        }}
+      >
+        {() => (
+          <div className={styles['section-container']}>
+            <Form>
+              {CurrentSection && <CurrentSection />}
 
-        <button className={clsx(styles.button, styles.next)} onClick={() => setSectionIndex(sectionIndex + 1)}>
-          NEXT
-          <img className={styles['right-icon']} src={arrowNext} alt=">"/>
-        </button>
-      </div>
+              {sectionIndex < sections.length - 1 && (
+                <button
+                  type="button"
+                  className={clsx(styles.button, styles.next)}
+                  onClick={() => setSectionIndex(sectionIndex + 1)}
+                >
+                  NEXT
+                  <img className={styles['right-icon']} src={arrowNext} alt=">" />
+                </button>
+              )}
+
+              { sectionIndex === sections.length - 2 && (
+                <button type="submit" className={clsx(styles.button, styles.next)}>
+                  SUBMIT
+                </button>
+              )}
+              
+            </Form>
+          </div>
+        )}
+      </Formik>
+      
     </div>
   )
 }
