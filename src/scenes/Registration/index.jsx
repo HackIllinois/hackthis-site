@@ -44,7 +44,7 @@ const sections = [
 ];
 
 const Registration = () => {
-  const [sectionIndex, setSectionIndex] = useState(2);
+  const [sectionIndex, setSectionIndex] = useState(0);
 
   const CurrentSection = sections[sectionIndex];
   return (

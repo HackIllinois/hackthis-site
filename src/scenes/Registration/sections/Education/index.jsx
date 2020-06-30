@@ -2,30 +2,33 @@ import React from 'react';
 import SelectField from 'components/SelectField';
 
 import styles from './style.module.scss';
+import majors from 'data/majors.json';
+import schools from 'data/schools.json';
 
 const degreeOptions = [
-  { label: 'Associates', value: 'Associates' },
-  { label: 'Bachelors', value: 'Bachelors' },
-  { label: 'Masters', value: 'Masters' },
-  { label: 'Phd', value: 'Phd' },
-]
+  'Associates Degree',
+  'Bachelor’s Degree',
+  'Master’s Degree',
+  'PhD',
+  'Other',
+].map(degree => ({ value: degree, label: degree }));
 
-const schoolOptions = [
-  { label: 'UIUC', value: 'UIUC' },
-  { label: 'Purdue', value: 'Purdue' },
-]
+const schoolOptions = schools.map(school => ({ value: school, label: school }));
 
-const majorOptions = [
-  { label: 'Computer Science', value: 'Computer Science' },
-  { label: 'Computer Engineering', value: 'Computer Engineering' },
-]
+const firstMajors = ['Computer Science', 'Computer Engineering', 'Electrical Engineering'];
+const remainingMajors = majors.filter(major => !firstMajors.includes(major));
+const majorOptions = firstMajors
+  .concat(remainingMajors)
+  .concat('Other')
+  .map(major => ({ value: major, label: major }));
+
 
 const Education = () => (
   <section className={styles.education}>
     <h1>Education</h1>
     <SelectField name="degree" options={degreeOptions} placeholder="What degree are you currently pursuring?" />
-    <SelectField name="school" options={schoolOptions} placeholder="School (Enter N/A if not applicable)" />
-    <SelectField name="major" options={majorOptions} placeholder="Major" />
+    <SelectField name="school" options={schoolOptions} placeholder="School (Enter N/A if not applicable)" creatable />
+    <SelectField name="major" options={majorOptions} placeholder="Major" creatable />
   </section>
 );
 

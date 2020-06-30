@@ -1,6 +1,7 @@
 import React from 'react';
 import { Field } from 'formik';
 import Select from 'react-select';
+import CreatableSelect from 'react-select/creatable';
 
 import styles from './style.module.scss';
 
@@ -63,19 +64,35 @@ const customStyles = {
     ...base,
     background: '#E8AECC',
     borderRadius: 20,
-    padding: '16px 20px',
+    padding: '0 15px',
+  }),
+  menuList: base => ({
+    ...base,
+    padding: '16px 0',
+    scrollbarColor: '#CF3E7F transparent',
+    scrollbarWidth: 'thin',
+    '&::-webkit-scrollbar': {
+      '-webkit-appearance': 'none',
+    },
+    '&::-webkit-scrollbar:vertical': {
+      width: 5,
+    },
+    '&::-webkit-scrollbar-thumb': {
+      borderRadius: 10,
+      border: '3px solid #CF3E7F',
+    },
   }),
   option: (base, state) => ({
     border: (state.isSelected || state.isFocused) ? 'none' : '1px solid #514F51',
     borderRadius: 10,
     cursor: 'pointer',
     padding: (state.isSelected || state.isFocused) ? '9px 13px' : '8px 12px',
-    margin: '5px 0',
+    margin: '5px',
     backgroundColor: (state.isSelected || state.isFocused) ? '#CF3E7F' : '#E8AECC',
   }),
 };
 
-const FormikSelect = ({ field, form, isMulti, options, ...props }) => {
+const FormikSelect = ({ field, form, isMulti, options, creatable, ...props }) => {
   const getValue = () => {
     if (isMulti) {
       if (field.value === undefined || field.value === null) {
@@ -100,8 +117,10 @@ const FormikSelect = ({ field, form, isMulti, options, ...props }) => {
     }
   }
 
+  const SelectComponent = creatable ? CreatableSelect : Select;
+
   return (
-    <Select
+    <SelectComponent
       name={field.name}
       value={getValue()}
       onChange={handleChange}

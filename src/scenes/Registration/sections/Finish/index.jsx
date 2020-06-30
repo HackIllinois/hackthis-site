@@ -5,12 +5,15 @@ import hackthisLogo from 'assets/registration/hackthis_logo.svg';
 
 const Finish = () => (
   <section className={styles.finish}>
-    <img src={hackthisLogo} alt="HackThis"/>
+    <a href="/">
+      <img src={hackthisLogo} alt="HackThis"/>
+    </a>
+    
     <p>
       Thank you for registering for HackThis 2020! Be sure to follow our
-      <a href="https://www.instagram.com/hackillinois/"> instagram (@hackillinois) </a>
+      <a href="https://www.instagram.com/hackillinois/" target="_blank" rel="noopener noreferrer"> instagram (@hackillinois) </a>
       and our
-      <a href="https://twitter.com/hackillinois"> twitter (@hackillinois)</a>.
+      <a href="https://twitter.com/hackillinois" target="_blank" rel="noopener noreferrer"> twitter (@hackillinois)</a>.
       We will be posting live updates during the event that you won’t want to miss! 
     </p>
   </section>

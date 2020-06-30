@@ -3,14 +3,14 @@ import React from 'react';
 import styles from './style.module.scss';
 import TextField from 'components/TextField';
 import SelectField from 'components/SelectField';
+import states from 'data/states.json';
+import countries from 'data/countries.json';
 
-const locationOptions = [
-  { label: 'Illinois', value: 'Illinois' },
-  { label: 'Indiana', value: 'Indiana' },
-  { label: 'Iowa', value: 'Iowa' },
-  { label: 'Minnesota', value: 'Minnesota' },
-  { label: 'Wisconsin', value: 'Wisconsin' },
-]
+const locationOptions = states
+  .concat(countries)
+  .filter(place => place !== 'United States') // removing US because we want people in the US to pick a state
+  .concat('Other')
+  .map(place => ({ value: place, label: place }));
 
 const timeZoneOptions = [
   { label: '-4:00 New York City ET', value: '-5' },
@@ -35,11 +35,11 @@ const PersonalInfo = () => (
       options={locationOptions}
       placeholder="Where are you located this summer?"
     />
-    <SelectField
+    {/* <SelectField
       name="timezone"
       options={timeZoneOptions}
       placeholder="What time zone are you located in?"
-    />
+    /> */}
     <SelectField
       name="gender"
       options={genderOptions}
