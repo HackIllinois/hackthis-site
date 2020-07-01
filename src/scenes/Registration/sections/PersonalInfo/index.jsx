@@ -25,26 +25,30 @@ const genderOptions = [
   { label: 'Prefer Not to Disclose', value: 'Prefer Not to Disclose' },
 ]
 
-const PersonalInfo = () => (
+const PersonalInfo = ({ Buttons }) => (
   <section className={styles['personal-info']}>
     <h1>Personal Information</h1>
-    <TextField name="name" placeholder="Name" />
-    <TextField name="email" type="email" placeholder="Primary Email Address" />
-    <SelectField
-      name="location"
-      options={locationOptions}
-      placeholder="Where are you located this summer?"
-    />
-    {/* <SelectField
-      name="timezone"
-      options={timeZoneOptions}
-      placeholder="What time zone are you located in?"
-    /> */}
-    <SelectField
-      name="gender"
-      options={genderOptions}
-      placeholder="Gender (optional)"
-    />
+    <div className={styles.content}>
+      <TextField name="name" placeholder="Name" />
+      <TextField name="email" type="email" placeholder="Primary Email Address" />
+      <SelectField
+        name="location"
+        options={locationOptions}
+        placeholder="Where are you located this summer?"
+      />
+      {/* <SelectField
+        name="timezone"
+        options={timeZoneOptions}
+        placeholder="What time zone are you located in?"
+      /> */}
+      <SelectField
+        name="gender"
+        options={genderOptions}
+        placeholder="Gender (optional)"
+      />
+    </div>
+
+    <Buttons className={styles.buttons}/>
   </section>
 );
 

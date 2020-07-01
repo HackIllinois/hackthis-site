@@ -12,7 +12,7 @@
     background-color: white;
     position: relative;
 
-    // we purposefully make the circles larger than we want, and then scale them down (it makes the border rounder)
+    // we purposefully make the circles larger than we want, and then scale them down (it makes them rounder)
     $scale: 4;
 
     &::before {

@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import styles from './style.module.scss';
 import TextInput from 'components/TextInput';
 
-const CheckboxField = ({ name, options = [] }) => {
+const CheckboxField = ({ name, options = [], className, style }) => {
   const findOption = (value, fromOptions) => (fromOptions || []).find(option => option.value === value);
   const isChecked = (checkboxValue, field, checkbox) => (
     !!findOption(checkboxValue, field.value)
@@ -50,7 +50,7 @@ const CheckboxField = ({ name, options = [] }) => {
   return (
     <Field name={name} key={name}>
       {({ field, form }) => (
-        <div className={styles['checkbox-field']}>
+        <div className={clsx(styles['checkbox-field'], className)} style={style}>
           {options.map(({ label, value, ...checkbox }) => (
             <>
               <label className={clsx(styles['checkbox-label'], isChecked(value, field, checkbox) && styles['checked'])}>

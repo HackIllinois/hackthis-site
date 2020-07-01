@@ -1,21 +1,90 @@
 .race-demographics {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 50px;
+  @media screen and (max-width: 900px) {
+    margin-left: 0;
+  }
+
   h1 {
     font-weight: 500;
     font-size: 2em;
+    white-space: pre;
+    @media screen and (max-width: 1065px) {
+      margin-bottom: 10px;
+
+      .small {
+        font-size: .7em;
+      }
+    }
   }
 
-  .container {
+  .content {
     display: flex;
-
-    .left {
-      white-space: nowrap;
+    @media screen and (max-width: 1100px) {
+      width: 110%;
+    }
+    @media screen and (max-width: 900px) {
+      width: 125%;
     }
 
-    .right {
+    .checkbox-container {
+      white-space: nowrap;
+      font-size: .92em;
+
+      @media screen and (max-width: 1065px) {
+        font-size: .75em;
+      }
+
+      @media screen and (max-width: 900px) {
+        .checkboxes {
+          --checkbox-margin: 20px;
+        }
+      }
+    }
+
+    .note {
       padding-left: 60px;
       padding-right: 175px;
-      padding-top: 50px;
+      padding-top: 30px;
       box-sizing: border-box;
+      max-width: 700px;
+
+      @media screen and (max-width: 1300px) {
+        padding-right: 0;
+      }
+
+      @media screen and (max-width: 1100px) {
+        padding-top: 0px;
+      }
+
+      @media screen and (max-width: 1065px) {
+        font-size: .85em;
+      }
+      
+      @media screen and (max-width: 900px) {
+        padding-top: 0;
+        padding-left: 40px;
+      }
+
+      @media screen and (min-height: 700px) {
+        padding-top: 50px;
+      }
+    }
+  }
+
+  .buttons {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 1065px) and (min-height: 850px) {
+      padding-right: 0 !important;
+    }
+
+    @media screen and (max-width: 1065px) {
+      bottom: -25px;
     }
   }
 }

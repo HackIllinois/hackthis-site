@@ -47,6 +47,36 @@ const Registration = () => {
   const [sectionIndex, setSectionIndex] = useState(0);
 
   const CurrentSection = sections[sectionIndex];
+
+  const NextButton = ({ style, className }) => {
+    if (sectionIndex < sections.length - 2) {
+      return (
+        <button
+          type="button"
+          className={clsx(styles.button, className)}
+          style={style}
+          onClick={() => setSectionIndex(sectionIndex + 1)}
+        >
+          NEXT
+          <img className={styles['right-icon']} src={arrowNext} alt=">" />
+        </button>
+      );
+    } else if (sectionIndex === sections.length - 2) {
+      return (
+        <button type="submit" className={clsx(styles.button, className)} style={style}>
+          SUBMIT
+        </button>
+      );
+    }
+    return false;
+  }
+
+  const Buttons = ({ className }) => (
+    <div className={clsx(styles.buttons, className)}>
+      <NextButton />
+    </div>
+  )
+
   return (
     <div className={styles.registration}>
       <div className={clsx(styles['top-left'], styles['decorations'])}>
@@ -83,25 +113,7 @@ const Registration = () => {
         {() => (
           <div className={styles['section-container']}>
             <Form>
-              {CurrentSection && <CurrentSection />}
-
-              {sectionIndex < sections.length - 1 && (
-                <button
-                  type="button"
-                  className={clsx(styles.button, styles.next)}
-                  onClick={() => setSectionIndex(sectionIndex + 1)}
-                >
-                  NEXT
-                  <img className={styles['right-icon']} src={arrowNext} alt=">" />
-                </button>
-              )}
-
-              { sectionIndex === sections.length - 2 && (
-                <button type="submit" className={clsx(styles.button, styles.next)}>
-                  SUBMIT
-                </button>
-              )}
-              
+              {CurrentSection && <CurrentSection Buttons={Buttons} />}
             </Form>
           </div>
         )}

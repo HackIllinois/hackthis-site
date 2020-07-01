@@ -1,9 +1,32 @@
 .education {
   --field-margin: 40px;
-  width: 55%;
-
+  margin-left: 50px;
+  margin-top: 50px;
+  @media screen and (max-width: 900px) {
+    margin-left: 0;
+    @media screen and (max-height: 850px) {
+      margin-top: 0;
+    }
+  }
+  
   h1 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 2em;
+  }
+  
+  .content {
+    width: 55%;
+    @media screen and (max-width: 1065px) {
+      width: 85%;
+      @media (min-height: 750px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .buttons {
+    @media screen and (max-width: 1065px) and (min-height: 750px) {
+      padding-right: 0 !important;
+    }
   }
 }

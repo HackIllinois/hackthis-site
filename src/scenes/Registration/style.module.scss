@@ -1,7 +1,7 @@
 .registration {
   overflow: auto;
   position: relative;
-  min-height: 100vh;
+  min-height: max(100vh, 650px);
 
   .decorations {
     position: absolute;
@@ -10,12 +10,14 @@
     &.top-left {
       left: 0;
       top: 0;
+      transform-origin: top left;
     }
 
     &.bottom-right {
       right: 0;
       bottom: 0;
       padding-left: 39px;
+      transform-origin: bottom right;
     }
 
     .background {
@@ -38,40 +40,82 @@
     position: absolute;
     left: 20%;
     top: 60px;
+
+    @media screen and (max-width: 1065px) {
+      left: 22%;
+      width: 75%;
+    }
   }
 
   .section-container {
     position: relative;
-    margin-top: 160px;
+    margin-top: 125px;
     margin-left: 200px;
     margin-right: 200px;
     padding: 1px; // to prevent margin collapse
-    // padding-bottom: 100px;
 
-    .button {
-      background-color: #F15C4B;
-      color: white;
-      padding: 6px 14px;
-      font-weight: 600;
-      font-size: 1em;
-      font-family: inherit;
-      border: none;
-      border-radius: 1000px;
+    .buttons {
+      margin-top: 30px;
       display: flex;
-      align-items: center;
-      outline: none;
-      cursor: pointer;
+      justify-content: flex-end;
+      padding-right: 310px;
 
-      .right-icon {
-        margin-left: 10px;
+      @media screen and (max-width: 1300px) {
+        padding-right: 200px;
       }
 
-      &.next {
-        position: absolute;
-        top: 430px;
-        // bottom: 50px;
-        right: 320px;
+      @media screen and (max-width: 900px) {
+        padding-right: 160px;
       }
+
+      @media screen and (max-width: 1065px) and (min-height: 1000px) {
+        padding-right: 0;
+      }
+
+      .button {
+        background-color: #F15C4B;
+        color: white;
+        padding: 6px 14px;
+        font-weight: 600;
+        font-size: 1em;
+        font-family: inherit;
+        border: none;
+        border-radius: 1000px;
+        display: flex;
+        align-items: center;
+        outline: none;
+        cursor: pointer;
+
+        .right-icon {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    .section-container {  
+      margin-left: 160px;
+      margin-right: 160px;
+    }
+
+    .decorations {
+      &.top-left {
+        transform: scale(.9);
+      } 
+      &.bottom-right {
+        transform: scale(.7);
+      }
+    }
+  }
+
+  @media screen and (min-height: 900px) {
+    .section-container {
+      margin-top: 150px;
+    }
+
+    .section-indicator {
+      top: 85px;
     }
   }
 }

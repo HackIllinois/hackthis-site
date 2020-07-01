@@ -14,17 +14,18 @@ const raceOptions = [
   { label: 'I’m optional! :) (Prefer not to answer)', value: 'Prefer Not to Say' },
 ]
 
-const RaceDemographics = () => (
+const RaceDemographics = ({ Buttons }) => (
   <section className={styles['race-demographics']}>
-    <h1>Race Demographics &nbsp;(Check one or more!)</h1>
-    <div className={styles.container}>
-      <div className={styles.left}>
+    <h1>Race Demographics &nbsp;<span className={styles.small}>(Check one or more!)</span></h1>
+    <div className={styles.content}>
+      <div className={styles['checkbox-container']}>
         <CheckboxField
           name="race"
           options={raceOptions}
+          className={styles.checkboxes}
         />
       </div>
-      <div className={styles.right}>
+      <div className={styles.note}>
         <p>
           <i><b>Note:</b> This is a purely optional question! :) In light of recent events, we’re collecting this
           information in order to determine what our current attendee demographics are and how we can work on
@@ -32,7 +33,8 @@ const RaceDemographics = () => (
         </p>
       </div>
     </div>
-    
+
+    <Buttons className={styles.buttons} />
   </section>
 );
 

@@ -23,12 +23,15 @@ const majorOptions = firstMajors
   .map(major => ({ value: major, label: major }));
 
 
-const Education = () => (
+const Education = ({ Buttons }) => (
   <section className={styles.education}>
     <h1>Education</h1>
-    <SelectField name="degree" options={degreeOptions} placeholder="What degree are you currently pursuring?" />
-    <SelectField name="school" options={schoolOptions} placeholder="School (Enter N/A if not applicable)" creatable />
-    <SelectField name="major" options={majorOptions} placeholder="Major" creatable />
+    <div className={styles.content}>
+      <SelectField name="degree" options={degreeOptions} placeholder="What degree are you currently pursuring?" />
+      <SelectField name="school" options={schoolOptions} placeholder="School (Enter N/A if not applicable)" creatable />
+      <SelectField name="major" options={majorOptions} placeholder="Major" creatable />
+    </div>
+    <Buttons className={styles.buttons}/>
   </section>
 );
 

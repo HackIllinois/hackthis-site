@@ -20,19 +20,24 @@ const internshipOptions = [
   { value: 'No', label: 'No' },
 ];
 
-const Experience = () => (
+const Experience = ({ Buttons }) => (
   <section className={styles.experience}>
     <h1>Experience</h1>
-    <SelectField name="yearsExperience" options={yearsExperienceOptions} placeholder="How many years have you been programming?" />
-    <SelectField name="ability" options={abilityOptions} placeholder="On a scale from 1 to 5, how do you rate your programming ability? " />
-    <SelectField name="internship" options={internshipOptions} placeholder="Do you have an internship or full-time position this summer?" />
 
-    <p>Attach your resume [file - pdf, docx] (optional)</p>
-    <FileUploadField
-      name="resumeFilename"
-      type="resume"
-      accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-    />
+    <div className={styles.content}>
+      <SelectField name="yearsExperience" options={yearsExperienceOptions} placeholder="How many years have you been programming?" />
+      <SelectField name="ability" options={abilityOptions} placeholder="On a scale from 1 to 5, how do you rate your programming ability? " />
+      <SelectField name="internship" options={internshipOptions} placeholder="Do you have an internship or full-time position this summer?" />
+
+      <p>Attach your resume [file - pdf, docx] (optional)</p>
+      <FileUploadField
+        name="resumeFilename"
+        type="resume"
+        accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      />
+    </div>
+    
+    <Buttons className={styles.buttons}/>
   </section>
 );
 

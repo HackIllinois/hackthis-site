@@ -6,7 +6,7 @@ import hackthisLogo from 'assets/registration/hackthis_logo.svg';
 const Finish = () => (
   <section className={styles.finish}>
     <a href="/">
-      <img src={hackthisLogo} alt="HackThis"/>
+      <img className={styles.logo} src={hackthisLogo} alt="HackThis" />
     </a>
     
     <p>
