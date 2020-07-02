@@ -48,22 +48,22 @@ const Registration = () => {
 
   const CurrentSection = sections[sectionIndex];
 
-  const NextButton = ({ style, className }) => {
+  const NextButton = ({ className, style }) => {
     if (sectionIndex < sections.length - 2) {
       return (
         <button
           type="button"
-          className={clsx(styles.button, className)}
+          className={clsx(styles.button, styles.right, className)}
           style={style}
           onClick={() => setSectionIndex(sectionIndex + 1)}
         >
           NEXT
-          <img className={styles['right-icon']} src={arrowNext} alt=">" />
+          <img className={styles['arrow-icon']} src={arrowNext} alt=">" />
         </button>
       );
     } else if (sectionIndex === sections.length - 2) {
       return (
-        <button type="submit" className={clsx(styles.button, className)} style={style}>
+        <button type="submit" className={clsx(styles.button, styles.right, className)} style={style}>
           SUBMIT
         </button>
       );
@@ -71,8 +71,24 @@ const Registration = () => {
     return false;
   }
 
+  const BackButton = ({ className , style }) => {
+    const hidden = sectionIndex === 0 || sectionIndex === sections.length - 1;
+    return (
+      <button
+        type="button"
+        className={clsx(styles.button, styles.left, hidden && styles.hidden, className)}
+        style={style}
+        onClick={() => setSectionIndex(sectionIndex - 1)}
+      >
+        <img className={styles['arrow-icon']} src={arrowNext} alt="<" />
+        BACK
+      </button>
+    )
+  }
+
   const Buttons = ({ className }) => (
     <div className={clsx(styles.buttons, className)}>
+      <BackButton />
       <NextButton />
     </div>
   )

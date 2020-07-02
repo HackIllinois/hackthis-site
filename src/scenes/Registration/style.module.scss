@@ -63,7 +63,7 @@
     .buttons {
       margin-top: 30px;
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       padding-right: 310px;
 
       @media screen and (max-width: 1300px) {
@@ -92,8 +92,24 @@
         outline: none;
         cursor: pointer;
 
-        .right-icon {
+        &.right .arrow-icon {
           margin-left: 10px;
+        }
+
+        &.left {
+          visibility: hidden;
+          @media screen and (max-width: $registration-mobile-breakpoint) {
+            visibility: visible;
+          }
+
+          .arrow-icon {
+            margin-right: 10px;
+            transform: rotate(180deg);
+          }
+        }
+
+        &.hidden {
+          visibility: hidden;
         }
       }
     }
