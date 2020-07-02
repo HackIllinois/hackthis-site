@@ -1,3 +1,5 @@
+@import 'constants.scss';
+
 .registration {
   overflow: auto;
   position: relative;
@@ -44,6 +46,10 @@
     @media screen and (max-width: 1065px) {
       left: 22%;
       width: 75%;
+    }
+
+    @media screen and (max-width: $registration-mobile-breakpoint) {
+      display: none;
     }
   }
 
@@ -93,6 +99,10 @@
     }
   }
 
+  .bottom-decoration-filler {
+    display: none;
+  }
+
   @media screen and (max-width: 1300px) {
     .section-container {  
       margin-left: 160px;
@@ -116,6 +126,30 @@
 
     .section-indicator {
       top: 85px;
+    }
+  }
+
+  @media screen and (max-width: $registration-mobile-breakpoint) {
+    .section-container {
+      margin: 0 15px;
+      padding: 0 35px;
+      @media screen and (max-width: 480px) {
+        padding: 0;
+      }
+
+
+      .buttons {
+        padding-right: 0;
+      }
+    }
+
+    .bottom-decoration-filler {
+      display: block;
+      height: 300px;
+    }
+
+    .decorations.top-left {
+      transform: scale(.7);
     }
   }
 }

@@ -16,7 +16,7 @@ const raceOptions = [
 
 const RaceDemographics = ({ Buttons }) => (
   <section className={styles['race-demographics']}>
-    <h1>Race Demographics &nbsp;<span className={styles.small}>(Check one or more!)</span></h1>
+    <h1>Race Demographics  <span className={styles.small}>(Check one or more!)</span></h1>
     <div className={styles.content}>
       <div className={styles['checkbox-container']}>
         <CheckboxField

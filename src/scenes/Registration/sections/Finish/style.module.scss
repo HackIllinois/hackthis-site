@@ -1,3 +1,5 @@
+@import 'constants.scss';
+
 .finish {
   display: flex;
   flex-direction: column;
@@ -36,6 +38,18 @@
     @media screen and (max-width: 1065px) {
       font-size: 1.19em;
       margin-top: 20px;
+    }
+  }
+
+  @media screen and (max-width: $registration-mobile-breakpoint) {
+    padding: 0;
+
+    .logo {
+      margin-top: 100px;
+    }
+
+    p {
+      width: 100%;
     }
   }
 }

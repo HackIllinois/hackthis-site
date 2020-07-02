@@ -1,3 +1,5 @@
+@import 'constants.scss';
+
 .race-demographics {
   position: relative;
   margin-top: 50px;
@@ -85,6 +87,42 @@
 
     @media screen and (max-width: 1065px) {
       bottom: -25px;
+    }
+  }
+
+  @media screen and (max-width: $registration-mobile-breakpoint) {
+    position: static;
+    overflow: hidden;
+    margin: 0;
+
+    h1 {
+      position: absolute;
+      top: 80px;
+      left: 105px;
+      white-space: pre-line;
+      font-size: 1.9em;
+      @media screen and (max-width: 448px) {
+        top: 65px;
+      }
+
+      .small::before {
+        content: '\a'; // new line character
+      }
+    }
+
+    .content {
+      margin-top: 240px;
+      width: 100%;
+      display: block;
+
+      .note {
+        padding: 0;
+        margin-top: 30px;
+      }
+    }
+
+    .buttons {
+      position: static;
     }
   }
 }

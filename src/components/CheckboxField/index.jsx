@@ -52,7 +52,7 @@ const CheckboxField = ({ name, options = [], className, style }) => {
       {({ field, form }) => (
         <div className={clsx(styles['checkbox-field'], className)} style={style}>
           {options.map(({ label, value, ...checkbox }) => (
-            <>
+            <React.Fragment key={label}>
               <label className={clsx(styles['checkbox-label'], isChecked(value, field, checkbox) && styles['checked'])}>
                 <input
                   type="checkbox"
@@ -70,7 +70,7 @@ const CheckboxField = ({ name, options = [], className, style }) => {
                   onChange={e => handleChange(true, { value: e.target.value }, field, form)}
                 />
               )}
-            </>
+            </React.Fragment>
           ))}
         </div>
       )}

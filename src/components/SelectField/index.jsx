@@ -89,6 +89,7 @@ const customStyles = {
     padding: (state.isSelected || state.isFocused) ? '9px 13px' : '8px 12px',
     margin: '5px',
     backgroundColor: (state.isSelected || state.isFocused) ? '#CF3E7F' : '#E8AECC',
+    color: (state.isSelected || state.isFocused) ? 'white' : 'black',
   }),
 };
 

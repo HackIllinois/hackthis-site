@@ -9,15 +9,15 @@ const yearsExperienceOptions = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 const abilityOptions = [
   { value: 1, label: '1 - What is code?' },
-  { value: 1, label: '2 - I am familiar with code, but need guidance. ' },
-  { value: 1, label: '3 - I am comfortable working on independent projects.' },
-  { value: 1, label: '4 - I am comfortable writing and reviewing production level code.' },
-  { value: 1, label: '5 - I am code.' },
+  { value: 2, label: '2 - I am familiar with code, but need guidance. ' },
+  { value: 3, label: '3 - I am comfortable working on independent projects.' },
+  { value: 4, label: '4 - I am comfortable writing and reviewing production level code.' },
+  { value: 5, label: '5 - I am code.' },
 ]
 
 const internshipOptions = [
-  { value: 'Yes', label: 'Yes' },
-  { value: 'No', label: 'No' },
+  { value: true, label: 'Yes' },
+  { value: false, label: 'No' },
 ];
 
 const Experience = ({ Buttons }) => (

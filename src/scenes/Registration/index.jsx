@@ -118,7 +118,8 @@ const Registration = () => {
           </div>
         )}
       </Formik>
-      
+
+      <div className={styles['bottom-decoration-filler']} />
     </div>
   )
 }
