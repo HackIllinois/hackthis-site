@@ -7,6 +7,8 @@ import './index.css';
 import StaticFileRedirect from 'components/StaticFileRedirect';
 import Home from 'scenes/Home';
 import Registration from 'scenes/Registration';
+import AuthenticatedRoute from 'components/AuthenticatedRoute';
+import Auth from 'scenes/Auth';
 
 ReactGA.initialize('UA-169912882-1', {
   testMode: process.env.NODE_ENV !== 'production'
@@ -26,9 +28,13 @@ const App = () => {
         <Home />
       </Route>
 
-      <Route path="/register" exact>
-        <Registration />
+      <Route path="/auth" exact>
+        <Auth />
       </Route>
+
+      <AuthenticatedRoute path="/register" exact>
+        <Registration />
+      </AuthenticatedRoute>
 
       <Route path="/sponsor" exact>
         <StaticFileRedirect to="/documents/sponsorship.pdf" />

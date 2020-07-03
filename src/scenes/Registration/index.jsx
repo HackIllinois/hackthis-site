@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import { Formik, Form } from 'formik';
 import * as yup from 'yup';
@@ -18,6 +18,7 @@ import Education from './sections/Education';
 import Experience from './sections/Experience';
 import Finish from './sections/Finish';
 import OnSubmitValidationError from 'components/form/OnSubmitValidationError';
+import { register, getRoles, getRegistration } from 'api';
 
 const topLeftDots = [
   { top: -8, left: 142, width: 29, height: 29 },
@@ -74,15 +75,50 @@ const fieldsBySection = [
   ['degreePursued', 'graduationYear', 'school', 'major'],
   ['programmingYears', 'programmingAbility', 'hasInternship', 'resumeFilename'],
   [],
-]
+];
+
+const submissionToRegistration = submission => {
+  const { name, ...registration } = submission;
+  const [firstName, lastName = ' '] = name.split(' ');
+  const timezone = `GMT${new Date().toString().split('GMT')[1]}`;
+  Object.assign(registration, { firstName, lastName, timezone });
+  return registration;
+};
+
+const registrationToSubmission = registration => {
+  const { firstName, lastName, timezone, ...submission } = registration;
+  if (firstName) {
+    submission.name = (`${firstName} ${lastName}`).trim();
+  }
+  return submission;
+}
 
 const Registration = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [isEditing, setIsEditing] = useState(false);
+  const [registration, setRegistration] = useState({});
   const [sectionIndex, setSectionIndex] = useState(0);
+
+  useEffect(() => {
+    getRoles().then(roles => {
+      if (roles.includes('Applicant')) {
+        setIsEditing(true);
+        return getRegistration('attendee');
+      }
+      return {};
+    }).then(registration => {
+      setRegistration(registration);
+    }).finally(() => {
+      setIsLoading(false);
+    });
+  }, []);
 
   const CurrentSection = sections[sectionIndex];
 
   const NextButton = ({ className, style }) => {
-    if (sectionIndex < sections.length - 2) {
+    if (isLoading) {
+      return <div className={clsx(styles.button, styles.loading)}>Loading...</div>
+    } else if (sectionIndex < sections.length - 2) {
       return (
         <button
           type="button"
@@ -167,19 +203,18 @@ const Registration = () => {
       />
 
       <Formik
-        initialValues={{}}
+        key={Object.values(registration).join('')} // rerender this component when the initial values change
+        initialValues={registrationToSubmission(registration)}
         validationSchema={schema}
         onSubmit={submission => {
-          const { name, ...registration }= submission;
-          const [firstName, lastName] = name.split(' ');
-          const timezone = new Date()
-            .toLocaleDateString('en-US', { timeZoneName: 'short' })
-            .split(',')[1]
-            .trim();
-          Object.assign(registration, { firstName, lastName, timezone });
-          
-          console.log(registration);
-          setSectionIndex(sectionIndex + 1);
+          setIsLoading(true);
+          return register(isEditing, 'attendee', submissionToRegistration(submission)).then(() => {
+            setSectionIndex(sectionIndex + 1);
+          }).catch(() => {
+            alert('There was an error while submitting. If this error persists, please email contact@hackillinois.org');
+          }).finally(() => {
+            setIsLoading(false);
+          });
         }}
       >
         <div className={styles['section-container']}>

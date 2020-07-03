@@ -121,6 +121,10 @@
           cursor: not-allowed;
           background-color: #6D7072;
         }
+
+        &.loading {
+          cursor: not-allowed;
+        }
       }
     }
   }
