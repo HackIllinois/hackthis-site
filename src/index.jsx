@@ -32,7 +32,7 @@ const App = () => {
         <Auth />
       </Route>
 
-      <AuthenticatedRoute path="/register" exact>
+      <AuthenticatedRoute path="/test-registration" exact>
         <Registration />
       </AuthenticatedRoute>
 
