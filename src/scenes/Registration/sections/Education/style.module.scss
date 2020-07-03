@@ -1,7 +1,6 @@
 @import 'constants.scss';
 
 .education {
-  --field-margin: 40px;
   margin-left: 50px;
   margin-top: 50px;
   @media screen and (max-width: 900px) {
@@ -11,7 +10,7 @@
     }
   }
   
-  h1 {
+  .title {
     font-weight: 500;
     font-size: 2em;
   }
@@ -19,15 +18,15 @@
   .content {
     width: 55%;
     @media screen and (max-width: 1065px) {
-      width: 85%;
-      @media (min-height: 750px) {
+      width: 75%;
+      @media (min-height: 850px) {
         width: 100%;
       }
     }
   }
 
   .buttons {
-    @media screen and (max-width: 1065px) and (min-height: 750px) {
+    @media screen and (max-width: 1065px) and (min-height: 850px) {
       padding-right: 0 !important;
     }
   }
@@ -36,7 +35,7 @@
     overflow: hidden;
     margin: 0;
 
-    h1 {
+    .title {
       position: absolute;
       top: 100px;
       left: 110px;

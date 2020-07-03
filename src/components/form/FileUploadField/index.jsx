@@ -3,8 +3,9 @@ import { Field } from 'formik';
 
 import { uploadFile } from 'api';
 import styles from './style.module.scss';
+import clsx from 'clsx';
 
-const FormikFileUpload = ({ field, form, type, accept }) => {
+const FormikFileUpload = ({ field, form, type, accept, text, className, ...props }) => {
   const onFileUpload = event => {
     const file = event.target.files[0];
     uploadFile(file, type).then(() => {
@@ -15,7 +16,9 @@ const FormikFileUpload = ({ field, form, type, accept }) => {
   }
 
   return (
-    <div className={styles['file-upload']}>
+    <div className={clsx(styles['file-upload'], className)} {...props}>
+      {text && <p>{text}</p>}
+
       <label>
         CHOOSE FILE
         <input
@@ -31,7 +34,7 @@ const FormikFileUpload = ({ field, form, type, accept }) => {
 }
 
 const FileUploadField = ({ name, ...props }) => (
-  <Field key={name} name={name} component={FormikFileUpload} {...props} />
+  <Field name={name} component={FormikFileUpload} {...props} />
 );
 
 export default FileUploadField;

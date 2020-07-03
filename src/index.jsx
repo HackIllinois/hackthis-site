@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, useLocation, Redirect } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 import './index.css';
@@ -22,25 +22,29 @@ const App = () => {
 
   return (
     <Switch>
-      <Route path="/registration">
+      <Route path="/" exact>
+        <Home />
+      </Route>
+
+      <Route path="/register" exact>
         <Registration />
       </Route>
 
-      <Route path="/sponsor">
+      <Route path="/sponsor" exact>
         <StaticFileRedirect to="/documents/sponsorship.pdf" />
       </Route>
 
-      <Route path="/speaker">
+      <Route path="/speaker" exact>
         <StaticFileRedirect to="/documents/speaker.pdf" />
       </Route>
 
-      <Route path="/mentor">
+      <Route path="/mentor" exact>
         <StaticFileRedirect to="/documents/mentorship.pdf" />
       </Route>
 
       <Route path="/">
-        <Home />
-      </Route>
+        <Redirect to="/" />
+      </Route>      
     </Switch>
   );
 }

@@ -4,6 +4,7 @@ import Select from 'react-select';
 import CreatableSelect from 'react-select/creatable';
 
 import styles from './style.module.scss';
+import FieldErrorMessage from '../FieldErrorMessage';
 
 const customStyles = {
   control: () => ({
@@ -72,7 +73,7 @@ const customStyles = {
     scrollbarColor: '#CF3E7F transparent',
     scrollbarWidth: 'thin',
     '&::-webkit-scrollbar': {
-      '-webkit-appearance': 'none',
+      WebkitAppearance: 'none',
     },
     '&::-webkit-scrollbar:vertical': {
       width: 5,
@@ -125,26 +126,31 @@ const FormikSelect = ({ field, form, isMulti, options, creatable, ...props }) =>
       name={field.name}
       value={getValue()}
       onChange={handleChange}
+      onMenuClose={() => form.setFieldTouched(field.name)}
       options={options}
       isMulti={isMulti}
       blurInputOnSelect={false}
       closeMenuOnSelect={!isMulti}
       menuPlacement="auto"
+      menuPortalTarget={document.body}
       isClearable
       {...props}
     />
   );
 }
 
-const SelectField = ({ name, ...props }) => (
-  <Field
-    key={name}
-    name={name}
-    className={styles['select-field']}
-    styles={customStyles}
-    component={FormikSelect}
-    {...props}
-  />
+const SelectField = ({ name, hideErrors, ...props }) => (
+  <>
+    <Field
+      name={name}
+      className={styles['select-field']}
+      styles={customStyles}
+      component={FormikSelect}
+      {...props}
+    />
+
+    {!hideErrors && <FieldErrorMessage name={name} />}
+  </>
 );
 
 export default SelectField;

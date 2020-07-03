@@ -63,7 +63,7 @@
     .buttons {
       margin-top: 30px;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       padding-right: 310px;
 
       @media screen and (max-width: 1300px) {
@@ -92,24 +92,34 @@
         outline: none;
         cursor: pointer;
 
+        .arrow-icon {
+          width: 7px;
+          transform: scale(1.1);
+        }
+
         &.right .arrow-icon {
           margin-left: 10px;
         }
 
         &.left {
-          visibility: hidden;
-          @media screen and (max-width: $registration-mobile-breakpoint) {
-            visibility: visible;
-          }
+          margin-right: 10px;
 
           .arrow-icon {
-            margin-right: 10px;
-            transform: rotate(180deg);
+            transform: rotate(180deg) scale(1.1);
+          }
+
+          .text {
+            display: none;
           }
         }
 
         &.hidden {
           visibility: hidden;
+        }
+
+        &.disabled {
+          cursor: not-allowed;
+          background-color: #6D7072;
         }
       }
     }
@@ -153,9 +163,19 @@
         padding: 0;
       }
 
-
       .buttons {
         padding-right: 0;
+        justify-content: space-between;
+
+        .button.left {
+          .arrow-icon {
+            margin-right: 10px;
+          }
+
+          .text {
+            display: inline;
+          }
+        } 
       }
     }
 

@@ -1,7 +1,6 @@
 @import 'constants.scss';
 
 .experience {
-  --field-margin: 40px;
   margin-top: 50px;
   margin-left: 50px;
   @media screen and (max-width: 900px) {
@@ -11,7 +10,7 @@
     }
   }
 
-  h1 {
+  .title {
     font-weight: 500;
     font-size: 2em;
   }
@@ -21,7 +20,7 @@
     @media screen and (max-width: 1065px) {
       width: 100%;
 
-      p {
+      .resume-upload {
         width: 80%;
       }
     }
@@ -37,7 +36,7 @@
     overflow: hidden;
     margin: 0;
 
-    h1 {
+    .title {
       position: absolute;
       top: 100px;
       left: 110px;

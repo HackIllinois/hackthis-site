@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
 import { Formik, Form } from 'formik';
+import * as yup from 'yup';
 
 import styles from './style.module.scss';
 import topLeftBackground from 'assets/registration/top_left.svg';
@@ -16,6 +17,7 @@ import RaceDemographics from "./sections/RaceDemographics";
 import Education from './sections/Education';
 import Experience from './sections/Experience';
 import Finish from './sections/Finish';
+import OnSubmitValidationError from 'components/form/OnSubmitValidationError';
 
 const topLeftDots = [
   { top: -8, left: 142, width: 29, height: 29 },
@@ -34,6 +36,28 @@ const bottomRightDots = [
   { bottom: -8, right: 132, width: 28, height: 28 },
 ]
 
+yup.setLocale({
+  mixed: {
+    required: 'This field is required',
+  }
+});
+
+const schema = yup.object().shape({
+  name: yup.string().required(),
+  email: yup.string().required().email('Please enter a valid email address.'),
+  location: yup.string().required(),
+  gender: yup.string(),
+  race: yup.string(),
+  degreePursued: yup.string().required().oneOf(['ASSOCIATES', 'BACHELORS', 'MASTERS', 'PHD', 'GRADUATED', 'OTHER']),
+  graduationYear: yup.number().required().integer(),
+  school: yup.string().required(),
+  major: yup.string().required(),
+  programmingYears: yup.number().required().integer().min(0).max(10),
+  programmingAbility: yup.number().required().min(1).max(5),
+  hasInternship: yup.boolean().required(),
+  resumeFilename: yup.string(),
+});
+
 const sections = [
   Welcome,
   PersonalInfo,
@@ -42,6 +66,15 @@ const sections = [
   Experience,
   Finish,
 ];
+
+const fieldsBySection = [
+  [],
+  ['name', 'email', 'location', 'gender'],
+  ['race'],
+  ['degreePursued', 'graduationYear', 'school', 'major'],
+  ['programmingYears', 'programmingAbility', 'hasInternship', 'resumeFilename'],
+  [],
+]
 
 const Registration = () => {
   const [sectionIndex, setSectionIndex] = useState(0);
@@ -81,7 +114,7 @@ const Registration = () => {
         onClick={() => setSectionIndex(sectionIndex - 1)}
       >
         <img className={styles['arrow-icon']} src={arrowNext} alt="<" />
-        BACK
+        <span className={styles.text}>BACK</span>
       </button>
     )
   }
@@ -91,7 +124,20 @@ const Registration = () => {
       <BackButton />
       <NextButton />
     </div>
-  )
+  );
+
+  const handleFailedSubmission = ({ errors, setTouched }) => {
+    // Find the first section containing a field with errors and navigate to it
+    for (const [i, section] of fieldsBySection.entries()) {
+      for (const field of section) {
+        if (errors[field]) {
+          setTouched({ [field]: true }); // display error message for that field
+          setSectionIndex(i);
+          return;
+        }
+      }
+    }
+  }
 
   return (
     <div className={styles.registration}>
@@ -122,17 +168,26 @@ const Registration = () => {
 
       <Formik
         initialValues={{}}
-        onSubmit={() => {
+        validationSchema={schema}
+        onSubmit={submission => {
+          const { name, ...registration }= submission;
+          const [firstName, lastName] = name.split(' ');
+          const timezone = new Date()
+            .toLocaleDateString('en-US', { timeZoneName: 'short' })
+            .split(',')[1]
+            .trim();
+          Object.assign(registration, { firstName, lastName, timezone });
+          
+          console.log(registration);
           setSectionIndex(sectionIndex + 1);
         }}
       >
-        {() => (
-          <div className={styles['section-container']}>
-            <Form>
-              {CurrentSection && <CurrentSection Buttons={Buttons} />}
-            </Form>
-          </div>
-        )}
+        <div className={styles['section-container']}>
+          <OnSubmitValidationError callback={handleFailedSubmission}/>
+          <Form>
+            {CurrentSection && <CurrentSection Buttons={Buttons} />}
+          </Form>
+        </div>
       </Formik>
 
       <div className={styles['bottom-decoration-filler']} />

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styles from './style.module.scss';
-import CheckboxField from 'components/CheckboxField';
+import CheckboxField from 'components/form/CheckboxField';
 
 const raceOptions = [
   { label: 'American Indian or Alaskan Native', value: 'American Indian or Alaskan Native' },
@@ -16,7 +16,7 @@ const raceOptions = [
 
 const RaceDemographics = ({ Buttons }) => (
   <section className={styles['race-demographics']}>
-    <h1>Race Demographics  <span className={styles.small}>(Check one or more!)</span></h1>
+    <h1 className={styles.title}>Race Demographics  <span className={styles.small}>(Check one or more!)</span></h1>
     <div className={styles.content}>
       <div className={styles['checkbox-container']}>
         <CheckboxField

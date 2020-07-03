@@ -1,6 +1,7 @@
 @import 'constants.scss';
 
 .race-demographics {
+  --field-margin: 25px;
   position: relative;
   margin-top: 50px;
   margin-left: 50px;
@@ -8,7 +9,7 @@
     margin-left: 0;
   }
 
-  h1 {
+  .title {
     font-weight: 500;
     font-size: 2em;
     white-space: pre;
@@ -95,7 +96,7 @@
     overflow: hidden;
     margin: 0;
 
-    h1 {
+    .title {
       position: absolute;
       top: 80px;
       left: 105px;
