@@ -1,4 +1,4 @@
-@import 'constants.scss';
+@import 'common.scss';
 
 .registration {
   overflow: auto;
@@ -179,7 +179,7 @@
           .text {
             display: inline;
           }
-        } 
+        }
       }
     }
 
@@ -191,5 +191,9 @@
     .decorations.top-left {
       transform: scale(.7);
     }
+  }
+
+  @media screen and (min-width: 1600px) and (min-height: 850px) {
+    font-size: 1.25em;
   }
 }

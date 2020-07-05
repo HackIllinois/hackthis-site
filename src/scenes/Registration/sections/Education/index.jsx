@@ -35,7 +35,7 @@ const Education = ({ Buttons }) => (
   <section className={styles.education}>
     <h1 className={styles.title}>Education</h1>
     <div className={styles.content}>
-      <SelectField name="degreePursued" options={degreeOptions} placeholder="What degree are you currently pursuring? *" />
+      <SelectField name="degreePursued" options={degreeOptions} placeholder="What degree are you currently pursuing? *" />
       <SelectField name="graduationYear" options={graduationYearOptions} placeholder="Graduation Year (Enter N/A if not applicable) *" />
       <SelectField name="school" options={schoolOptions} placeholder="School (Enter N/A if not applicable) *" creatable />
       <SelectField name="major" options={majorOptions} placeholder="Major (Enter N/A if not applicable) *" creatable />
