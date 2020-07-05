@@ -1,5 +1,6 @@
 import React from 'react';
 import queryString from 'query-string';
+import { useLocation } from 'react-router-dom';
 
 import { getToken } from 'api';
 import Loading from 'components/Loading';
@@ -10,7 +11,7 @@ function mobileRedirect(os, code) {
 }
 
 const Auth = () => {
-  const { location } = this.props;
+  const location = useLocation();
   const {
     code,
     isAndroid,
@@ -19,7 +20,7 @@ const Auth = () => {
   } = queryString.parse(location.search);
 
   if (!code) {
-    return;
+    window.location.replace('/');
   }
 
   if (isAndroid || isiOS) {
