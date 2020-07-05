@@ -1,0 +1,47 @@
+$mobile-breakpoint: 800px;
+$registration-mobile-breakpoint: 767px;
+
+@mixin standard-registration-section {
+  margin-left: 50px;
+  margin-top: 50px;
+  @media screen and (max-width: 900px) {
+    margin-left: 0;
+    @media screen and (max-height: 850px) {
+      margin-top: 0;
+    }
+  }
+  
+  .title {
+    font-weight: 500;
+    font-size: 2em;
+  }
+  
+  .content {
+    width: 75%;
+    @media screen and (max-width: 1065px) and (min-height: 850px) {
+      width: 100%;
+    }
+  }
+
+  .buttons {
+    @media screen and (max-width: 1065px) and (min-height: 850px) {
+      padding-right: 0 !important;
+    }
+  }
+
+  @media screen and (max-width: $registration-mobile-breakpoint) {
+    overflow: hidden;
+    margin: 0;
+
+    .title {
+      position: absolute;
+      top: 100px;
+      left: 110px;
+    }
+
+    .content {
+      margin-top: 240px;
+      width: 100%;
+    }
+  }
+}

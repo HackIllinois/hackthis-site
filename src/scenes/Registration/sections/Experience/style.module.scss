@@ -1,0 +1,16 @@
+@import 'common.scss';
+
+.experience {
+  @include standard-registration-section;
+  
+  .content {
+    width: 75%;
+    @media screen and (max-width: 1065px) {
+      width: 100%;
+
+      .resume-upload {
+        width: 80%;
+      }
+    }
+  }
+}

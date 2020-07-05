@@ -1,0 +1,11 @@
+@import 'common.scss';
+
+.personal-info {
+  @include standard-registration-section;
+
+  @media screen and (max-width: 500px) {
+    .title {
+      top: 80px;
+    }
+  }
+}
