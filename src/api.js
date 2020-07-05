@@ -81,3 +81,8 @@ export function getPrizes() {
   return request('GET', '/upload/blobstore/prizes/')
     .then(res => res.data);
 }
+
+export function refreshToken() {
+  return request('GET', '/auth/token/refresh/')
+    .then(res => sessionStorage.setItem(res.token));
+}

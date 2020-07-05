@@ -18,7 +18,7 @@ import Education from './sections/Education';
 import Experience from './sections/Experience';
 import Finish from './sections/Finish';
 import OnSubmitValidationError from 'components/form/OnSubmitValidationError';
-import { register, getRoles, getRegistration } from 'api';
+import { register, getRoles, getRegistration, refreshToken } from 'api';
 
 const topLeftDots = [
   { top: -8, left: 142, width: 29, height: 29 },
@@ -48,7 +48,7 @@ const schema = yup.object().shape({
   email: yup.string().required().email('Please enter a valid email address.'),
   location: yup.string().required(),
   gender: yup.string(),
-  race: yup.string(),
+  race: yup.array().nullable(),
   degreePursued: yup.string().required().oneOf(['ASSOCIATES', 'BACHELORS', 'MASTERS', 'PHD', 'GRADUATED', 'OTHER']),
   graduationYear: yup.number().required().integer(),
   school: yup.string().required(),
@@ -77,19 +77,23 @@ const fieldsBySection = [
   [],
 ];
 
+// note: submission refers to the object that Formik uses, while registration refers to the object that the API uses
+
 const submissionToRegistration = submission => {
-  const { name, ...registration } = submission;
+  let { name, race, ...registration } = submission;
   const [firstName, lastName = ' '] = name.split(' ');
   const timezone = `GMT${new Date().toString().split('GMT')[1]}`;
-  Object.assign(registration, { firstName, lastName, timezone });
+  race = race || [];
+  Object.assign(registration, { firstName, lastName, timezone, race });
   return registration;
 };
 
 const registrationToSubmission = registration => {
-  const { firstName, lastName, timezone, ...submission } = registration;
+  const { firstName, lastName, timezone, race, ...submission } = registration;
   if (firstName) {
     submission.name = (`${firstName} ${lastName}`).trim();
   }
+  submission.race = race || [];
   return submission;
 }
 
@@ -210,6 +214,7 @@ const Registration = () => {
           setIsLoading(true);
           return register(isEditing, 'attendee', submissionToRegistration(submission)).then(() => {
             setSectionIndex(sectionIndex + 1);
+            refreshToken();
           }).catch(() => {
             alert('There was an error while submitting. If this error persists, please email contact@hackillinois.org');
           }).finally(() => {
