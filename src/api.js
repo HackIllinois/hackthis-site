@@ -84,5 +84,5 @@ export function getPrizes() {
 
 export function refreshToken() {
   return request('GET', '/auth/token/refresh/')
-    .then(res => sessionStorage.setItem(res.token));
+    .then(res => sessionStorage.setItem('token', res.token));
 }

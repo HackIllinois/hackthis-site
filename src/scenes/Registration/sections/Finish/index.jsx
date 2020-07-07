@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from './style.module.scss';
 import hackthisLogo from 'assets/registration/hackthis_logo.svg';
@@ -16,6 +17,8 @@ const Finish = () => (
       <a href="https://twitter.com/hackillinois" target="_blank" rel="noopener noreferrer"> twitter (@hackillinois)</a>.
       We will be posting live updates during the event that you won’t want to miss! 
     </p>
+
+    <Link to="/" className={styles['home-button']}>Back to Home</Link>
   </section>
 );
 
