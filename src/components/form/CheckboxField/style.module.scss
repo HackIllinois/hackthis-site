@@ -8,6 +8,7 @@
     font-size: 1.25em;
     display: block;
     margin: var(--checkbox-margin, 25px) 0;
+    z-index: 1;
 
     &::before {
       content: '';
