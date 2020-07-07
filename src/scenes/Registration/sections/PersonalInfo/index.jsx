@@ -16,7 +16,7 @@ const genderOptions = [
   { label: 'Male', value: 'Male' },
   { label: 'Female', value: 'Female' },
   { label: 'Non-Binary', value: 'Non-Binary' },
-  { label: 'Prefer Not to Disclose', value: 'Prefer Not to Say' },
+  { label: 'Prefer Not to Answer', value: 'Prefer Not to Answer' },
 ]
 
 const PersonalInfo = ({ Buttons }) => (

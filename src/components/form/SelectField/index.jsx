@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Field } from 'formik';
 import Select from 'react-select';
 import CreatableSelect from 'react-select/creatable';
@@ -29,7 +29,7 @@ const customStyles = {
     ...base,
     color: 'black',
     fontWeight: 500,
-    fontSize: '1.25em'
+    fontSize: '1.25em',
   }),
   multiValue: base => ({
     ...base,
@@ -95,6 +95,8 @@ const customStyles = {
 };
 
 const FormikSelect = ({ field, form, isMulti, options, creatable, ...props }) => {
+  const [isFocused, setIsFocused] = useState(false);
+
   const getValue = () => {
     if (isMulti) {
       if (field.value === undefined || field.value === null) {
@@ -124,15 +126,17 @@ const FormikSelect = ({ field, form, isMulti, options, creatable, ...props }) =>
   return (
     <SelectComponent
       name={field.name}
-      value={getValue()}
+      value={isFocused ? '' : getValue()}
       onChange={handleChange}
       onMenuClose={() => form.setFieldTouched(field.name)}
       options={options}
       isMulti={isMulti}
-      blurInputOnSelect={false}
+      blurInputOnSelect={true}
       closeMenuOnSelect={!isMulti}
       menuPlacement="auto"
       menuPortalTarget={document.body}
+      onFocus={() => setIsFocused(true)}
+      onBlur={() => setIsFocused(false)}
       isClearable
       {...props}
     />
