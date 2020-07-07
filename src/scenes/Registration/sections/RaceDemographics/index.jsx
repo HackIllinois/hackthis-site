@@ -11,12 +11,12 @@ const raceOptions = [
   { label: 'Hispanic or Latino or Spanish Origin', value: 'Hispanic or Latino or Spanish Origin' },
   { label: 'White', value: 'White' },
   { label: 'Other', value: 'Other', isOther: true },
-  { label: 'Optional! :) (Prefer not to answer)', value: 'Prefer Not to Say' },
+  { label: 'Optional! (Prefer not to answer)', value: 'Prefer Not to Say' },
 ]
 
 const RaceDemographics = ({ Buttons }) => (
   <section className={styles['race-demographics']}>
-    <h1 className={styles.title}>Race Demographics  <span className={styles.small}>(Check one or more!)</span></h1>
+    <h1 className={styles.title}>Race Demographics  <span className={styles.small}>(Check one or more)</span></h1>
     <div className={styles.content}>
       <div className={styles['checkbox-container']}>
         <CheckboxField
@@ -27,7 +27,7 @@ const RaceDemographics = ({ Buttons }) => (
       </div>
       <div className={styles.note}>
         <p>
-          <i><b>Note:</b> This is a purely optional question! :) In light of recent events, we’re collecting this
+          <i><b>Note:</b> This is a purely optional question! In light of recent events, we’re collecting this
           information in order to determine what our current attendee demographics are and how we can work on
           increasing diversity! Don’t forget that it’s purely optional and won’t affect anything!</i>
         </p>
