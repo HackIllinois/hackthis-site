@@ -11,7 +11,7 @@ const raceOptions = [
   { label: 'Hispanic or Latino or Spanish Origin', value: 'Hispanic or Latino or Spanish Origin' },
   { label: 'White', value: 'White' },
   { label: 'Other', value: 'Other', isOther: true },
-  { label: 'Prefer Not to Answer', value: 'Prefer Not to Answer' },
+  { label: 'Prefer Not to Answer', value: 'Prefer Not to Answer', isRadio: true },
 ]
 
 const RaceDemographics = ({ Buttons }) => (

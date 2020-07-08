@@ -25,11 +25,25 @@ const CheckboxField = ({ name, options = [], hideErrors, className, style, ...pr
   );
 
   const handleChange = (checked, selectedValue, field, form, checkbox = {}) => {
-    const fieldValue = field.value || [];
+    let fieldValue = field.value || [];
     if (checked && !fieldValue.includes(selectedValue)) {
-      if (checkbox.isOther) {
+      // remove all currently selected checkboxes that act as radio buttons
+      // if the selected checkbox is also a radio button, then we want to remove all other options
+      const findOptionWithValue = value => {
+        return options.find(option => option.value === value)
+          || options.find(option => option.isOther) // assuming only one other option
+          || {};
+      }
+      fieldValue = fieldValue.filter(value => {
+        if (checkbox.isRadio || findOptionWithValue(value).isRadio){
+          return false;
+        }
+        return true;
+      });
+
+      if (checkbox.isOther) { // when the 'other' checkbox is clicked
         form.setFieldValue(field.name, fieldValue.concat(''));
-      } else if (isValueOther(selectedValue)) {
+      } else if (isValueOther(selectedValue)) { // when the 'other' field is modified
         form.setFieldValue(field.name, removeOther(fieldValue).concat(selectedValue));
       } else {
         form.setFieldValue(field.name, fieldValue.concat(selectedValue));

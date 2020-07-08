@@ -40,7 +40,7 @@ const bottomRightDots = [
 yup.setLocale({
   mixed: {
     required: 'This field is required',
-  }
+  },
 });
 
 const schema = yup.object().shape({

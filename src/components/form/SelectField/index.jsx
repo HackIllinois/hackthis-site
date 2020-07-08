@@ -14,12 +14,16 @@ const customStyles = {
   }),
   valueContainer: base => ({
     ...base,
-    paddingLeft: 0
+    paddingLeft: 0,
+    overflow: 'visible',
   }),
   placeholder: base => ({
     ...base,
     color: '#525051',
     fontWeight: 500,
+    bottom: 0,
+    top: 'unset',
+    transform: 'none',
   }),
   input: base => ({
     ...base,
@@ -106,6 +110,19 @@ const customStyles = {
   },
 };
 
+// Modified from https://github.com/JedWatson/react-select/issues/3067
+const customFilterOption = (option, rawInput) => {
+  if (String(option.label).toLowerCase() === 'other') {
+    return true;
+  }
+
+  const words = rawInput.split(' ');
+  return words.reduce(
+    (acc, cur) => acc && String(option.label).toLowerCase().includes(String(cur).toLowerCase()),
+    true,
+  );
+};
+
 const FormikSelect = ({ field, form, isMulti, options, creatable, ...props }) => {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -165,6 +182,7 @@ const FormikSelect = ({ field, form, isMulti, options, creatable, ...props }) =>
       menuPortalTarget={document.body}
       onFocus={() => setIsFocused(true)}
       onBlur={() => setIsFocused(false)}
+      filterOption={customFilterOption}
       isClearable
       {...props}
     />

@@ -15,7 +15,7 @@ const degreeOptions = [
 ];
 
 const graduationYearOptions = [];
-for (let i = 2030; i >= 1900; i--) {
+for (let i = 2026; i >= 1950; i--) {
   graduationYearOptions.push({ value: i, label: i });
 }
 graduationYearOptions.push({ value: 0, label: 'N/A' });
