@@ -97,6 +97,13 @@ const customStyles = {
 const FormikSelect = ({ field, form, isMulti, options, creatable, ...props }) => {
   const [isFocused, setIsFocused] = useState(false);
 
+  // if it's a creatable select, and the selected value is not among the options, add it
+  if (creatable && field.value !== '' && options.every(option => field.value !== option.value)) {
+    console.log('ADDING VALUE:');
+    console.log(field.value);
+    options = options.concat({ value: field.value, label: field.value });
+  }
+
   const getValue = () => {
     if (isMulti) {
       if (field.value === undefined || field.value === null) {
