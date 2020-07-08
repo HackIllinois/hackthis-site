@@ -19,6 +19,9 @@
     @media screen and (max-width: 1450px) {
       width: 200px;
     }
+    @media screen and (max-height: 700px) {
+      width: 180px;
+    }
     @media screen and (max-width: 1065px) {
       width: 150px;
     }
@@ -38,6 +41,20 @@
     @media screen and (max-width: 1065px) {
       font-size: 1.19em;
       margin-top: 20px;
+    }
+  }
+
+  .home-button {
+    text-decoration: none;
+    background-color: #F15C4B;
+    color: white;
+    font-family: inherit;
+    border-radius: 100px;
+    padding: 5px 17px;
+    font-weight: 500;
+    font-size: 1.2em;
+    @media screen and (max-width: 1065px) {
+      font-size: 1.1em;
     }
   }
 
