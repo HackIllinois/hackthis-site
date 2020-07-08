@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import clsx from 'clsx';
 
 import styles from './style.module.scss';
+import NavBar from 'components/NavBar';
 import background from 'assets/home/background.svg';
 import mobileBackground from 'assets/home/mobile_background.svg';
 import pencil from 'assets/home/pencil.svg';
@@ -10,7 +13,14 @@ import globe from 'assets/home/globe.svg';
 import notebook from 'assets/home/notebook.svg';
 import paintTools from 'assets/home/paint_tools.svg';
 import titration from 'assets/home/titration.svg';
-import NavBar from 'components/NavBar';
+import twitter from 'assets/home/twitter.svg';
+import instagram from 'assets/home/instagram.svg';
+import discord from 'assets/home/discord.png';
+import star from 'assets/home/star.svg';
+import chalk from 'assets/home/chalk.svg';
+import eraser from 'assets/home/eraser.svg';
+import middleDecoration from 'assets/home/middle_decoration.svg';
+import faqNote from 'assets/home/faq_note.svg';
 
 const decorations = [
   { asset: pencil, style: { top: 452, right: 492 } },
@@ -81,6 +91,7 @@ const Home = () => {
           <h1 className={styles.title}>HackThis</h1>
           <h2 className={styles.tagline}>this.hack = education</h2>
           <p className={styles.dates}>August 7 - August 15, 2020</p>
+          <Link to="/register" className={styles['apply-button']}>APPLY NOW</Link>
         </div>
 
         <div className={styles['decoration-container']}>
@@ -110,6 +121,90 @@ const Home = () => {
             <div className={styles.dot} style={style} key={Object.values(style).join(' ')} />
           ))}
         </div>
+      </section>
+
+      <section className={styles.info}>
+        <div className={styles.content}>
+          <h3>THE EVENT</h3>
+          <p>
+            HackThis is a fully virtual, education focused hackathon taking place between August 7th and
+            August 15th, 2020. At our event, you will be given resources to develop solutions to enhance
+            virtual learning on a global scale, while having the opportunity to hear from leaders in education,
+            attend workshops, and consult mentors from different backgrounds. HackThis is a great way to gain
+            new technical skills and collaborate with other students, with a common goal of innovation for social good!
+          </p>
+          <h3>JOIN US</h3>
+          <p>Follow us on Twitter (@HackIllinois) and Instagram (@HackIllinois) to be notified of our event updates!</p>
+          <p>
+            In terms of the platforms you will need to have access to, we’ll be connecting mentors and attendees on
+            Discord! As we approach the event, we’ll post a link on our social media to the discord server so that
+            you can join and introduce yourself.
+          </p>
+          <h4>Twitter <img src={twitter} alt="" /></h4>
+          <p>
+            This is where we’ll be posting main updates with regards to our schedule, additions to our event, and other
+            things we come up with! We’ll also be using it during the event to make updates with any schedule changes
+            and send out reminders for workshops and other mini-events starting out!
+          </p>
+          <h4>Instagram <img src={instagram} alt="" /></h4>
+          <p>
+            This is where we’ll be posting more of the fun, behind-the-scenes aspects of our event! You’ll get an
+            opportunity to see the work that goes into making the event a possibility and also get insights from
+            staff and mentors about what makes HackThis a one-of-a-kind hacking experience.
+          </p>
+          <h4>Discord <img src={discord} alt="" /></h4>
+          <p>
+            Our discord server will be the main hub for our event. You’ll use this to find and communicate with
+            teammates and other attendees, access our workshops and mini-events, and get help from mentors—all
+            through one centralized platform.
+          </p>
+        </div>
+
+        <img src={star} className={clsx(styles.decoration, styles.star)} alt="" />
+        <img src={chalk} className={clsx(styles.decoration, styles.chalk)} alt="" />
+        <img src={eraser} className={clsx(styles.decoration, styles.eraser)} alt="" />
+        <div className={styles.dot} style={{ top: 57, right: -45, width: 90, height: 30 }} />
+        <div className={styles.dot} style={{ bottom: 160, left: -75, width: 125, height: 50 }} />
+        <div className={clsx(styles.dot, styles.mobile)} style={{ top: 57, right: -10, width: 45, height: 15, transformOrigin: 'center right' }} />
+        <div className={clsx(styles.dot, styles.mobile)} style={{ bottom: 60, left: -10, width: 53, height: 21 }} />
+      </section>
+
+      <div className={styles['middle-decoration']}><img src={middleDecoration} alt="" /></div> 
+
+      <section className={styles.faq}>
+        <div className={styles.left}>
+          <img src={faqNote} alt="FAQ" />
+        </div>
+
+        <div className={styles.questions}>
+          <h3 className={styles.title}>FAQ</h3>
+
+          <h4>What kind of projects can I work on?</h4>
+          <p>
+            We have two different project tracks! The first is the traditional hackathon style project, where
+            you have a week to come up with a new solution related to improving virtual education/collaboration.
+            The second is bring a project that you may have worked on previously, and work on fitting that project
+            to the theme of education!
+          </p>
+          <h4>What if I don’t have that much programming experience?</h4>
+          <p>
+            People of all programming levels are welcome! You’ll have the chance to gain technical experience
+            through workshops and work with mentors who can guide you with your project idea. 
+          </p>
+          <h4>How do applications work?</h4>
+          <p>
+            There is no application! Just register here on this website and we will send you more information
+            about our event! Registration is open until the end of the event. In order to join our Discord server
+            and submit a project, you will need to register! 
+          </p>
+          <h4>Where can I go for more information?</h4>
+          <p>
+            Take a look at our website for more information about our event! If you have any further questions,
+            feel free to reach out to us through our social media channels, or email us at contact@hackillinois.org! 
+          </p>
+        </div>
+
+        <div className={styles.right} />
       </section>
     </div>
   );

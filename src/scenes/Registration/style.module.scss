@@ -48,7 +48,7 @@
       width: 75%;
     }
 
-    @media screen and (max-width: $registration-mobile-breakpoint) {
+    @media screen and (max-width: $mobile-breakpoint) {
       display: none;
     }
   }
@@ -159,7 +159,7 @@
     }
   }
 
-  @media screen and (max-width: $registration-mobile-breakpoint) {
+  @media screen and (max-width: $mobile-breakpoint) {
     .section-container {
       margin: 0 15px;
       padding: 0 35px;

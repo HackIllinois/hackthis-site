@@ -7,9 +7,14 @@
   padding: 45px;
   z-index: 10;
 
+  .logo {
+    width: 160px;
+  }
+
   .logoMobile {
     display: none;
     transform-origin: left top;
+    width: 85px;
   }
 
   @media screen and (max-width: $mobile-breakpoint) {
