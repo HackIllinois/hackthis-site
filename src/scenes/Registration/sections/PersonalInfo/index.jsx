@@ -23,7 +23,7 @@ const PersonalInfo = ({ Buttons }) => (
   <section className={styles['personal-info']}>
     <h1 className={styles.title}>Personal Information</h1>
     <div className={styles.content}>
-      <TextField name="name" placeholder="Name *" />    
+      <TextField name="name" placeholder="Full Name *" />    
       <TextField name="email" type="email" placeholder="Primary Email Address *" />
       <SelectField
         name="location"

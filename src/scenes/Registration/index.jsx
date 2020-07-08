@@ -44,7 +44,7 @@ yup.setLocale({
 });
 
 const schema = yup.object().shape({
-  name: yup.string().required(),
+  name: yup.string().required().matches(/^[^ ]+ +[^ ]+.*$/, 'Please enter your first and last name.'),
   email: yup.string().required().email('Please enter a valid email address.'),
   location: yup.string().required(),
   gender: yup.string(),
@@ -81,7 +81,8 @@ const fieldsBySection = [
 
 const submissionToRegistration = submission => {
   let { name, race, ...registration } = submission;
-  const [firstName, lastName = ' '] = name.split(' ');
+  let [firstName, lastName] = name.split(' ');
+  lastName = lastName || ' ';
   const timezone = `GMT${new Date().toString().split('GMT')[1]}`;
   race = race || [];
   Object.assign(registration, { firstName, lastName, timezone, race });
