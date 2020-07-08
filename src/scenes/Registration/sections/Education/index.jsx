@@ -20,13 +20,12 @@ for (let i = 2030; i >= 1900; i--) {
 }
 graduationYearOptions.push({ value: 0, label: 'N/A' });
 
-const schoolOptions = schools.map(school => ({ value: school, label: school }));
+const schoolOptions = schools.concat('N/A').map(school => ({ value: school, label: school }));
 
 const firstMajors = ['Computer Science', 'Computer Engineering', 'Electrical Engineering'];
 const remainingMajors = majors.filter(major => !firstMajors.includes(major));
 const majorOptions = firstMajors
   .concat(remainingMajors)
-  .concat('Other')
   .concat('N/A')
   .map(major => ({ value: major, label: major }));
 

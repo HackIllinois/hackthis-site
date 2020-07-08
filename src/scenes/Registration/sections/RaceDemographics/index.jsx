@@ -27,9 +27,9 @@ const RaceDemographics = ({ Buttons }) => (
       </div>
       <div className={styles.note}>
         <p>
-          <i><b>Note:</b> This is a purely optional question! In light of recent events, we’re collecting this
-          information in order to determine what our current attendee demographics are and how we can work on
-          increasing diversity! Don’t forget that it’s purely optional and won’t affect anything!</i>
+          <i><b>Note:</b> In light of recent events, we’re collecting this information in order to determine
+          what our current attendee demographics are and how we can work on increasing diversity. Don’t forget
+          that it’s purely optional and won’t affect anything!</i>
         </p>
       </div>
     </div>
