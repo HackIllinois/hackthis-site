@@ -91,7 +91,7 @@ const Home = () => {
           <h1 className={styles.title}>HackThis</h1>
           <h2 className={styles.tagline}>this.hack = education</h2>
           <p className={styles.dates}>August 7 - August 15, 2020</p>
-          <Link to="/register" className={styles['apply-button']}>APPLY NOW</Link>
+          <Link to="/register" className={styles['register-button']}>REGISTER NOW</Link>
         </div>
 
         <div className={styles['decoration-container']}>
