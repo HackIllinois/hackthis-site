@@ -23,8 +23,9 @@
 
   .text {
     font-size: 1.2em;
-    &.small {
+    &.note {
       font-size: 1em;
+      font-weight: 600;
     }
 
     a {

@@ -22,7 +22,7 @@ const Welcome = ({ Buttons }) => (
         or email us at
         <a href="mailto:contact@hackillinois.org"> contact@hackillinois.org</a>.
       </p>
-      <p className={clsx(styles.text, styles.small)}>Note: Registration uses your GitHub account for authentication</p>
+      <p className={clsx(styles.text, styles.note)}>Note: Registration uses your GitHub account for authentication</p>
     </div>
 
     <Buttons className={styles.buttons} />

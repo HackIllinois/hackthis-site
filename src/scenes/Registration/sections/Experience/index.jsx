@@ -7,8 +7,12 @@ import FileUploadField from 'components/form/FileUploadField';
 import Checkbox from 'components/form/Checkbox';
 import FieldErrorMessage from 'components/form/FieldErrorMessage';
 
+const formatYears = years => `${years} year${years === 1 ? '' : 's'}`
 const programmingYearsOptions = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  .map(years => ({ value: years, label: years === 10 ? '10+' : `${years}`}));
+  .map(years => ({
+    value: years,
+    label: years === 10 ? '10+ years' : formatYears(years),
+  }));
 
 const abilityOptions = [
   { value: 1, label: '1 - What is code?' },
