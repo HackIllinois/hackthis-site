@@ -16,7 +16,7 @@
 
   .buttons {
     margin-top: 20px !important;
-    @media screen and (max-width: 900px) and (min-width: $registration-mobile-breakpoint + 1px) {
+    @media screen and (max-width: 900px) and (min-width: $mobile-breakpoint + 1px) {
       padding-right: 170px !important;
     }
   }
