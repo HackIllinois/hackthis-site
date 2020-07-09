@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import { Formik, Form } from 'formik';
 import * as yup from 'yup';
+import { Link } from 'react-router-dom';
 
 import styles from './style.module.scss';
 import topLeftBackground from 'assets/registration/top_left.svg';
@@ -9,6 +10,7 @@ import bottomRightBackground from 'assets/registration/bottom_right.svg';
 import pencil from 'assets/registration/pencil.svg';
 import desk from 'assets/registration/desk.svg';
 import arrowNext from 'assets/registration/arrow_next.svg';
+import logoLight from 'assets/logo_light.svg';
 
 import SectionIndicator from './SectionIndicator';
 import Welcome from './sections/Welcome';
@@ -185,6 +187,10 @@ const Registration = () => {
 
   return (
     <div className={styles.registration}>
+      <Link to="/">
+        <img className={styles.logo} src={logoLight} alt="HackThis Home" />
+      </Link>
+
       <div className={clsx(styles['top-left'], styles['decorations'])}>
         <img className={styles.background} src={topLeftBackground} alt="" />
         <img className={styles.decoration} src={pencil} style={{ top: 115, left: 30 }} alt="" />

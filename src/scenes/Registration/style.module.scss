@@ -5,6 +5,14 @@
   position: relative;
   min-height: max(100vh, 650px);
 
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    z-index: 1;
+    width: 110px;
+  }
+
   .decorations {
     position: absolute;
     overflow: hidden;
@@ -147,6 +155,10 @@
         transform: scale(.7);
       }
     }
+
+    .logo {
+      width: 100px;
+    }
   }
 
   @media screen and (min-height: 900px) {
@@ -190,6 +202,11 @@
 
     .decorations.top-left {
       transform: scale(.7);
+    }
+
+    .logo {
+      width: 80px;
+      top: 15px;
     }
   }
 
