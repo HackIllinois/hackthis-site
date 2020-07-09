@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Field } from 'formik';
 import Select from 'react-select';
 import CreatableSelect from 'react-select/creatable';
@@ -14,12 +14,16 @@ const customStyles = {
   }),
   valueContainer: base => ({
     ...base,
-    paddingLeft: 0
+    paddingLeft: 0,
+    overflow: 'visible',
   }),
   placeholder: base => ({
     ...base,
     color: '#525051',
     fontWeight: 500,
+    bottom: 0,
+    top: 'unset',
+    transform: 'none',
   }),
   input: base => ({
     ...base,
@@ -29,7 +33,7 @@ const customStyles = {
     ...base,
     color: 'black',
     fontWeight: 500,
-    fontSize: '1.25em'
+    fontSize: '1.25em',
   }),
   multiValue: base => ({
     ...base,
@@ -83,18 +87,60 @@ const customStyles = {
       border: '3px solid #CF3E7F',
     },
   }),
-  option: (base, state) => ({
-    border: (state.isSelected || state.isFocused) ? 'none' : '1px solid #514F51',
-    borderRadius: 10,
-    cursor: 'pointer',
-    padding: (state.isSelected || state.isFocused) ? '9px 13px' : '8px 12px',
-    margin: '5px',
-    backgroundColor: (state.isSelected || state.isFocused) ? '#CF3E7F' : '#E8AECC',
-    color: (state.isSelected || state.isFocused) ? 'white' : 'black',
-  }),
+  option: (base, state) => {
+    const shouldColor = (state.isSelected || state.isFocused) && !state.isDisabled;
+    let style = {
+      border: shouldColor ? 'none' : '1px solid #514F51',
+      borderRadius: 10,
+      cursor: 'pointer',
+      padding: shouldColor ? '9px 13px' : '8px 12px',
+      margin: 5,
+      backgroundColor: shouldColor ? '#CF3E7F' : '#E8AECC',
+      color: shouldColor ? 'white' : 'black',
+    }
+    if (state.isDisabled) {
+      return {
+        ...style,
+        cursor: 'default',
+        color: '#444444',
+        fontWeight: 600,
+      };
+    }
+    return style;
+  },
+};
+
+// Modified from https://github.com/JedWatson/react-select/issues/3067
+const customFilterOption = (option, rawInput) => {
+  if (String(option.label).toLowerCase() === 'other') {
+    return true;
+  }
+
+  const words = rawInput.split(' ');
+  return words.reduce(
+    (acc, cur) => acc && String(option.label).toLowerCase().includes(String(cur).toLowerCase()),
+    true,
+  );
 };
 
 const FormikSelect = ({ field, form, isMulti, options, creatable, ...props }) => {
+  const [isFocused, setIsFocused] = useState(false);
+
+  const isFieldBlank = ['', null, undefined].includes(field.value);
+
+  if (creatable) {
+    options = [{
+      label: 'Note: You can type if none of the available options match',
+      value: null,
+      isDisabled: true,
+    }].concat(options);
+
+    // if the selected value is not among the options, add it (since this is a creatable select)
+    if (!isFieldBlank && options.every(option => field.value !== option.value)) {
+      options = options.concat({ value: field.value, label: field.value });
+    }
+  }
+
   const getValue = () => {
     if (isMulti) {
       if (field.value === undefined || field.value === null) {
@@ -117,6 +163,7 @@ const FormikSelect = ({ field, form, isMulti, options, creatable, ...props }) =>
       const value = selected ? selected.value : '';
       form.setFieldValue(field.name, value);
     }
+    setTimeout(() => form.validateForm(), 1); // workaround for https://github.com/formik/formik/issues/529
   }
 
   const SelectComponent = creatable ? CreatableSelect : Select;
@@ -124,15 +171,18 @@ const FormikSelect = ({ field, form, isMulti, options, creatable, ...props }) =>
   return (
     <SelectComponent
       name={field.name}
-      value={getValue()}
+      value={isFocused ? '' : getValue()}
       onChange={handleChange}
       onMenuClose={() => form.setFieldTouched(field.name)}
       options={options}
       isMulti={isMulti}
-      blurInputOnSelect={false}
+      blurInputOnSelect={true}
       closeMenuOnSelect={!isMulti}
       menuPlacement="auto"
       menuPortalTarget={document.body}
+      onFocus={() => setIsFocused(true)}
+      onBlur={() => setIsFocused(false)}
+      filterOption={customFilterOption}
       isClearable
       {...props}
     />

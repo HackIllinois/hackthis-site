@@ -52,6 +52,10 @@ const App = () => {
         <StaticFileRedirect to="/documents/diversity.pdf" />
       </Route>
 
+      <Route path="/terms-of-service">
+        <StaticFileRedirect to="/documents/terms-of-service.pdf" />
+      </Route>
+
       <Route path="/">
         <Redirect to="/" />
       </Route>      

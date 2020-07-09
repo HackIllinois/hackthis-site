@@ -2,15 +2,42 @@
 
 .experience {
   @include standard-registration-section;
+
+  .title {
+    margin-bottom: -15px !important;
+  }
   
   .content {
     width: 75%;
     @media screen and (max-width: 1065px) {
       width: 100%;
 
-      .resume-upload {
-        width: 80%;
+      .resume-upload{
+        width: 84%;
       }
+
+      .terms-field {
+        width: 70%;
+        position: relative;
+      }
+    }
+
+    .resume-upload {
+      margin-top: 35px;
+    }
+
+    .terms-checkbox {
+      margin-top: 20px;
+      margin-bottom: 0;
+      font-size: .9em;
+      padding-top: 2px;
+    }
+  }
+
+  .buttons {
+    @media screen and (max-width: 900px) and (min-width: $registration-mobile-breakpoint + 1px) {
+      margin-top: 25px !important;
+      padding-right: 170px !important;
     }
   }
 }

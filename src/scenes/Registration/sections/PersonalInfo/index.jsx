@@ -16,14 +16,14 @@ const genderOptions = [
   { label: 'Male', value: 'Male' },
   { label: 'Female', value: 'Female' },
   { label: 'Non-Binary', value: 'Non-Binary' },
-  { label: 'Prefer Not to Disclose', value: 'Prefer Not to Say' },
+  { label: 'Prefer Not to Answer', value: 'Prefer Not to Answer' },
 ]
 
 const PersonalInfo = ({ Buttons }) => (
   <section className={styles['personal-info']}>
     <h1 className={styles.title}>Personal Information</h1>
     <div className={styles.content}>
-      <TextField name="name" placeholder="Name *" />    
+      <TextField name="name" placeholder="Full Name *" />    
       <TextField name="email" type="email" placeholder="Primary Email Address *" />
       <SelectField
         name="location"
