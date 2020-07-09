@@ -11,7 +11,8 @@
     content: '';
     position: absolute;
     left: 0;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 1.25em;
     height: 1.25em;
     border: 2px solid #F9C669;
@@ -19,7 +20,7 @@
     border-radius: .5em;
   }
 
-  &:active::before, &.checked::before{
+  &:active::before, &.checked::before {
     background-color: #F9C669;
   }
   
