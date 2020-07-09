@@ -43,20 +43,23 @@ yup.setLocale({
   },
 });
 
+const termsErrorMessage = 'You must agree to the terms of service to register';
+
 const schema = yup.object().shape({
   name: yup.string().required().matches(/^[^ ]+ +[^ ]+.*$/, 'Please enter your first and last name.'),
   email: yup.string().required().email('Please enter a valid email address.'),
   location: yup.string().required(),
   gender: yup.string(),
   race: yup.array().nullable(),
-  degreePursued: yup.string().required().oneOf(['ASSOCIATES', 'BACHELORS', 'MASTERS', 'PHD', 'GRADUATED', 'OTHER']),
+  degreePursued: yup.string().required().oneOf(['ASSOCIATES', 'BACHELORS', 'MASTERS', 'PHD', 'GRADUATED', 'OTHER'], 'This field is required'),
   graduationYear: yup.number().required().integer(),
   school: yup.string().required(),
   major: yup.string().required(),
   programmingYears: yup.number().required().integer().min(0).max(10),
-  programmingAbility: yup.number().required().min(1).max(5),
+  programmingAbility: yup.number().required().integer().min(1).max(5),
   hasInternship: yup.boolean().required(),
   resumeFilename: yup.string(),
+  terms: yup.boolean().required(termsErrorMessage).oneOf([true], termsErrorMessage),
 });
 
 const sections = [
@@ -73,14 +76,14 @@ const fieldsBySection = [
   ['name', 'email', 'location', 'gender'],
   ['race'],
   ['degreePursued', 'graduationYear', 'school', 'major'],
-  ['programmingYears', 'programmingAbility', 'hasInternship', 'resumeFilename'],
+  ['programmingYears', 'programmingAbility', 'hasInternship', 'resumeFilename', 'terms'],
   [],
 ];
 
 // note: submission refers to the object that Formik uses, while registration refers to the object that the API uses
 
 const submissionToRegistration = submission => {
-  let { name, race, ...registration } = submission;
+  let { name, race, terms, ...registration } = submission;
   let [firstName, lastName] = name.split(' ');
   lastName = lastName || ' ';
   const timezone = `GMT${new Date().toString().split('GMT')[1]}`;

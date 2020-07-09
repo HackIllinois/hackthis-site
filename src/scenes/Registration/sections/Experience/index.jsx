@@ -1,8 +1,11 @@
 import React from 'react';
 import SelectField from 'components/form/SelectField';
+import { Field } from 'formik';
 
 import styles from './style.module.scss';
 import FileUploadField from 'components/form/FileUploadField';
+import Checkbox from 'components/form/Checkbox';
+import FieldErrorMessage from 'components/form/FieldErrorMessage';
 
 const programmingYearsOptions = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   .map(years => ({ value: years, label: years === 10 ? '10+' : `${years}`}));
@@ -13,7 +16,7 @@ const abilityOptions = [
   { value: 3, label: '3 - I am comfortable working on independent projects.' },
   { value: 4, label: '4 - I am comfortable writing and reviewing production level code.' },
   { value: 5, label: '5 - I am code.' },
-]
+];
 
 const internshipOptions = [
   { value: true, label: 'Yes' },
@@ -36,6 +39,22 @@ const Experience = ({ Buttons }) => (
         accept="application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         text="Attach your resume [file - pdf, docx] (optional)"
       />
+
+      <div className={styles['terms-field']}>
+        <Field name="terms">
+          {({ field, form }) => (
+            <Checkbox
+              name={field.name}
+              className={styles['terms-checkbox']}
+              label={<span>I am over the age of 18 and agree to the <a href="/terms-of-service" target="_blank">terms of service</a> *</span>}
+              checked={field.value}
+              onChange={e => form.setFieldValue(field.name, e.target.checked)}
+              onBlur={field.onBlur}
+              />
+            )}
+        </Field>
+        <FieldErrorMessage name="terms" />
+      </div>
     </div>
     
     <Buttons className={styles.buttons}/>

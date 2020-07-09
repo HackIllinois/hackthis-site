@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import styles from './style.module.scss';
 import TextInput from '../TextInput';
 import FieldErrorMessage from '../FieldErrorMessage';
+import Checkbox from '../Checkbox';
 
 const CheckboxField = ({ name, options = [], hideErrors, className, style, ...props }) => {
   const isValueOther = value => options.every(option => option.value !== value);
@@ -65,18 +66,14 @@ const CheckboxField = ({ name, options = [], hideErrors, className, style, ...pr
       <Field name={name} {...props}>
         {({ field, form }) => (
           <div className={clsx(styles['checkbox-field'], className)} style={style}>
-            {options.map(({ label, value, ...checkbox }) => (
+            {options.map(({ value, label, ...checkbox }) => (
               <React.Fragment key={label}>
-                <label className={clsx(styles['checkbox-label'], isChecked(value, field, checkbox) && styles['checked'])}>
-                  <input
-                    type="checkbox"
-                    className={styles.checkbox}
-                    value={value}
-                    checked={isChecked(value, field, checkbox)}
-                    onChange={e => handleChange(e.target.checked, value, field, form, checkbox)}
-                  />
-                  {label}
-                </label>
+                <Checkbox
+                  value={value}
+                  checked={isChecked(value, field, checkbox)}
+                  label={label}
+                  onChange={e => handleChange(e.target.checked, value, field, form, checkbox)}
+                />
                 {checkbox.isOther && isChecked(value, field, checkbox) && (
                   <TextInput
                     placeholder="Insert Race Here"

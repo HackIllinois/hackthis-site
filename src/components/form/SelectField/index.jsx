@@ -163,7 +163,7 @@ const FormikSelect = ({ field, form, isMulti, options, creatable, ...props }) =>
       const value = selected ? selected.value : '';
       form.setFieldValue(field.name, value);
     }
-    setTimeout(() => form.validateField(field.name), 1); // workaround for https://github.com/formik/formik/issues/529
+    setTimeout(() => form.validateForm(), 1); // workaround for https://github.com/formik/formik/issues/529
   }
 
   const SelectComponent = creatable ? CreatableSelect : Select;
