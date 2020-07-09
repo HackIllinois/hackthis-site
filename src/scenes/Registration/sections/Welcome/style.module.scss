@@ -14,8 +14,18 @@
     width: 65%;
   }
 
+  .buttons {
+    margin-top: 20px !important;
+    @media screen and (max-width: 900px) and (min-width: $registration-mobile-breakpoint + 1px) {
+      padding-right: 170px !important;
+    }
+  }
+
   .text {
-    font-size: 1.25em;
+    font-size: 1.2em;
+    &.small {
+      font-size: 1em;
+    }
 
     a {
       color: #46959F;

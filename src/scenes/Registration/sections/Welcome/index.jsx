@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styles from './style.module.scss';
+import clsx from 'clsx';
 
 const Welcome = ({ Buttons }) => (
   <section className={styles.welcome}>
@@ -21,9 +22,10 @@ const Welcome = ({ Buttons }) => (
         or email us at
         <a href="mailto:contact@hackillinois.org"> contact@hackillinois.org</a>.
       </p>
+      <p className={clsx(styles.text, styles.small)}>Note: Registration uses your GitHub account for authentication</p>
     </div>
 
-    <Buttons />
+    <Buttons className={styles.buttons} />
   </section>
 );
 
