@@ -12,18 +12,26 @@
     @media screen and (max-width: 1065px) {
       width: 100%;
 
-      .resume-upload{
-        width: 84%;
-      }
+      @media screen and (min-width: $mobile-breakpoint) {
+        .resume-upload {
+          width: 84%;
+        }
 
-      .terms-field {
-        width: 70%;
-        position: relative;
+        .terms-field {
+          width: 70%;
+        }
       }
     }
 
     .resume-upload {
       margin-top: 35px;
+    }
+
+    .terms-field {
+      position: relative;
+      @media screen and (max-width: $mobile-breakpoint) {
+        margin-bottom: 45px;
+      }
     }
 
     .terms-checkbox {
@@ -32,10 +40,14 @@
       font-size: .9em;
       padding-top: 2px;
     }
+
+    @media screen and (max-width: 350px) {
+      font-size: .9em;
+    }
   }
 
   .buttons {
-    @media screen and (max-width: 900px) and (min-width: $registration-mobile-breakpoint + 1px) {
+    @media screen and (max-width: 900px) and (min-width: $mobile-breakpoint + 1px) {
       margin-top: 25px !important;
       padding-right: 170px !important;
     }

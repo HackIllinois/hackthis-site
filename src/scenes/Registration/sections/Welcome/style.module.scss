@@ -16,15 +16,16 @@
 
   .buttons {
     margin-top: 20px !important;
-    @media screen and (max-width: 900px) and (min-width: $registration-mobile-breakpoint + 1px) {
+    @media screen and (max-width: 900px) and (min-width: $mobile-breakpoint + 1px) {
       padding-right: 170px !important;
     }
   }
 
   .text {
     font-size: 1.2em;
-    &.small {
+    &.note {
       font-size: 1em;
+      font-weight: 600;
     }
 
     a {
@@ -82,7 +83,7 @@
     margin-top: 50px;
   }
 
-  @media screen and (max-width: $registration-mobile-breakpoint) {
+  @media screen and (max-width: $mobile-breakpoint) {
     overflow: hidden;
     margin: 0;
 

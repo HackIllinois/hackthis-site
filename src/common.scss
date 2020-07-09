@@ -1,5 +1,4 @@
-$mobile-breakpoint: 800px;
-$registration-mobile-breakpoint: 767px;
+$mobile-breakpoint: 767px;
 
 @mixin standard-registration-section {
   margin-left: 50px;
@@ -29,7 +28,7 @@ $registration-mobile-breakpoint: 767px;
     }
   }
 
-  @media screen and (max-width: $registration-mobile-breakpoint) {
+  @media screen and (max-width: $mobile-breakpoint) {
     overflow: hidden;
     margin: 0;
 
