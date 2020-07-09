@@ -279,7 +279,7 @@
         margin-top: 25px;
         margin-bottom: -10px;
         font-weight: 600;
-        font-size: 1.75em;
+        font-size: 1.85em;
       }
 
       p {
@@ -347,6 +347,10 @@
 
         &.chalk {
           transform-origin: top right;
+          top: 310px;
+          @media screen and (max-width: 650px) {
+            top: 375px;
+          }
         }
 
         &.eraser {
@@ -375,17 +379,21 @@
 
       .decoration.chalk {
         right: 0;
-        @media screen and (max-width: 520px) {
-          top: 300px;
-        }
-        @media screen and (max-width: 450px) {
-          top: 350px;
-        }
-        @media screen and (max-width: 375px) {
+        top: 360px;
+        @media screen and (max-width: 480px) {
           top: 390px;
         }
-        @media screen and (max-width: 350px) {
+        @media screen and (max-width: 450px) {
           top: 440px;
+        }
+        @media screen and (max-width: 400px) {
+          top: 480px;
+        }
+        @media screen and (max-width: 370px) {
+          top: 500px;
+        }
+        @media screen and (max-width: 345px) {
+          top: 580px;
         }
       }
     }

@@ -128,10 +128,12 @@ const Home = () => {
           <h3>THE EVENT</h3>
           <p>
             HackThis is a fully virtual, education focused hackathon taking place between August 7th and
-            August 15th, 2020. At our event, you will be given resources to develop solutions to enhance
-            virtual learning on a global scale, while having the opportunity to hear from leaders in education,
-            attend workshops, and consult mentors from different backgrounds. HackThis is a great way to gain
-            new technical skills and collaborate with other students, with a common goal of innovation for social good!
+            August 15th, 2020. The first weekend will feature a 48-hour hack sprint, similar to a typical hackathon.
+            The following weekdays will be an opportunity to refine your product with continued support from mentors.
+            At our event, you will be given resources to develop solutions to enhance virtual learning on a global scale,
+            while having the opportunity to hear from leaders in education, attend workshops, and consult mentors from
+            different backgrounds. HackThis is a great way to gain new technical skills and collaborate with other students,
+            with a common goal of innovation for social good!
           </p>
           <h3>JOIN US</h3>
           <p>Follow us on Twitter (@HackIllinois) and Instagram (@HackIllinois) to be notified of our event updates!</p>
