@@ -84,8 +84,8 @@ const fieldsBySection = [
 
 const submissionToRegistration = submission => {
   let { name, race, terms, ...registration } = submission;
-  let [firstName, lastName] = name.split(' ');
-  lastName = lastName || ' ';
+  let [firstName, ...remainingWords] = name.split(' ');
+  const lastName = remainingWords.join(' ') || ' ';
   const timezone = `GMT${new Date().toString().split('GMT')[1]}`;
   race = race || [];
   Object.assign(registration, { firstName, lastName, timezone, race });
