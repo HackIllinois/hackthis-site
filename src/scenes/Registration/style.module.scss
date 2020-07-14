@@ -212,5 +212,29 @@
 
   @media screen and (min-width: 1600px) and (min-height: 850px) {
     font-size: 1.25em;
+
+    .section-container {
+      margin-top: 150px;
+      @media screen and (min-height: 900px) {
+        margin-top: 175px;
+      }
+      @media screen and (min-width: 2000px) {
+        margin-left: 250px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 2000px) and (min-height: 1000px) {
+    font-size: 1.35em;
+
+    .logo {
+      width: 135px;
+    }
+
+    .decorations {
+      &.top-left, &.bottom-right {
+        transform: scale(1.25);
+      }
+    }
   }
 }
