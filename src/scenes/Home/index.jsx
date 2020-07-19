@@ -137,8 +137,8 @@ const Home = () => {
           </p>
           <h3>JOIN US</h3>
           <p>
-            Follow us on Twitter (<a href="https://twitter.com/hackillinois/">@HackIllinois</a>) and Instagram
-            (<a href="https://www.instagram.com/hackillinois/">@HackIllinois</a>) to be notified of our event updates!
+            Follow us on Twitter (<a href="https://twitter.com/hackillinois/" target="_blank">@HackIllinois</a>) and Instagram
+            (<a href="https://www.instagram.com/hackillinois/" target="_blank">@HackIllinois</a>) to be notified of our event updates!
           </p>
           <p>
             In terms of the platforms you will need to have access to, we’ll be connecting mentors and attendees on
