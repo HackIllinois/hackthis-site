@@ -136,7 +136,10 @@ const Home = () => {
             with a common goal of innovation for social good!
           </p>
           <h3>JOIN US</h3>
-          <p>Follow us on Twitter (@HackIllinois) and Instagram (@HackIllinois) to be notified of our event updates!</p>
+          <p>
+            Follow us on Twitter (<a href="https://twitter.com/hackillinois/" target="_blank" rel="noopener noreferrer">@HackIllinois</a>) and Instagram
+            (<a href="https://www.instagram.com/hackillinois/" target="_blank" rel="noopener noreferrer">@HackIllinois</a>) to be notified of our event updates!
+          </p>
           <p>
             In terms of the platforms you will need to have access to, we’ll be connecting mentors and attendees on
             Discord! As we approach the event, we’ll post a link on our social media to the discord server so that
@@ -195,14 +198,34 @@ const Home = () => {
           </p>
           <h4>How do applications work?</h4>
           <p>
-            There is no application! Just register here on this website and we will send you more information
-            about our event! Registration is open until the end of the event. In order to join our Discord server
-            and submit a project, you will need to register! 
+            There is no application! Just register using <Link to="/register">hackthis.hackillinois.org/register</Link> and
+            we will send you more information about our event - everyone is accepted! Registration is open until the end of
+            the event. In order to join our Discord server and submit a project, you will need to register! You must be 18+
+            to register. 
           </p>
           <h4>Where can I go for more information?</h4>
           <p>
             Take a look at our website for more information about our event! If you have any further questions,
-            feel free to reach out to us through our social media channels, or email us at contact@hackillinois.org! 
+            feel free to reach out to us through our social media channels, or email us at <a href="mailto:contact@hackillinois.org">contact@hackillinois.org</a>! 
+          </p>
+          <h4>What do I need as a virtual hacker?</h4>
+          <p>You won’t need much to get the most out of your HackThis experience. All it’ll take is:</p>
+          <ul>
+            <li><strong>A Github account</strong>, to share and collaborate on your code with others.</li>
+            <li><strong>A Discord account</strong> to work and engage with teammates, mentors, and other attendees.</li>
+          </ul>
+          <h4>Why is HackThis a week long?</h4>
+          <p>
+            With an ambitious goal of solving wide-reaching problems in the area of virtual education, we believe that a longer
+            hacking time of a week will help each project and group go through the full development cycle to create the most refined
+            prototype—or complete product—as possible. An online event is also free of the time and space constraints of a physical
+            event, meaning that we’re able to host and maintain a unique experience for all hackers throughout the week.
+          </p>
+          <h4>Can I work in a team? Alone?</h4>
+          <p>
+            Yes! HackThis allows teams of up to size 8. While teamwork is highly encouraged to ensure the most effective ideation
+            and development over the span of the event, with a discord channel dedicated towards finding teammates, individual
+            submissions are also allowed.
           </p>
         </div>
 
