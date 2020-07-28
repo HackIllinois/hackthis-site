@@ -1,0 +1,28 @@
+.email-link-message {
+  font-size: 1.25em;
+  font-weight: 500;
+  color: #37352F;
+}
+
+.mentor-availability {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .calendar-container {
+    flex: 1;
+  }
+
+  .instructions {
+    text-align: center;
+    padding: 5px 10px 0;
+    font-weight: 500;
+    color: #37352F;
+    font-size: .9em;
+    margin-bottom: -3px;
+    @media screen and (max-width: 650px) {
+      font-size: .8em;
+    }
+  }
+}
