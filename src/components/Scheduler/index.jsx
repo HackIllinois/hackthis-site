@@ -63,6 +63,10 @@ const Scheduler = ({ logo, logoLink, startDate, events, onChange, eventTextPlace
     };
     document.addEventListener('click', clickListener);
     return () => document.removeEventListener('click', clickListener);
+
+    // purposefully not listing dependencies above since the prop "readOnly" is not meant to be changed
+    // (we don't want to initialize the dhtmlx scheduler twice)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // purposefully not listing dependencies above since the prop "readOnly" is not meant to be changed
   // (we don't want to initialize the dhtmlx scheduler twice)
@@ -126,7 +130,10 @@ const Scheduler = ({ logo, logoLink, startDate, events, onChange, eventTextPlace
     return () => {
       listenerIds.forEach(id => scheduler.detachEvent(id));
     };
-  }, [events, onChange]); // not listing "readOnly", meant to be constant
+
+    // not listing "readOnly" as a dependency, meant to be constant
+    // eslint-disable-next-line
+  }, [events, onChange]);
 
   // weekStartOffset and weekEndOffset may be constants or functions, so this helper function 
   const getValue = (potentialFunction, ...args) =>
