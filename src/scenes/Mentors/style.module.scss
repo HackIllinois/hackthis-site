@@ -1,8 +1,14 @@
+@import 'common.scss';
+
 .mentors {
   width: 100%;
   height: 100vh;
   overflow: hidden;
   position: relative;
+
+  .navbar {
+    top: -10px;
+  }
 
   .decoration {
     position: absolute;
@@ -11,6 +17,7 @@
       top: 0;
       left: 0;
       height: 110%;
+      max-height: 900px;
     }
 
     &.bottom-right {
@@ -50,7 +57,6 @@
 
       .title {
         font-weight: 600;
-        // margin: 0 10px;
       }
 
       .clarification {
@@ -60,6 +66,13 @@
     }
   }
 
+  .category-select {
+    display: none;
+    position: absolute;
+    top: 75px;
+    z-index: 5;
+  }
+
   .board {
     background-color: #514F51;
     position: absolute;
@@ -67,9 +80,19 @@
     left: 250px;
     right: 150px;
     bottom: 50px;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 30px;
     box-sizing: border-box;
+
+    .corner-marker {
+      display: none;
+      position: absolute;
+      top: 12px;
+      right: 5px;
+      z-index: 1;
+      transform: rotate(-4.35deg);
+      width: 70px;
+    }
 
     .content {
       background-color: white;
@@ -115,29 +138,31 @@
         position: relative;
         overflow: auto;
         padding-right: 30px;
-        scrollbar-color: #F9C669 transparent;
-        scrollbar-width: thin;
         margin-top: 10px;
+        scrollbar-width: none;
         &::-webkit-scrollbar {
           --webkit-appearance: 'none';
         }
-        &::-webkit-scrollbar:vertical {
-          width: 10px,
+        @media screen and (min-width: $mobile-breakpoint) { // only display the scrollbar on desktop
+          scrollbar-width: thin;
+          scrollbar-color: #F9C669 transparent;
+          &::-webkit-scrollbar:vertical {
+            width: 10px,
+          }
+          &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            border: 5px solid #F9C669;
+          }
+          &::-webkit-scrollbar-track {
+            background-color: #F0F0F0;
+            border-radius: 10px;
+          }
         }
-        &::-webkit-scrollbar-thumb {
-          border-radius: 10px;
-          border: 5px solid #F9C669;
-        }
-        &::-webkit-scrollbar-track {
-          background-color: #F0F0F0;
-          border-radius: 10px;
-        }
-
+          
         .mentor {
           display: flex;
           align-items: center;
           margin-bottom: 40px;
-          max-width: 1000px;
 
           .photo {
             width: 120px;
@@ -149,7 +174,6 @@
           .name {
             font-weight: 600;
             margin: 0;
-            // font-size: 1.1em;
           }
 
           .description {
@@ -159,6 +183,171 @@
           }
         }
       }
+    }
+
+    @media screen and (max-width: 1240px) {
+      right: 50px;
+      .content .title .marker {
+        right: -100px;
+      }
+    }
+
+    @media screen and (max-width: 1100px) {
+      .content .marker {
+        display: none;
+      }
+
+      .corner-marker {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .content {
+        .title {
+          font-size: 1.5em;
+        }
+
+        .mentor-list .mentor {
+          display: block;
+
+          .name {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    .navbar {
+      top: -5px;
+    }
+
+    .categories, .page-title, .decoration.bottom-right {
+      display: none;
+    }
+
+    .category-select {
+      display: block;
+      left: 50px;
+      right: 50px;
+    }
+
+    .decoration.top-left {
+      width: 115%;
+      height: auto;
+      max-height: unset;
+    }
+
+    .board {
+      right: 20px;
+      left: 20px;
+      bottom: 20px;
+      top: 125px;
+
+      .corner-marker {
+        width: 55px;
+      }
+
+      .content {
+        padding-bottom: 0;
+        padding-top: 0;
+        .title, .eraser {
+          display: none;
+        }
+
+        .mentor-list {
+          margin-top: 0px;
+          padding-top: 15px;
+          scrollbar-width: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .category-select {
+      left: 20px;
+      right: 20px;
+    }
+
+    .board {
+      left: 0;
+      right: 0;
+      padding: 20px;
+
+      .content {
+        padding-left: 25px;
+        padding-right: 0;
+
+        .mentor-list {
+          padding-right: 20px;
+
+          .mentor .photo {
+            width: 100px;
+            min-width: 100px;
+            height: 100px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1500px) {
+    .board {
+      left: 300px;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: 1.15em;
+
+    .board {
+      left: 325px;
+      max-width: 1600px;
+      .content .mentor-list {
+        max-width: 1300px;
+      }
+    }
+  }
+
+  @media screen and (min-height: 750px) {
+    .page-title {
+      left: 50px;
+      top: 210px;
+    }
+
+    .categories {
+      left: 55px;
+      top: 250px;
+    }
+  }
+
+  @media screen and (min-height: 800px) {
+    .page-title {
+      top: 220px;
+    }
+
+    .categories {
+      .category {
+        margin-top: 90px;
+        width: 165px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 2100px) {
+    font-size: 1.25em;
+
+    .categories .category {
+      width: 180px;
+    }
+
+    .board {
+      width: 1600px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }

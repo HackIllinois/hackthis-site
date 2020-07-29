@@ -8,6 +8,12 @@ import bottomRight from 'assets/mentors/bottom-right.svg';
 import marker from 'assets/mentors/marker.svg';
 import eraser from 'assets/mentors/eraser.svg';
 import categories from './mentors.json';
+import MentorSelect from './MentorSelect';
+
+const categoryOptions = categories.map((category, i) => ({
+  value: i,
+  label: `${category.title} (${category.clarification})`
+}));
 
 const Mentors = () => {
   const [categoryIndex, setCategoryIndex] = useState(0);
@@ -16,7 +22,7 @@ const Mentors = () => {
 
   return (
     <div className={styles.mentors}>
-      <NavBar />
+      <NavBar className={styles.navbar} light />
 
       <img className={clsx(styles.decoration, styles['top-left'])} src={topLeft} alt="" />
       <img className={clsx(styles.decoration, styles['bottom-right'])} src={bottomRight} alt="" />
@@ -35,9 +41,19 @@ const Mentors = () => {
             <p className={styles.clarification}>({category.clarification})</p>
           </div>
         ))}
-      </div>      
+      </div>
+
+      <div className={styles['category-select']}>
+        <MentorSelect
+          value={categoryOptions[categoryIndex]}
+          options={categoryOptions}
+          onChange={({ value }) => setCategoryIndex(value)}
+        />
+      </div>
 
       <div className={styles.board}>
+        <img className={styles['corner-marker']} src={marker} alt="" />
+
         <div className={styles.content}>
           <img className={styles.eraser} src={eraser} alt="" />
 
