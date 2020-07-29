@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Product Development",
+    "clarification": "Technical",
+    "rotation": -6,
+    "mentors": [
+      {
+        "name": "First Last",
+        "image": "blank.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum purus, quam eu urna suscipit rutrum dolor, sollicitudin amet. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa. Pulvinar at scelerisque id augue ut laoreet. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa."
+      },
+      {
+        "name": "First Last",
+        "image": "blank.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum purus, quam eu urna suscipit rutrum dolor, sollicitudin amet. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa. Pulvinar at scelerisque id augue ut laoreet. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa."
+      },
+      {
+        "name": "First Last",
+        "image": "blank.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum purus, quam eu urna suscipit rutrum dolor, sollicitudin amet. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa. Pulvinar at scelerisque id augue ut laoreet. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa."
+      }
+    ]
+  },
+  {
+    "title": "Product Consultation",
+    "clarification": "Non-Technical",
+    "rotation": 9,
+    "mentors": [
+      {
+        "name": "First Last",
+        "image": "blank.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum purus, quam eu urna suscipit rutrum dolor, sollicitudin amet. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa. Pulvinar at scelerisque id augue ut laoreet. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa."
+      },
+      {
+        "name": "First Last",
+        "image": "blank.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum purus, quam eu urna suscipit rutrum dolor, sollicitudin amet. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa. Pulvinar at scelerisque id augue ut laoreet. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa."
+      },
+      {
+        "name": "First Last",
+        "image": "blank.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum purus, quam eu urna suscipit rutrum dolor, sollicitudin amet. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa. Pulvinar at scelerisque id augue ut laoreet. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa. Semper eu massa diam habitant ante in turpis elementum. Ullamcorper lorem proin vestibulum massa."
+      }
+    ]
+  }
+]
