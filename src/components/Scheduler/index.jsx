@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import styles from './style.module.scss';
 import './style-overrides.scss';
 import 'dhtmlx-scheduler';
+import 'dhtmlx-scheduler/codebase/ext/dhtmlxscheduler_limit.js'
 import 'dhtmlx-scheduler/codebase/dhtmlxscheduler_material.css'
 import { useState } from 'react';
 import clsx from 'clsx';
@@ -21,7 +22,7 @@ const dateAt12am = date => new Date(date.getFullYear(), date.getMonth(), date.ge
 const dayDifference = (date1, date2) => Math.floor((dateAt12am(date2)- dateAt12am(date1)) / 1000 / 60 / 60 / 24);
 
 
-const Scheduler = ({ logo, logoLink, startDate, events, onChange, eventTextPlaceholder, readOnly = false }) => {
+const Scheduler = ({ logo, logoLink, startDate, events, onChange, eventTextPlaceholder, eventStartTime, eventEndTime, readOnly = false }) => {
   const [currentDate, setCurrentDate] = useState(startDate);
 
   // careful when setting weekStartOffset or weekEndOffset to a function (https://reactjs.org/docs/hooks-reference.html#functional-updates)
@@ -52,6 +53,22 @@ const Scheduler = ({ logo, logoLink, startDate, events, onChange, eventTextPlace
     scheduler.templates.event_text = (_, _2, event) => {
       return `<div title="${event.text}">${event.text}</div>`;
     };
+
+    scheduler.addMarkedTimespan({
+      start_date: new Date(2020, 0),
+      end_date: eventStartTime,
+      zones: "fullday",
+      css: styles['blocked-section'],
+      type: "dhx_time_block"
+    });
+
+    scheduler.addMarkedTimespan({
+      start_date: eventEndTime,
+      end_date: new Date(2020, 12, 31),
+      zones: "fullday",
+      css: styles['blocked-section'],
+      type: "dhx_time_block" //the hardcoded value
+    });
 
     scheduler.init(schedulerContainer.current);
 

@@ -38,6 +38,8 @@ const removeExtraData = events => removeColors(events).map(event => {
 const addEmails = (events, mentorEmail = '') => events.map(event => ({ email: mentorEmail, ...event }));
 
 const startDate = new Date(2020, 7, 7);
+const eventStartTime = new Date(1596841200000);
+const eventEndTime = new Date(1597431600000);
 const readOnly = false;
 
 const MentorAvailability = () => {
@@ -93,10 +95,14 @@ const MentorAvailability = () => {
     );
   }
 
+  const timezone = /\((.*)\)/.exec(new Date().toString())[1]; // extracts contents of parentheses in result of Date.toString
+
   return (
     <div className={styles['mentor-availability']}>
       {!readOnly && (
-        <div className={styles.instructions}>Click and drag to add your available time slots (please use your full name). We encourage you to sign up for slots that have fewer mentors!</div>
+        <div className={styles.instructions}>
+          Click and drag to add your available time slots (in {timezone}). We encourage you to sign up for slots that have fewer mentors!
+        </div>
       )}
 
       <div className={styles['calendar-container']}>
@@ -107,6 +113,8 @@ const MentorAvailability = () => {
           events={events}
           onChange={updateEvents}
           eventTextPlaceholder={sessionStorage.mentorName || 'Full Name'}
+          eventStartTime={eventStartTime}
+          eventEndTime={eventEndTime}
           readOnly={readOnly}
         />
       </div>

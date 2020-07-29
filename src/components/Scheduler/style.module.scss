@@ -3,6 +3,11 @@
   height: 100%;
   overflow: hidden;
 
+  .blocked-section {
+    background-image: url('/assets/blocked_lines.png');
+    background-color: transparent;
+  }
+
   .logo-container {
     width: 100px;
     display: block;
