@@ -40,6 +40,19 @@ export function getRoles() {
     .then(res => res.roles);
 }
 
+export function getRolesSync() {
+  const token = sessionStorage.getItem('token');
+  if (token) {
+    try {
+      const tokenData = JSON.parse(atob(token.split('.')[1]));
+      return tokenData.roles;
+    } catch (e) {
+      // if the token is incorrectly formatted, we just ignore it and return the default []
+    }
+  }
+  return [];
+}
+
 export function getRegistration(role) {
   return request('GET', `/registration/${role}/`);
 }
@@ -85,4 +98,14 @@ export function getPrizes() {
 export function refreshToken() {
   return request('GET', '/auth/token/refresh/')
     .then(res => sessionStorage.setItem('token', res.token));
+}
+
+export function getMentorTimeslots() {
+  return request('GET', '/upload/blobstore/mentor-timeslots/')
+    .then(res => res.data);
+}
+
+export function setMentorTimeslots(data) {
+  return request('PUT', '/upload/blobstore/', { id: 'mentor-timeslots', data })
+    .then(res => res.data);
 }

@@ -1,0 +1,116 @@
+$primary-color: #3C519C;
+$primary-color-light: lighten($primary-color, 50%);
+
+.dhx_cal_navline {
+  .dhx_cal_tab {
+    box-shadow: -1px 0 0 $primary-color !important;
+    border-color: $primary-color;
+    color: $primary-color !important;
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+
+    &.dhx_cal_nav_button_custom {
+      border: none !important;
+      width: 100px !important;
+      box-shadow: none !important;
+      display: block;
+      color: rgba(0,0,0,.75) !important;
+      font-family: 'Montserrat', sans-serif !important;
+      cursor: default !important;
+      
+      &:hover {
+        background-color: white !important;
+      }
+      
+      img {
+        width: 100%;
+        margin-right: 20px;
+        cursor: pointer;
+      }
+    }
+
+    &.active[aria-pressed=true] {
+      background-color: $primary-color !important;
+      border-color: $primary-color !important;
+      color: white !important;
+    }
+
+    &:hover {
+      background-color: $primary-color-light !important;
+    }
+  }
+
+  .dhx_cal_today_button {
+    color: $primary-color !important;
+    font-weight: 600 !important;
+  }
+
+  .dhx_cal_next_button, .dhx_cal_prev_button {
+    background-image: none !important;
+    font-size: 2.5em;
+    color: $primary-color !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .dhx_cal_next_button::before {
+    content: '›';
+    position: relative;
+    left: 11px;
+    top: -2px;
+  }
+
+  .dhx_cal_prev_button {
+    right: 50px;
+
+    &::before {
+      content: '‹';
+      position: relative;
+      left: 10px;
+      top: -2px;
+    }
+  }
+}
+
+.dhx_cal_ltitle {
+  background-color: var(--color) !important;
+  border-color: var(--color) !important;
+}
+
+.dhx_save_btn_set, .dhx_save_btn_set > div {
+  background-color: var(--color) !important;
+  border-color: var(--color) !important;
+}
+
+.dhx_cancel_btn_set {
+  color: var(--color) !important;
+  &:hover {
+    background-color: var(--color)-light !important;
+    border-color: var(--color)-light !important;
+  }
+}
+
+
+.dhx_cal_light {
+  width: 475px !important;
+  
+  .dhx_lightbox_time_select {
+    width: 118px !important;
+  }
+}
+
+.dhtmlx-scheduler-event {
+  cursor: pointer;
+  border-radius: 2px;
+  overflow: hidden;
+
+  .dhx_body {
+    border-bottom-right-radius: 2px !important;
+    border-bottom-left-radius: 2px !important;
+  }
+}
+
+.read-only .dhtmlx-scheduler-event {
+  cursor: default;
+}
