@@ -42,9 +42,12 @@
       width: 150px;
       text-align: center;
       padding-bottom: 10px;
-      margin-top: 70px;
+      margin-top: 50px;
       filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3));
       cursor: pointer;
+      @media screen and (min-height: 650px) {
+        margin-top: 70px
+      }
       
       .green-bar {
         background-color: #46959F;
@@ -156,7 +159,7 @@
             border-radius: 10px;
           }
         }
-          
+
         .mentor {
           display: flex;
           align-items: center;
@@ -305,18 +308,6 @@
     }
   }
 
-  @media screen and (min-width: 1600px) {
-    font-size: 1.15em;
-
-    .board {
-      left: 325px;
-      max-width: 1600px;
-      .content .mentor-list .mentor {
-        max-width: 1300px;
-      }
-    }
-  }
-
   @media screen and (min-height: 750px) {
     .page-title {
       left: 50px;
@@ -338,6 +329,27 @@
       .category {
         margin-top: 90px;
         width: 165px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    font-size: 1.15em;
+
+    .decoration.top-left {
+      max-height: 950px;
+    }
+
+    .categories .category {
+        margin-top: 95px;
+        width: 175px;
+    }
+
+    .board {
+      left: 325px;
+      max-width: 1600px;
+      .content .mentor-list .mentor {
+        max-width: 1300px;
       }
     }
   }
