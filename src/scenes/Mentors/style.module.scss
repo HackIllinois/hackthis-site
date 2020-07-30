@@ -30,6 +30,9 @@
     font-size: 1.6em;
     color: white;
     text-transform: uppercase;
+    @media screen and (min-height: 650px) {
+      left: 40px;
+    }
   }
 
   .categories {
@@ -310,7 +313,7 @@
 
   @media screen and (min-height: 750px) {
     .page-title {
-      left: 50px;
+      left: 60px;
       top: 210px;
     }
 
