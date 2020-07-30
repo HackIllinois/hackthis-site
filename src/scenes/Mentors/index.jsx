@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 
 import NavBar from 'components/NavBar';
+import MentorSelect from './MentorSelect';
 import styles from './style.module.scss'
 import topLeft from 'assets/mentors/top-left.svg';
 import bottomRight from 'assets/mentors/bottom-right.svg';
 import marker from 'assets/mentors/marker.svg';
 import eraser from 'assets/mentors/eraser.svg';
-import categories from './mentors.json';
-import MentorSelect from './MentorSelect';
+import categories from './categories.json';
+import mentors from './mentors.json';
 
 const categoryOptions = categories.map((category, i) => ({
   value: i,
@@ -63,12 +64,12 @@ const Mentors = () => {
             <img className={styles.marker} src={marker} alt="" />
           </h2>
 
-          <div className={styles['mentor-list']}>
-            {currentCategory.mentors.map(mentor => (
-              <div className={styles.mentor}>
-                <img className={styles.photo} src={`/assets/mentor-photos/${mentor.image}`} alt="" />
+          <div className={styles['mentor-list']} key={categoryIndex}>
+            {currentCategory.mentors.map(name => [name, mentors[name]]).map(([name, mentor]) => (
+              <div className={styles.mentor} key={name}>
+                <div className={styles.photo} style={{ backgroundImage: `url("/assets/mentor-photos/${mentor.image}")`}} />
                 <div>
-                  <h3 className={styles.name}>{mentor.name}</h3>
+                  <h3 className={styles.name}>{name}</h3>
                   <p className={styles.description}>{mentor.description}</p>
                 </div>
               </div>

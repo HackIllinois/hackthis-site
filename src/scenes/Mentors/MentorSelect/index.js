@@ -10,6 +10,7 @@ const customStyles = {
     borderRadius: 0,
     outline: 'none',
     boxShadow: 'none',
+    fontSize: '.9em',
     '&:hover': {},
   }),
   singleValue: base => ({
@@ -41,6 +42,7 @@ const customStyles = {
     background: '#E8AECC',
     borderTop: '#CF3E7F solid 1.5px',
     textAlign: 'center',
+    fontSize: '.9em',
     fontWeight: 500,
     '&:active': {
       backgroundColor: '#E8AECC',
