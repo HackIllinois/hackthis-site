@@ -20,11 +20,11 @@
     "description": "I'm an educator who also loves to hack. I create content and tools that have helped thousands of students learn computer science and programming."
   },
   "Haitham El Mengad": {
-    "image": "Haitham Mengad.jpeg",
+    "image": "Haitham Mengad.jpg",
     "description": "I'm a PM and software engineer with experience in consumer products, enterprise software, venture capital, open source and academic research. Also a UIUC engineering alum!"
   },
   "Heather Huynh": {
-    "image": "Heather Huynh.png",
+    "image": "Heather Huynh.jpg",
     "description": "Heather is a graduated Masters student from the University of Illinois at Urbana-Champaign. She has previously interned at Google, Blend, and Los Alamos National Labs and focused her research on visualizing diversity in fashion. She also worked as a TA for many beginner level CS courses at UIUC. She hopes to use her skills to create impactful technology for others."
   },
   "Jennie Magiera": {
@@ -32,7 +32,7 @@
     "description": "Jennie Magiera is Google’s Global Head of Education Impact, bestselling author of Courageous Edventures, and founder of the education equity nonprofit Our Voice Alliance. A lifelong educator, Jennie taught for over a decade and has also been an instructional coach, building leader, and district administrator. She served on the TWG for the US Dept of Education’s National EdTech Plan, and has been featured on programs such as NBC’s Education Nation, C-SPAN’s Reimagining Education, TEDx, and NPR."
   },
   "Kyle Begovich": {
-    "image": "Kyle Begovich.png",
+    "image": "Kyle Begovich.jpg",
     "description": "I'm a recent graduate from the Math & CS program now working as a Software Engineer in privacy at Google. I've been engaged with many of the UIUC student events, other hackathons, and non-profit work in my spare time as a student. I am always looking to improve and give back to the technical education ecosystem and promote the welfare of our communities, so please feel free to reach out!"
   },
   "Margarita Zias": {
@@ -76,7 +76,7 @@
     "description": "After 30+ years in the tech industry, name a tech job and Susi has probably done it - from Software Engineer to Chief Product Officer, using skills ranging from development and analysis to database design, UI/UX, project and product mgmt. Currently she is advising several social good startups Phin, Kikori and CVKE) and nonprofits (MediaPowerYouth). She is the Chief Impact officer at Phin where she is tasked with advocating for Phin's social causes and helping that community create the maximum impact.  She is also the Tech Advisor at Kikori which is an Experiential Education and Social Emotional Learning app."
   },
   "Tamara Nelson-Fromm": {
-    "image": "Tamara Nelson-Fromm.png",
+    "image": "Tamara Nelson-Fromm.jpg",
     "description": "Tamara is a PhD student studying the intersection of education and computing, with a focus on integrating CS lessons with non-STEM subjects in high school settings. Over the last 3 years she has been the director of a tech-themed summer camp, a data structures course assistant, and a coding camp instructor. Tamara graduated from UIUC with a BS in CS in May 2020."
   }
 }
