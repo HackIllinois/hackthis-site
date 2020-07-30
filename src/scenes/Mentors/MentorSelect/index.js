@@ -26,6 +26,7 @@ const customStyles = {
   dropdownIndicator: base => ({
     ...base,
     color: 'white',
+    cursor: 'pointer',
   }),
   menu: base => ({
     ...base,

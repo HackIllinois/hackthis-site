@@ -4,8 +4,8 @@ import clsx from 'clsx';
 import NavBar from 'components/NavBar';
 import MentorSelect from './MentorSelect';
 import styles from './style.module.scss'
-import topLeft from 'assets/mentors/top-left.svg';
-import bottomRight from 'assets/mentors/bottom-right.svg';
+import topLeft from 'assets/mentors/top_left.svg';
+import bottomRight from 'assets/mentors/bottom_right.svg';
 import marker from 'assets/mentors/marker.svg';
 import eraser from 'assets/mentors/eraser.svg';
 import categories from './categories.json';
@@ -23,7 +23,7 @@ const Mentors = () => {
 
   return (
     <div className={styles.mentors}>
-      <NavBar className={styles.navbar} light />
+      <NavBar light blueLink />
 
       <img className={clsx(styles.decoration, styles['top-left'])} src={topLeft} alt="" />
       <img className={clsx(styles.decoration, styles['bottom-right'])} src={bottomRight} alt="" />

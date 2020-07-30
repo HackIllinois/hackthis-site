@@ -6,12 +6,9 @@
   overflow: hidden;
   position: relative;
 
-  .navbar {
-    top: -10px;
-  }
-
   .decoration {
     position: absolute;
+    user-select: none;
 
     &.top-left {
       top: 0;
@@ -225,10 +222,6 @@
   }
 
   @media screen and (max-width: $mobile-breakpoint) {
-    .navbar {
-      top: -5px;
-    }
-
     .categories, .page-title, .decoration.bottom-right {
       display: none;
     }
@@ -240,9 +233,12 @@
     }
 
     .decoration.top-left {
-      width: 115%;
       height: auto;
       max-height: unset;
+      width: 125%;
+      @media screen and (max-width: 400px) {
+        width: 140%;
+      }
     }
 
     .board {
