@@ -65,7 +65,25 @@ const mobileDots = [
   { top: 51, left: 349, width: 6, height: 6 },
   { top: 313, left: 384, width: 9, height: 9 },
   { top: 202, left: 405, width: 25, height: 12 },
-]
+];
+
+const notes = [
+  {
+    title: 'Our Projects:',
+    subtitle: 'Different Tracks for Different Students',
+    text: 'Start a new project from scratch - just like a regular hackathon.\n\nPresent a project that has developed in the past for the purpose of enhancing education.'
+  },
+  {
+    title: 'Our Resourses:',
+    subtitle: 'For Your Learning',
+    text: 'Access to mentors from industry, education and business for your projects.\n\nTons of workshops to expand and strengthen attendee abilities. '
+  },
+  {
+    title: 'Our Experience:',
+    subtitle: 'Building Educational Tools',
+    text: 'Talks and Panels to inspire, excite, and educate as you work.\n\nMini Events to help build new connections and have some fun.'
+  },
+];
 
 const Home = () => {
   const [backgroundWidth, setBackgroundWidth] = useState(0);
@@ -123,6 +141,22 @@ const Home = () => {
         </div>
       </section>
 
+      <section className={styles.notes}>
+        <h3 className={styles['section-title']}>Our&nbsp;Hackathon&nbsp;Focus: Advancing&nbsp;Virtual&nbsp;Education</h3>
+        <div className={styles['flex-container']}>
+          {notes.map(({ title, subtitle, text }) => (
+            <div className={styles.note}>
+              <img className={styles.star} src={star} alt="" />
+              <div>
+                <h4 className={styles.title}>{title}</h4>
+                <h5 className={styles.subtitle}>{subtitle}</h5>
+                <p className={styles.text}>{text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className={styles.info}>
         <div className={styles.content}>
           <h3>THE EVENT</h3>
@@ -165,7 +199,7 @@ const Home = () => {
           </p>
         </div>
 
-        <img src={star} className={clsx(styles.decoration, styles.star)} alt="" />
+        {/* <img src={star} className={clsx(styles.decoration, styles.star)} alt="" /> */}
         <img src={chalk} className={clsx(styles.decoration, styles.chalk)} alt="" />
         <img src={eraser} className={clsx(styles.decoration, styles.eraser)} alt="" />
         <div className={styles.dot} style={{ top: 57, right: -45, width: 90, height: 30 }} />

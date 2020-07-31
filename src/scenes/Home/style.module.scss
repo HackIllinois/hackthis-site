@@ -249,6 +249,142 @@
     }
   }
 
+  .notes {
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    .section-title {
+      text-align: center;
+      color: #2A3072;
+      font-weight: 600;
+      font-size: 1.25em;
+    }
+
+    .flex-container {
+      display: flex;
+      margin: 40px 100px;
+      justify-content: space-between;
+    }
+
+    .note {
+      display: flex;
+      margin: 0 25px;
+      width: 400px;
+
+      .star {
+        align-self: flex-start;
+        width: 50px;
+        margin-right: 15px;
+      }
+
+      .title, .subtitle {
+        font-size: 1.2em;
+        color: #46959F;
+        margin: 5px 0;
+      }
+
+      .title {
+        font-weight: 600;
+        margin-top: 0;
+      }
+
+      .subtitle {
+        font-weight: 500;
+        height: 2.4em;
+      }
+
+      .text {
+        white-space: pre-wrap;
+      }
+    }
+
+    @media screen and (max-width: 1300px) {
+      font-size: .95em;
+      .flex-container {
+        margin: 40px 50px;
+      }
+      .note {
+        margin: 0 10px;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      font-size: .9em;
+      .note .star {
+        width: 45px;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      font-size: .85em;
+      .flex-container {
+        margin: 40px 15px;
+      }
+      .note .star {
+        width: 35px;
+      }
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      margin-top: 25px;
+      margin-bottom: 50px;
+
+      .section-title {
+        margin: 0 15px;
+      }
+
+      .flex-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+      }
+
+      .note {
+        width: 90%;
+        margin: 15px 0;
+        .subtitle {
+          height: unset;
+        }
+      }
+    }
+
+    @media screen and (min-width: 1600px) {
+      font-size: 1.15em;
+
+      .flex-container {
+        margin: 40px 150px;
+      }
+
+      .note {
+        width: 500px;
+        .star {
+          width: 55px;
+        }
+      }
+    }
+
+    @media screen and (min-width: 2000px) {
+      font-size: 1.25em;
+
+      .flex-container {
+        justify-content: center;
+      }
+
+      .note {
+        margin: 0 35px;
+      }
+    }
+
+    // @media screen and (min-width: 2000px) {
+    //   font-size: 1.25em;
+    //   .note {
+    //     .star {
+    //       width: 60px;
+    //     }
+    //   }
+    // }
+  }
+
   .info {
     background-color: #46959F;
     border-radius: 35px;
