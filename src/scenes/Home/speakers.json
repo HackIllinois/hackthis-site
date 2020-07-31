@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Andrew Sutherland",
+    "title": "Founder and CEO of Quizlet",
+    "image": "Andrew Sutherland.png",
+    "description": "Andrew Sutherland is the founder of Quizlet, an education software company that serves millions of students and teachers every month. Andrew started Quizlet while taking a high school French class, continued working on it studying computer science at MIT, and has grown it to a successful company with more than 200 employees."
+  },
+  {
+    "name": "Elizabeth Engele",
+    "title": "Founder of MakerGirl and X",
+    "image": "Elizabeth Engele.png",
+    "description": "Elizabeth (Lizzy) enjoys creating meaningful solutions for complex socio-cultural challenges through using her knowledge of design, entrepreneurship, and sales.  Her biggest accomplishment is educating over 4,000 girls in STEM through MakerGirl a not for profit she co-founded in 2015 which hosts 3D printing workshops for 7-10 year old girls.  She’s currently earning her Master’s at IIT’s Institute of Design in Chicago, and prior to that, she learned how to ask difficult questions and build meaningful business relationships as an Account Executive at LinkedIn."
+  },
+  {
+    "name": "Julia Haried",
+    "title": "Founder of MakerGirl and X",
+    "image": "Julia Haried.jpg",
+    "description": "Julia M. Haried is the Co-Founder and Executive Director of MakerGirl and works full-time as a Consultant at Deloitte Consulting. Currently Julia lives in the midwest downtown Chicago, loves providing exceptional customer service to her clients at Deloitte and customers at MakerGirl, and enjoys playing Catan and tennis with her family and friends. Julia strives for people to be happy and healthy, and brings this to life everyday with food, conversations, and actions."
+  },
+  {
+    "name": "Pamela Fox",
+    "title": "Computing Content Creator at Khan Academy",
+    "image": "Pamela Fox.jpg",
+    "description": "Pamela Fox loves to learn, teach, and create. In her role at Khan Academy, she has created more than 140 hours of computer science and programming content. In her volunteer hours, she enjoys teaching for non-profits - like GirlDevelopIt, TEALS, GirlsWhoCode, and CoderDojo. Pamela is also a software engineer. At Khan Academy, she helps develop the interactive platform for teaching programming. Before KA, she was one of the first frontend engineers at Coursera and one of the first developer advocates at Google, where she worked on the Maps and Wave APIs. Pamela earned her bachelors and masters in Computer Science, with minors in 3d animation and linguistics, from the University of Southern California."
+  }
+]

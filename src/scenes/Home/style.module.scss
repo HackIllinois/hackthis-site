@@ -645,7 +645,7 @@
     .questions {
       flex: 1;
       font-size: 1.25em;
-      margin-bottom: 100px;
+      margin-bottom: 75px;
       max-width: 1000px;
 
       .title {
@@ -767,6 +767,200 @@
 
       .questions .title {
         display: block;
+      }
+    }
+  }
+
+  .speakers {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    max-width: 1600px;
+    .section-title {
+      text-transform: uppercase;
+      font-size: 1.6em;
+      font-weight: 600;
+      color: #3C519C;
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      .star {
+        width: 45px;
+        margin-right: 15px;
+      }
+    }
+
+    .speaker {
+      --image-size: 230px;
+      display: flex;
+      width: 90%;
+      margin: 25px auto;
+
+      .image {
+        min-width: var(--image-size);
+        width: var(--image-size);
+        height: var(--image-size);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 200px;
+        margin-right: 50px;
+      }
+
+      .name {
+        margin: 0;
+        font-size: 1.6em;
+        font-weight: 400;
+      }
+
+      .title {
+        margin: 0;
+        font-weight: 600;
+        font-size: 1em;
+        color: #CF3F81;
+        margin-top: 4px;
+      }
+    }
+
+    @media screen and (min-width: 1600px) {
+      font-size: 1.15em;
+    }
+
+    @media screen and (max-width: 1023px) {
+      .speaker {
+        --image-size: 200px;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      font-size: .95em;
+    }
+    @media screen and (max-width: 850px) {
+      width: 90%;
+      .speaker {
+        --image-size: 175px;
+        .image {
+          margin-right: 30px;
+        }
+      }
+    }
+    @media screen and (max-width: $mobile-breakpoint) {
+      font-size: .9em;
+      .section-title {
+        margin-bottom: 20px;
+        .star {
+          width: 40px;
+        }
+      }
+      .speaker {
+        --image-size: 150px;
+        display: block;
+        margin-top: 0;
+        .image {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  .team {
+    max-width: 1600px;
+    margin: auto;
+    margin-top: 75px;
+    width: 95%;
+
+    .section-title {
+      margin: auto;
+      max-width: 1600px;
+      margin-bottom: 20px;
+      width: 80vw;
+      text-transform: uppercase;
+      font-size: 1.6em;
+      font-weight: 600;
+      color: #3C519C;
+      display: flex;
+      align-items: center;
+      .star {
+        width: 45px;
+        margin-right: 15px;
+      }
+    }
+
+    .staff {
+      // width: 113%;
+      position: relative;
+      // left: -6.5%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1100px;
+
+      .member {
+        margin: 15px 15px;
+
+        .image {
+          width: 130px;
+          border-radius: 100px;
+        }
+
+        .name {
+          font-size: 1.12em;
+          font-weight: 600;
+          color: #3C519C;
+          margin: 0;
+          text-align: center;
+          margin-top: 5px;
+        }
+      }
+    }
+
+    @media screen and (min-width: 1600px) {
+      .staff {
+        max-width: 1400px;
+        .member {
+          margin: 10px 20px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 912px) {
+      .staff .member {
+        margin: 10px 15px;
+        .image {
+          width: 110px;
+        }
+      }
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      font-size: .9em;
+      width: 100%;
+      margin-top: 50px;
+      .section-title {
+        text-align: center;
+        display: block;
+        width: 100%;
+        .star {
+          display: none;
+        }
+      }
+    }
+
+    @media screen and (max-width: 610px) {
+      .staff .member {
+        margin: 10px;
+        .image {
+          width: 90px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      .staff .member {
+        margin: 10px 5px;
+        .image {
+          width: 75px;
+        }
       }
     }
   }

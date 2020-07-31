@@ -21,6 +21,8 @@ import chalk from 'assets/home/chalk.svg';
 import eraser from 'assets/home/eraser.svg';
 import middleDecoration from 'assets/home/middle_decoration.svg';
 import faqNote from 'assets/home/faq_note.svg';
+import speakers from './speakers.json';
+import staff from './staff.json';
 
 const decorations = [
   { asset: pencil, style: { top: 452, right: 492 } },
@@ -264,6 +266,40 @@ const Home = () => {
         </div>
 
         <div className={styles.right} />
+      </section>
+
+      <section className={styles.speakers}>
+        <h3 className={styles['section-title']}>
+          <img className={styles.star} src={star} alt="" />
+          Speakers
+        </h3>
+
+        {speakers.map(({ name, title, image, description }) => (
+          <div className={styles.speaker}>
+            <div className={styles.image} style={{ backgroundImage: `url("/assets/speaker-photos/${image}")`}} />
+            <div>
+              <h4 className={styles.name}>{name}</h4>
+              <h5 className={styles.title}>{title}</h5>
+              <p className={styles.description}>{description}</p>
+            </div>
+          </div>
+        ))}
+      </section>
+
+      <section className={styles.team}>
+        <h3 className={styles['section-title']}>
+          <img className={styles.star} src={star} alt="" />
+          Our Team
+        </h3>
+
+        <div className={styles.staff}>
+          {staff.map(name => (
+            <div className={styles.member}>
+              <img className={styles.image} src={`/assets/team-photos/${name}.png`} alt="" />
+              <h6 className={styles.name}>{name}</h6>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );
