@@ -10,6 +10,7 @@ import Registration from 'scenes/Registration';
 import AuthenticatedRoute from 'components/AuthenticatedRoute';
 import Auth from 'scenes/Auth';
 import MentorAvailability from 'scenes/MentorAvailability';
+import Mentors from 'scenes/Mentors';
 
 ReactGA.initialize('UA-169912882-1', {
   testMode: process.env.NODE_ENV !== 'production'
@@ -39,6 +40,10 @@ const App = () => {
 
       <Route path="/mentor-availability">
         <MentorAvailability />
+      </Route>
+
+      <Route path="/mentors" exact>
+        <Mentors />
       </Route>
 
       <Route path="/sponsor" exact>

@@ -5,7 +5,7 @@ import NavBar from 'components/NavBar';
 
 const Message = ({ text, className, style }) => (
   <div className={styles.message}>
-    <NavBar singleLogo />
+    <NavBar dark />
     <span className={className} style={style}>{text}</span>
   </div>
 );
