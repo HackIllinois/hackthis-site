@@ -31,7 +31,7 @@ const NavBar = ({ dark, light, blueLink }) => {
 
         <div className={styles.spacer} />
 
-        {links.map(link => (
+        {linksWithHome.map(link => (
           <NavLink
             to={link.to}
             className={styles['nav-link']}

@@ -40,6 +40,11 @@
       font-size: 1.25em;
     }
 
+    &::after {
+      color: rgb(0, 255, 255); 
+      mix-blend-mode: exclusion;
+    }
+
     .line {
       height: 2.4px;
       width: 0px;
