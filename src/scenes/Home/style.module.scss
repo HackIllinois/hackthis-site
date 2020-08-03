@@ -586,6 +586,7 @@
     justify-content: center;
     align-items: flex-start;
     overflow: hidden;
+    user-select: none;
 
     img {
       width: 100%;
@@ -961,6 +962,124 @@
         .image {
           width: 75px;
         }
+      }
+    }
+  }
+
+  .sponsors {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    position: relative;
+
+    .background-container {
+      position: relative;
+
+      .sponsors-background {
+        width: 100%;
+        max-width: 1000px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .section-title {
+      position: relative;
+      top: 7vw;
+      width: 80%;
+      margin: auto;
+      color: #3C519C;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 1.65em;
+      max-width: 1600px;
+      @media screen and (min-width: 1600px) {
+        font-size: 1.8em;
+      }
+      @media screen and (max-width: 1023px) {
+        top: 0;
+        transform: translateY(100%);
+      }
+    }
+
+    .box {
+      position: absolute;
+      top: min(27vw, 275px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 65%;
+      max-width: 690px;
+      height: 40vw;
+      max-height: 400px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-content: center;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.88);
+      border-radius: 40px;
+
+      .sponsor {
+        // width: 40%;
+        margin: min(2.5vw, 25px) 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          // width: 300px;
+          width: 75%;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1023px) {
+      .box {
+        width: 70%;
+        .sponsor {
+          img {
+            width: 80%;
+          }
+        }
+      }
+    }
+
+
+    @media screen and (max-width: $mobile-breakpoint) {
+      .section-title {
+        font-size: 1.3em;
+      }
+
+      .box {
+        width: 75%;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      .section-title {
+        font-size: 1em;
+        width: 85%;
+      }
+      .box {
+        top: 26vw;
+        width: 85%;
+        height: 44vw;
+        .dot {
+          display: none;
+        }
+        .sponsor {
+          margin: 2vw 0;
+          img {
+            width: 90%;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 350px) {
+      .section-title {
+        top: -10px;
       }
     }
   }

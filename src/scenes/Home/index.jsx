@@ -21,8 +21,10 @@ import chalk from 'assets/home/chalk.svg';
 import eraser from 'assets/home/eraser.svg';
 import middleDecoration from 'assets/home/middle_decoration.svg';
 import faqNote from 'assets/home/faq_note.svg';
+import sponsorsBackground from 'assets/home/sponsors_background.svg';
 import speakers from './speakers.json';
 import staff from './staff.json';
+import sponsors from './sponsors.json';
 
 const decorations = [
   { asset: pencil, style: { top: 452, right: 492 } },
@@ -298,6 +300,28 @@ const Home = () => {
               <img className={styles.image} src={`/assets/team-photos/${name}.png`} alt="" />
               <h6 className={styles.name}>{name}</h6>
             </div>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.sponsors}>
+        <h3 className={styles['section-title']}>Sponsors</h3>
+
+        <div className={styles['background-container']}>
+          <img className={styles['sponsors-background']} src={sponsorsBackground} alt="" />
+        </div>
+
+        <div className={styles.box}>
+          {sponsors.map(sponsor => (
+            <a
+              className={styles.sponsor}
+              href={sponsor.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ width: sponsor.width }}
+            >
+              <img src={`/assets/sponsors/${sponsor.image}`} alt="" />
+            </a>
           ))}
         </div>
       </section>
