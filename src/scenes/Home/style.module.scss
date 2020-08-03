@@ -978,7 +978,7 @@
 
       .sponsors-background {
         width: 100%;
-        max-width: 1000px;
+        max-width: 1100px;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
@@ -1006,13 +1006,13 @@
 
     .box {
       position: absolute;
-      top: min(27vw, 275px);
+      top: min(27vw, 300px);
       left: 50%;
       transform: translateX(-50%);
       width: 65%;
-      max-width: 690px;
+      max-width: 730px;
       height: 40vw;
-      max-height: 400px;
+      max-height: 450px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
@@ -1022,13 +1022,11 @@
       border-radius: 40px;
 
       .sponsor {
-        // width: 40%;
-        margin: min(2.5vw, 25px) 0;
+        margin: min(2.5vw, 30px) 0;
         display: flex;
         justify-content: center;
         align-items: center;
         img {
-          // width: 300px;
           width: 75%;
         }
       }
