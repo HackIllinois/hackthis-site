@@ -78,7 +78,7 @@ const notes = [
     text: 'Start a new project from scratch - just like a regular hackathon.\n\nPresent a project that has developed in the past for the purpose of enhancing education.'
   },
   {
-    title: 'Our Resourses:',
+    title: 'Our Resources:',
     subtitle: 'For Your Learning',
     text: 'Access to mentors from industry, education and business for your projects.\n\nTons of workshops to expand and strengthen attendee abilities. '
   },
