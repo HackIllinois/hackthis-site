@@ -66,6 +66,10 @@ const App = () => {
         <StaticFileRedirect to="/documents/terms-of-service.pdf" />
       </Route>
 
+      <Route path="/discord-terms-of-service">
+        <StaticFileRedirect to="/documents/discord-terms-of-service.pdf" />
+      </Route>
+
       <Route path="/">
         <Redirect to="/" />
       </Route>      
