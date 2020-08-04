@@ -84,13 +84,15 @@ const MentorAvailability = () => {
 
   const timezone = /\((.*)\)/.exec(new Date().toString())[1]; // extracts contents of parentheses in result of Date.toString
 
+  const instructions = readOnly
+    ? "If you're a mentor, please use the link you received by email to add your timeslots"
+    : `Click and drag to add your available time slots (in ${timezone}). We encourage you to sign up for slots that have fewer mentors!`;
+  
   return (
     <div className={styles['mentor-availability']}>
-      {!readOnly && (
-        <div className={styles.instructions}>
-          Click and drag to add your available time slots (in {timezone}). We encourage you to sign up for slots that have fewer mentors!
-        </div>
-      )}
+      <div className={styles.instructions}>
+        {instructions}
+      </div>
 
       <div className={styles['calendar-container']}>
         <Scheduler
