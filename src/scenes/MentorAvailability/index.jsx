@@ -5,7 +5,6 @@ import Scheduler from 'components/Scheduler';
 import logo from 'assets/logo.svg';
 import Loading from 'components/Loading';
 import { getMentorTimeslots, getRolesSync, setMentorTimeslots } from 'api';
-import Message from 'components/Message';
 
 const colors = [
   '#CF3E7F', '#F15D4B', '#5DBEBD', '#46959F', '#3C519C', '#2A3072',
@@ -40,7 +39,6 @@ const addEmails = (events, mentorEmail = '') => events.map(event => ({ email: me
 const startDate = new Date(2020, 7, 7);
 const eventStartTime = new Date(1596841200000);
 const eventEndTime = new Date(1597431600000);
-const readOnly = false;
 
 const MentorAvailability = () => {
   // before doing anything else, save any parameters that were passed through the url query and remove them from the url
@@ -70,30 +68,19 @@ const MentorAvailability = () => {
   };
 
   useEffect(() => {
-    const roles = getRolesSync();
-    if (sessionStorage.token && (roles.includes('Admin') || roles.includes('Blobstore'))) {
-      getMentorTimeslots().then(timeslots => {
-        setEvents(addColors(timeslots));
-      }).finally(() => {
-        setIsLoading(false);
-      })
-    } else {
+    getMentorTimeslots().then(timeslots => {
+      setEvents(addColors(timeslots));
+    }).finally(() => {
       setIsLoading(false);
-    }
+    })
   }, []);
 
   if (isLoading) {
     return <Loading />;
   }
 
-  if (!Array.isArray(events)) {
-    return (
-      <Message
-        className={styles['email-link-message']}
-        text="If you're a mentor, please use the link you received by email to access this page"
-      />
-    );
-  }
+  const roles = getRolesSync();
+  const readOnly = !(roles.includes('Admin') || roles.includes('Blobstore'));
 
   const timezone = /\((.*)\)/.exec(new Date().toString())[1]; // extracts contents of parentheses in result of Date.toString
 
