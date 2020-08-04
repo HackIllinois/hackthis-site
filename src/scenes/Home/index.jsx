@@ -22,6 +22,7 @@ import eraser from 'assets/home/eraser.svg';
 import middleDecoration from 'assets/home/middle_decoration.svg';
 import faqNote from 'assets/home/faq_note.svg';
 import sponsorsBackground from 'assets/home/sponsors_background.svg';
+import discordLogo from 'assets/home/Discord-Logo-White.svg';
 import speakers from './speakers.json';
 import staff from './staff.json';
 import sponsors from './sponsors.json';
@@ -113,7 +114,18 @@ const Home = () => {
           <h1 className={styles.title}>HackThis</h1>
           <h2 className={styles.tagline}>this.hack = education</h2>
           <p className={styles.dates}>August 7 - August 15, 2020</p>
-          <Link to="/register" className={styles['register-button']}>REGISTER NOW</Link>
+          <div className={styles['button-container']}>
+            <Link to="/register" className={styles['register-button']}>REGISTER NOW</Link>
+            <a
+              className={styles['discord-button']}
+              href="https://go.hackillinois.org/hackthis-discord"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Join our Discord!"
+            >
+              <div className={styles.image} style={{ backgroundImage: `url("${discordLogo}")`}} />
+            </a>
+          </div>
         </div>
 
         <div className={styles['decoration-container']}>

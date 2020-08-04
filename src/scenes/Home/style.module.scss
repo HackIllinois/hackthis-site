@@ -156,6 +156,14 @@
         margin-top: 15px;
       }
 
+      .button-container {
+        display: flex;
+        // align-items: center;
+        position: relative;
+        margin-top: 30px;
+        padding: 1px;
+      }
+
       .register-button {
         background-color: #F15C4B;
         border: none;
@@ -165,9 +173,36 @@
         font-weight: 600;
         font-family: inherit;
         border-radius: 100px;
-        margin-top: 30px;
         display: inline-block;
         text-decoration: none;
+      }
+        
+
+      .discord-button {
+        background-color: #7289DA;
+        text-decoration: none;
+        display: flex;
+        border-radius: 100px;
+        margin-left: 15px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        box-sizing: border-box;
+        width: 50px;
+        @media screen and (max-width: $mobile-breakpoint) { width: 42px; }
+        @media screen and (max-width: 600px) { width: 40.4px; }
+        @media screen and (max-width: 500px) { width: 37.2px; }
+        @media screen and (max-width: 400px) { width: 36.4px; }
+        @media screen and (max-width: 350px) { width: 34px; }
+        @media screen and (min-width: 1000px) { width: 53.2px; }
+        @media screen and (min-width: 1250px) { width: 56.4px; }
+        @media screen and (min-width: 1600px) { width: 62px; }
+        @media screen and (min-width: 2000px) { width: 65.2px; }
+        .image {
+          width: 60%;
+          height: 60%;
+          background-repeat: no-repeat;
+        }
       }
 
       @media screen and (max-width: $mobile-breakpoint) {
@@ -189,10 +224,15 @@
           font-size: 1.25em;
           font-weight: 600;
         }
+        
+        .button-container {
+          justify-content: center;
+          margin-top: 20px;
+        }
 
         .register-button {
-          padding: 8px 15px;
-          margin-top: 20px;
+          padding: 9px 15px;
+          font-size: 1.4em;
         }
       }
     }
