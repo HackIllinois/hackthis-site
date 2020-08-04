@@ -88,7 +88,9 @@ const Scheduler = ({ logo, logoLink, startDate, events, onChange, eventTextPlace
   // purposefully not listing dependencies above since the prop "readOnly" is not meant to be changed
   // (we don't want to initialize the dhtmlx scheduler twice)
 
-  useEffect(() => scheduler.locale.labels.new_event = eventTextPlaceholder, [eventTextPlaceholder]);
+  useEffect(() => {
+    scheduler.locale.labels.new_event = eventTextPlaceholder;
+  }, [eventTextPlaceholder]);
 
   useEffect(() => {
     const callback = () => {
