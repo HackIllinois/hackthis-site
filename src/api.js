@@ -109,3 +109,8 @@ export function setMentorTimeslots(data) {
   return request('PUT', '/upload/blobstore/', { id: 'mentor-timeslots', data })
     .then(res => res.data);
 }
+
+export function getEvents() {
+  return request('GET', '/event/')
+    .then(res => res.events);
+}

@@ -5,7 +5,7 @@ import NavBar from 'components/NavBar';
 
 const Loading = () => (
   <div className={styles.loading}>
-    <NavBar dark />
+    <NavBar dark blueLink />
     Loading...
   </div>
 );
