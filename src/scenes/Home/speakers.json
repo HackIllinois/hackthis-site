@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Andrew Sutherland",
+    "title": "Founder and CTO of Quizlet",
+    "image": "Andrew Sutherland.png",
+    "description": "Andrew Sutherland is the founder of Quizlet, an education software company that serves millions of students and teachers every month. Andrew started Quizlet while taking a high school French class, continued working on it studying computer science at MIT, and has grown it to a successful company with more than 200 employees."
+  },
+  {
+    "name": "Elizabeth Engele",
+    "title": "Founder of MakerGirl and X",
+    "image": "Elizabeth Engele.png",
+    "description": "Elizabeth (Lizzy) enjoys creating meaningful solutions for complex socio-cultural challenges through using her knowledge of design, entrepreneurship, and sales.  Her biggest accomplishment is educating over 4,000 girls in STEM through MakerGirl a not for profit she co-founded in 2015 which hosts 3D printing workshops for 7-10 year old girls.  She’s currently earning her Master’s at IIT’s Institute of Design in Chicago, and prior to that, she learned how to ask difficult questions and build meaningful business relationships as an Account Executive at LinkedIn."
+  },
+  {
+    "name": "Julia Haried",
+    "title": "Founder of MakerGirl and X",
+    "image": "Julia Haried.jpg",
+    "description": "Julia M. Haried is the Co-Founder and Executive Director of MakerGirl and works full-time as a Consultant at Deloitte Consulting. Currently Julia lives in the midwest downtown Chicago, loves providing exceptional customer service to her clients at Deloitte and customers at MakerGirl, and enjoys playing Catan and tennis with her family and friends. Julia strives for people to be happy and healthy, and brings this to life everyday with food, conversations, and actions."
+  },
+  {
+    "name": "Pamela Fox",
+    "title": "Computing Content Creator at Khan Academy",
+    "image": "Pamela Fox.jpg",
+    "description": "Pamela Fox loves to learn, teach, and create. In her role at Khan Academy, she has created more than 140 hours of computer science and programming content. In her volunteer hours, she enjoys teaching for non-profits - like GirlDevelopIt, TEALS, GirlsWhoCode, and CoderDojo. Pamela is also a software engineer. At Khan Academy, she helps develop the interactive platform for teaching programming. Before KA, she was one of the first frontend engineers at Coursera and one of the first developer advocates at Google, where she worked on the Maps and Wave APIs. Pamela earned her bachelors and masters in Computer Science, with minors in 3d animation and linguistics, from the University of Southern California."
+  },
+  {
+    "name": "David Hardy",
+    "title": "Managing Partner and Vice President of People and Culture for Education Elements",
+    "image": "David Hardy.png",
+    "description": "David Hardy Jr. is a Managing Partner and Vice President of People and Culture for Education Elements. Prior to this, David led the state turnaround efforts of the second lowest-performing district in Ohio. Under his leadership, Lorain City Schools received its highest performance marks in nearly 25 years. Previously, David also served in many roles as a public educator and leader, including the Deputy Superintendent of Academics for St. Louis Public Schools and Executive Director for Regional Achievement in Camden, New Jersey. He earned his bachelor’s degree in economics from Colgate University, his Master’s degree in Urban Education from Teachers’ College, Columbia University and will complete his doctorate from Columbia University in 2020."
+  },
+  {
+    "name": "Karl Mehta",
+    "title": "Founder and CEO of EdCast",
+    "image": "Karl Mehta.png",
+    "description": "Karl Mehta is a serial entrepreneur, author, investor, engineer, and civil servant with over 20 years of experience in founding, building, and funding technology companies in the U.S. and international markets. He is currently Founder & CEO of EdCast Inc., a next-generation knowledge platform company and former venture partner at Menlo Ventures, a leading VC  firm of Silicon Valley. Karl also served as a White House Presidential Innovation Fellow, selected by the Obama Administration during the inaugural 2012-13 term. Previously, he was the Founder & CEO of PlaySpan Inc., acquired by Visa Inc. He is also the founder of several non-profit's including Code For India and Grassroots Innovation, and author of “Financial Inclusion at the Bottom of the Pyramid”"
+  }
+]

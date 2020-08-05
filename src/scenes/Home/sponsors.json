@@ -1,0 +1,27 @@
+[
+  {
+    "image": "Optum.svg",
+    "link": "https://www.optum.com/",
+    "width": "75%"
+  },
+  {
+    "image": "Facebook.svg",
+    "link": "https://www.facebook.com/",
+    "width": "40%"
+  },
+  {
+    "image": "Schlumberger.svg",
+    "link": "https://www.slb.com/",
+    "width": "40%"
+  },
+  {
+    "image": "statefarm.svg",
+    "link": "https://www.statefarm.com/",
+    "width": "40%"
+  },
+  {
+    "image": "Waitwhile.png",
+    "link": "https://waitwhile.com/",
+    "width": "40%"
+  }
+]

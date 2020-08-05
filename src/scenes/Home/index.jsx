@@ -21,6 +21,11 @@ import chalk from 'assets/home/chalk.svg';
 import eraser from 'assets/home/eraser.svg';
 import middleDecoration from 'assets/home/middle_decoration.svg';
 import faqNote from 'assets/home/faq_note.svg';
+import sponsorsBackground from 'assets/home/sponsors_background.svg';
+import discordLogo from 'assets/home/Discord-Logo-White.svg';
+import speakers from './speakers.json';
+import staff from './staff.json';
+import sponsors from './sponsors.json';
 
 const decorations = [
   { asset: pencil, style: { top: 452, right: 492 } },
@@ -65,7 +70,25 @@ const mobileDots = [
   { top: 51, left: 349, width: 6, height: 6 },
   { top: 313, left: 384, width: 9, height: 9 },
   { top: 202, left: 405, width: 25, height: 12 },
-]
+];
+
+const notes = [
+  {
+    title: 'Our Projects:',
+    subtitle: 'Many Approaches towards One Goal',
+    text: 'You might create an educational tool for students or an educators to improve the virtual learning experience.\n\nOr, you might make a data visualization or other analysis to highlight and suggest possible solutions to pressing issues in remote learning. It\'s time to HackThis!'
+  },
+  {
+    title: 'Our Resources:',
+    subtitle: 'For Your Learning',
+    text: 'Access to mentors from industry, education and business for your projects.\n\nTons of workshops to expand and strengthen attendee abilities. '
+  },
+  {
+    title: 'Our Experience:',
+    subtitle: 'Building Educational Tools',
+    text: 'Talks and Panels to inspire, excite, and educate as you work.\n\nMini Events to help build new connections and have some fun.'
+  },
+];
 
 const Home = () => {
   const [backgroundWidth, setBackgroundWidth] = useState(0);
@@ -91,7 +114,18 @@ const Home = () => {
           <h1 className={styles.title}>HackThis</h1>
           <h2 className={styles.tagline}>this.hack = education</h2>
           <p className={styles.dates}>August 7 - August 15, 2020</p>
-          <Link to="/register" className={styles['register-button']}>REGISTER NOW</Link>
+          <div className={styles['button-container']}>
+            <Link to="/register" className={styles['register-button']}>REGISTER NOW</Link>
+            <a
+              className={styles['discord-button']}
+              href="https://go.hackillinois.org/hackthis-discord"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Join our Discord!"
+            >
+              <div className={styles.image} style={{ backgroundImage: `url("${discordLogo}")`}} />
+            </a>
+          </div>
         </div>
 
         <div className={styles['decoration-container']}>
@@ -119,6 +153,22 @@ const Home = () => {
 
           {mobileDots.map(style => (
             <div className={styles.dot} style={style} key={Object.values(style).join(' ')} />
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.notes}>
+        <h3 className={styles['section-title']}>Our&nbsp;Hackathon&nbsp;Focus: Advancing&nbsp;Virtual&nbsp;Education</h3>
+        <div className={styles['flex-container']}>
+          {notes.map(({ title, subtitle, text }) => (
+            <div className={styles.note}>
+              <img className={styles.star} src={star} alt="" />
+              <div>
+                <h4 className={styles.title}>{title}</h4>
+                <h5 className={styles.subtitle}>{subtitle}</h5>
+                <p className={styles.text}>{text}</p>
+              </div>
+            </div>
           ))}
         </div>
       </section>
@@ -165,7 +215,7 @@ const Home = () => {
           </p>
         </div>
 
-        <img src={star} className={clsx(styles.decoration, styles.star)} alt="" />
+        {/* <img src={star} className={clsx(styles.decoration, styles.star)} alt="" /> */}
         <img src={chalk} className={clsx(styles.decoration, styles.chalk)} alt="" />
         <img src={eraser} className={clsx(styles.decoration, styles.eraser)} alt="" />
         <div className={styles.dot} style={{ top: 57, right: -45, width: 90, height: 30 }} />
@@ -230,6 +280,62 @@ const Home = () => {
         </div>
 
         <div className={styles.right} />
+      </section>
+
+      <section className={styles.speakers}>
+        <h3 className={styles['section-title']}>
+          <img className={styles.star} src={star} alt="" />
+          Speakers
+        </h3>
+
+        {speakers.map(({ name, title, image, description }) => (
+          <div className={styles.speaker}>
+            <div className={styles.image} style={{ backgroundImage: `url("/assets/speaker-photos/${image}")`}} />
+            <div>
+              <h4 className={styles.name}>{name}</h4>
+              <h5 className={styles.title}>{title}</h5>
+              <p className={styles.description}>{description}</p>
+            </div>
+          </div>
+        ))}
+      </section>
+
+      <section className={styles.team}>
+        <h3 className={styles['section-title']}>
+          <img className={styles.star} src={star} alt="" />
+          Our Team
+        </h3>
+
+        <div className={styles.staff}>
+          {staff.map(name => (
+            <div className={styles.member}>
+              <img className={styles.image} src={`/assets/team-photos/${name}.png`} alt="" />
+              <h6 className={styles.name}>{name}</h6>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.sponsors}>
+        <h3 className={styles['section-title']}>Sponsors</h3>
+
+        <div className={styles['background-container']}>
+          <img className={styles['sponsors-background']} src={sponsorsBackground} alt="" />
+        </div>
+
+        <div className={styles.box}>
+          {sponsors.map(sponsor => (
+            <a
+              className={styles.sponsor}
+              href={sponsor.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ width: sponsor.width }}
+            >
+              <img src={`/assets/sponsors/${sponsor.image}`} alt="" />
+            </a>
+          ))}
+        </div>
       </section>
     </div>
   );
