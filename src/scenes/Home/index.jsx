@@ -76,7 +76,7 @@ const notes = [
   {
     title: 'Our Projects:',
     subtitle: 'Many Approaches towards One Goal',
-    text: 'You might create an educational tool for students or an educators to improve the virtual learning experience.\n\nOr, you might make a data visualization or other analysis to highlight and suggest possible solutions to pressing issues in remote learning. It\'s time to HackThis!'
+    text: 'You might create an educational tool for students and educators to improve the virtual learning experience.\n\nOr, you might make a data visualization or other analysis to highlight and suggest possible solutions to pressing issues in remote learning. It\'s time to HackThis!'
   },
   {
     title: 'Our Resources:',
