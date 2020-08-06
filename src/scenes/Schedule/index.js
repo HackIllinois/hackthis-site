@@ -41,8 +41,8 @@ const mobileDots = [
   { left: 15, top: 160, width: 7, height: 7 },
 ]
 
-const urlRegex = /https?:\/\/((www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*))/g;
-const processLinks = description => description.replace(urlRegex, '<a href="$&">$1</a>');
+const urlRegex = /https?:\/\/((www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*))/g;
+const processLinks = description => description.replace(urlRegex, '<a href="$&" target="_blank" rel="noopener noreferrer">$1</a>');
 const processBullets = description => description.replace(/•/g, '<span style="font-family: Calibri, Verdana, Tahoma, Impact, sans-serif">•</span>');
 const processEventDescription = description => processLinks(processBullets(description));
 
