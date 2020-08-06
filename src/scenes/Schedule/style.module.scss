@@ -2,8 +2,8 @@
 
 .schedule {
   --top-left-width: 425px;
-  --top-left-scale: .95;
-  --mobile-decoration-height: 300px;
+  --top-left-scale: .93;
+  --mobile-decoration-height: 310px;
 
   .dot {
     border-radius: 100px;
@@ -282,12 +282,8 @@
     }
   }
 
-  @media screen and (max-height: 715px) {
-    --top-left-scale: .9;
-  }
-
-  @media screen and (max-height: 660px), screen and (max-width: 1023px) {
-    --top-left-scale: .81;
+  @media screen and (max-height: 715px), screen and (max-width: 1023px) {
+    --top-left-scale: .83;
     .calendar-container {
       transform: scale(calc(var(--top-left-scale) * .95));
       left: 40px;
@@ -305,7 +301,7 @@
     }
   }
 
-  @media screen and (max-height: 610px), screen and (max-width: 850px) {
+  @media screen and (max-height: 665px), screen and (max-width: 850px) {
     --top-left-scale: .75
   }
 
@@ -423,7 +419,7 @@
   }
 
   @media screen and (max-width: 500px) {
-    --mobile-decoration-height: 275px;
+    --mobile-decoration-height: 290px;
 
     .calendar-container {
       font-size: .9em;
@@ -431,10 +427,13 @@
      
     .guide {
       font-size: .75em;
-      top: 170px;
+      top: 173px;
       padding-left: 30px;
       @media screen and (max-width: 350px) {
         --width: 97.5%;
+      }
+      @media screen and (max-width: 335px) {
+        font-size: .7em;
       }
 
       .event-type .circle {

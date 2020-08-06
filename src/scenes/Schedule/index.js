@@ -26,6 +26,10 @@ const eventTypes = {
     name: 'Mini Events',
     color: '#5DBEBD',
   },
+  MEAL: {
+    name: 'Challenges',
+    color: '#F15D4B',
+  }
 };
 
 const formatTime = seconds => new Date(seconds * 1000).toLocaleString('en-US', { hour: 'numeric', minute: '2-digit' });
@@ -148,7 +152,9 @@ const Schedule = () => {
               
               <div>
                 <div className={styles.name}>{name}</div>
-                <div className={styles.description} dangerouslySetInnerHTML={{ __html: processEventDescription(description) }} />
+                {description.trim() && (
+                  <div className={styles.description} dangerouslySetInnerHTML={{ __html: processEventDescription(description) }} />
+                )}
               </div>
             </div>
           ))}
