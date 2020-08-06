@@ -81,12 +81,10 @@ const Scheduler = ({ logo, logoLink, startDate, events, onChange, eventTextPlace
     document.addEventListener('click', clickListener);
     return () => document.removeEventListener('click', clickListener);
 
-    // purposefully not listing dependencies above since the prop "readOnly" is not meant to be changed
+    // purposefully not listing dependencies below since the prop "readOnly" is not meant to be changed
     // (we don't want to initialize the dhtmlx scheduler twice)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  // purposefully not listing dependencies above since the prop "readOnly" is not meant to be changed
-  // (we don't want to initialize the dhtmlx scheduler twice)
 
   useEffect(() => {
     scheduler.locale.labels.new_event = eventTextPlaceholder;

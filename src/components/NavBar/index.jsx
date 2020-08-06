@@ -10,7 +10,7 @@ import menuIcon from 'assets/menu_icon.svg';
 const links = [
   { text: 'Mentors', to: '/mentors' },
   // { text: 'Prizes', to: '/prizes' },
-  // { text: 'Schedule', to: '/schedule' },
+  { text: 'Schedule', to: '/schedule' },
   // { text: 'Guides and Resources', to: '/resources' },
 ];
 
@@ -52,7 +52,7 @@ const NavBar = ({ dark, light, blueLink }) => {
           aria-label="Open Side Nav"
         >
           <img src={menuIcon} alt="Side Nav Toggle" />
-        </button>`
+        </button>
       </nav>
 
       <div className={clsx(styles['side-nav'], isSideNavOpen && styles.open)}>

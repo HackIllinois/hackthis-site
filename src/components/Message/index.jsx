@@ -3,10 +3,10 @@ import React from 'react';
 import styles from './style.module.scss'
 import NavBar from 'components/NavBar';
 
-const Message = ({ text, className, style }) => (
+const Message = ({ children, className, style }) => (
   <div className={styles.message}>
-    <NavBar dark />
-    <span className={className} style={style}>{text}</span>
+    <NavBar dark blueLink />
+    <span className={className} style={style}>{children}</span>
   </div>
 );
 
