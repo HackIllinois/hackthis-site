@@ -37,6 +37,11 @@ const mobileDots = [
   { left: 15, top: 160, width: 7, height: 7 },
 ]
 
+const urlRegex = /https?:\/\/((www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*))/g;
+const processLinks = description => description.replace(urlRegex, '<a href="$&">$1</a>');
+const processBullets = description => description.replace(/•/g, '<span style="font-family: Calibri, Verdana, Tahoma, Impact, sans-serif">•</span>');
+const processEventDescription = description => processLinks(processBullets(description));
+
 const Schedule = () => {
   const [eventsByDay, setEventsByDay] = useState(null);
   const [selectedDay, setSelectedDay] = useState(0);
@@ -143,7 +148,7 @@ const Schedule = () => {
               
               <div>
                 <div className={styles.name}>{name}</div>
-                <div className={styles.description}>{description}</div>
+                <div className={styles.description} dangerouslySetInnerHTML={{ __html: processEventDescription(description) }} />
               </div>
             </div>
           ))}
