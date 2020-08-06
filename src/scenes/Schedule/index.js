@@ -63,6 +63,8 @@ const Schedule = () => {
   const firstDate = eventsByDay[0].date;
   const weeks = getSurroundingWeeks(firstDate, eventsByDay.length);
 
+  const timezone = /\((.*)\)/.exec(new Date().toString())[1];
+
   return (
     <div className={styles.schedule}>
       <NavBar light blueLink />
@@ -103,6 +105,10 @@ const Schedule = () => {
             <div className={styles['day-of-week']}>{currentDay.dayOfWeek}</div>
             <div className={styles['day-of-month']}>{currentDay.dayOfMonth}</div>
           </div>
+
+          {selectedDay === 0 && (
+            <div className={styles['hackathon-begins']}>Hackathon Begins!</div>
+          )}
         </div>
       </div>
 
@@ -114,12 +120,14 @@ const Schedule = () => {
             <h4 className={styles.name}>{name}</h4>
           </div>
         ))}
+
+        <div className={styles.dot} style={{ right: 25, top: -4, height: 8, width: 8 }} />
+        <div className={styles.dot} style={{ left: 70, bottom: -6, height: 12, width: 12 }} />
       </div>
 
       <div className={styles['events-section']}>
-        <div className={styles.heading}>
-          {currentDay.month} {currentDay.dayOfMonth} - {currentDay.dayOfWeek}
-        </div>
+        <div className={styles.heading}>{currentDay.month} {currentDay.dayOfMonth} - {currentDay.dayOfWeek}</div>
+        <div className={styles.timezone}>(All times are in {timezone})</div>
 
         <div className={styles.events}>
           {currentDay.events.map(({ startTime, endTime, eventType, name, description }) => (
