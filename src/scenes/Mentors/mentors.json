@@ -3,6 +3,18 @@
     "image": "Anastasia Olga Tzirides.jpg",
     "description": "Anastasia-Olga (Olnancy) Tzirides is a PhD candidate in the Learning Design and Leadership Program at University of Illinois, Urbana-Champaign. Her research interests include emerging digital technologies, online education, as well as language and culture learning. Her current project focuses on exploring the potential of using digital technologies and Artificial Intelligence combined with a multimodal and translanguaging approach to language learning."
   },
+  "Anqi Yu": {
+    "image": "Anqi Yu.jpg",
+    "description": "Front-End Developer at Schlumberger. "
+  },
+  "Arnav Mishra": {
+    "image": "Arnav Mishra.jpg",
+    "description": "I grew up in the Bay Area and got my Bachelors and Masters in Computer Science at UIUC from 2014-2018. After graduation, I worked at Rubrik as a backend engineer till early 2020 when I switched to Siteline to be the 5th employee and 2nd engineer. Along with my daily role, I am also a mentor for Built By Girls and an avid 49ers/Warriors/Sharks/Giants fan!"
+  },
+  "Asif Billa": {
+    "image": "Asif Billa.jpg",
+    "description": "Back End Software Engineer in Schlumberger. Experienced with Java, Golang, NodeJs, typescript, Cloud Computing, Google Cloud Platform, REST APIs, Oracle, MySql, Cassandra, MongoDB etc."
+  },
   "Che Kun Law": {
     "image": "Che Kun Law.jpg",
     "description": "Che Kun Law is currently a Roboticist at Vicarious AI, where he works on Artificial General Intelligence (AGI) for robots. He has diverse robotics experience in self-driving trucks, robots in agriculture, surveillance/military, logistics/warehouse, service, social robots, drones; and his passion is in using robotics and automation to create meaningful impact at scale. Che Kun has received five Product Design/Robotics awards such as the Singapore Good Design Mark (SG Mark) Award. He graduated from Purdue University with a Masters in Mechanical Engineering, where he worked on mobile robotics for precision agriculture."
@@ -10,6 +22,10 @@
   "Chieh-Li \"Julian\" Chin": {
     "image": "Chieh-Li Chin.jpg",
     "description": "Chieh-Li \"Julian\" Chin is a data analyst at the Data and Technology Innovation Lab at Technology Services at the University of Illinois at Urbana-Champaign, and a research manager at the Social Computing Lab led by Professor Jana Diesner in the School of Information Sciences (iSchool). She has a B.S. in Business Administration, an M.S. in Library and Information Sciences, and an M.S. in Computer Science. She is experienced in software development, web development, and data analysis. Her research interests focus on data ethics and regulations in research practices in the area of responsible computing."
+  },
+  "Christopher Jones": {
+    "image": "Christopher R. Jones.jpg",
+    "description": "Product Manager for globally recognized non-profit, co-founder of Hackathon Mentors, former software engineer, former serial entrepreneur, former hacker.  "
   },
   "Craig Zilles": {
     "image": "Craig Zilles.jpg",
@@ -27,9 +43,17 @@
     "image": "Heather Huynh.jpg",
     "description": "Heather is a graduated Masters student from the University of Illinois at Urbana-Champaign. She has previously interned at Google, Blend, and Los Alamos National Labs and focused her research on visualizing diversity in fashion. She also worked as a TA for many beginner level CS courses at UIUC. She hopes to use her skills to create impactful technology for others."
   },
+  "Jane Yang": {
+    "image": "Jane Yang.jpg",
+    "description": "I’m optimizing for positive social impact. My academic training is in engineering, so my mind tends to think in terms of systems. I’ve worked in international development and community development financing. These days, I analyze data, support on policy work, and push on civic engagement at the remote software company Basecamp."
+  },
   "Jennie Magiera": {
     "image": "Jennie Magiera.jpg",
     "description": "Jennie Magiera is Google’s Global Head of Education Impact, bestselling author of Courageous Edventures, and founder of the education equity nonprofit Our Voice Alliance. A lifelong educator, Jennie taught for over a decade and has also been an instructional coach, building leader, and district administrator. She served on the TWG for the US Dept of Education’s National EdTech Plan, and has been featured on programs such as NBC’s Education Nation, C-SPAN’s Reimagining Education, TEDx, and NPR."
+  },
+  "Kevin Verre": {
+    "image": "Kevin Verre.jpg",
+    "description": "I graduated UIUC in 2012 with a degree in Computer Science and a minor in Business. Currently working for Apple as a full-stack web software engineer. I build internal tools websites with Django for other Apple employees to use. Currently living in East Palo Alto, California."
   },
   "Kyle Begovich": {
     "image": "Kyle Begovich.jpg",
@@ -39,17 +63,45 @@
     "image": "Margarita Zias.jpg",
     "description": "Margarita works as a full-time Information Security Associate and is currently based in Illinois. Although she has lived there for almost a year she says nothing can beat NYC pizza. Before moving, Margarita attended CUNY Queens College where she studied Computer Science. Her passion for cyber grew during her time working as project manager at the Queens College Tech Incubator. She describes herself as a complete geek and loves legos, superheroes, manga and anime. \n\nFun fact, she actually grew up in a small town in Greece called Kastoria and came back to US for college!"
   },
+  "Matthew Dierker": {
+    "image": "Matthew Dierker.jpg",
+    "description": "Hi! I'm Matt. 😄 I'm a former CS student that graduated in 2015. While at UIUC, I helped start HackIllinois, Sail, and loved participating in CS student activities! I'm happy to help mentor on anything web related (in particular I know Angular + Firebase but can probably help with most things), connecting with APIs, and getting a functional backend deployed. I'm happy to chat and help with things -- say hello!"
+  },
   "Matthew Turk": {
     "image": "Matthew Turk.jpg",
     "description": "I'm an assistant professor at the School of Information Sciences, where I teach data visualization and data storytelling, and I build open source, community-driven tools for data analysis and visualization.  My background is in the physical sciences (astronomy) where I study how the first stars in the universe formed."
+  },
+  "Mavisha Ramachandran": {
+    "image": "Mavisha Ramachandran.jpg",
+    "description": "An entrepreneurial self-starter who is enthusiastic about executing the product roadmap to enrich the user experience and create financial growth for the company using his triple C (convenience, community & compatibility) product framework. "
+  },
+  "Molly Catherine Briggs": {
+    "image": "Molly Briggs.jpg",
+    "description": "Molly Catherine Briggs is a design theorist, landscape scholar, and studio practitioner whose research bridges scholarship and creative practice. She teaches design theory, methods, and history with an emphasis on reading, representing, and reimagining the shape of built space. She holds an MFA in Art Theory and Practice from Northwestern University and a PhD in Landscape Architecture History and Theory from Illinois. Her dissertation, The Panoramic Mode: Immersive Media and the Large Parks Movement (2018), examines the affiliation of large urban park landscapes in Europe and the United States with nineteenth-century virtual reality media. Her current research traces associations between popular media and the formation of urban social space. "
+  },
+  "Nathan H Handler": {
+    "image": "Nathan Handler.jpg",
+    "description": "Nathan Handler has been involved with the open source community for over a decade, primarily through his roles as an Ubuntu and Debian GNU/Linux Developer and a member of the freenode IRC staff. During the day, he works as a Developer Advocate and Software Engineer at Orchid Labs, where he is helping to build the natural internet by creating an open marketplace for bandwidth built on Ethereum, and an open source VPN client for all major operating systems. Professionally, he enjoys working to improve the reliability and scalability of large applications, as well as exploring the latest cloud technologies."
   },
   "Nerla Jean-Louis": {
     "image": "Nerla Jean.jpg",
     "description": "I am currently working as an intern at IBM Research for the summer. I am also a phd student at University of Illinois at Urbana Champaign"
   },
+  "Nick Ettlinger": {
+    "image": "Nick Ettlinger.jpg",
+    "description": "I studied Statistics and Machine learning from Carnegie Mellon, and have been working in industry for five years. I started out doing data science consulting, working with data from industrial clients like mining and aerospace companies. I'm now at edx, a higher education nonprofit founded by MIT and Harvard.\nI work with stakeholders throughout the company, helping guide experimentation and data driven decision making.  "
+  },
+  "Pablo Aguiar": {
+    "image": "Pablo Aguiar.jpg",
+    "description": "A Computer Scientist from Brazil and previously a software engineer at Globo.com, the internet branch of Latin America's largest media company, Pablo currently lives in Munich, Germany, disrupting the music industry with a revolutionary B2B solution based on cloud computing.\n\nHe's got two decades of professional experience writing software mainly with Python, Go and Javascript. Lately, he's in an affair with both Elixir/OTP and Rust.\n\nIn the hackathon, his expectation is to bring his experience and knowledge, as limited as they are, and hopefully help with whatever he can. Let's HackThis!"
+  },
   "Page Wolf": {
     "image": "Page Wolf.jpg",
     "description": "Dr. Page Wolf is a professor and Faculty Development Chair in the Teaching, Learning and Educational Technology Center at the College of Lake County.  She has been at CLC since 1999 and prior worked at the Center for the Application of Information Technologies at Western Illinois University, helping develop WIU's first online courses.  Her educational background includes B.S. Communication (UIUC), M.S.Ed Instructional Technology (NIU), and Ph.D. in Higher Education Administration (Illinois State).  Her role includes working with faculty to help effectively utilize technology as an instructional tool, from educational apps to online and blended learning."
+  },
+  "Reginald Davis": {
+    "image": "Reginald Davis.jpg",
+    "description": "I'm a Site Reliability Engineer at Schlumberger with a focus on infrastructure automation. I enjoy teaching about how the cloud works and how businesses can leverage it to create more value for end-users."
   },
   "Rohan Pandit": {
     "image": "Rohan Pandit.jpg",
@@ -78,5 +130,17 @@
   "Tamara Nelson-Fromm": {
     "image": "Tamara Nelson-Fromm.jpg",
     "description": "Tamara is a PhD student studying the intersection of education and computing, with a focus on integrating CS lessons with non-STEM subjects in high school settings. Over the last 3 years she has been the director of a tech-themed summer camp, a data structures course assistant, and a coding camp instructor. Tamara graduated from UIUC with a BS in CS in May 2020."
+  },
+  "Tiffani Williams": {
+    "image": "Tiffani Williams.jpg",
+    "description": "Tiffani L. Williams is a Teaching Professor at the University of Illinois at Urbana-Champaign. She is the director of the Illinois Computing Accelerator for Non-specialists (iCAN) program, which is designed for students who have a bachelor’s degree in any field other than computer science."
+  },
+  "Vicky Vo": {
+    "image": "Uyen Vicky Vo.jpg",
+    "description": "Vicky is an International Award Winning UX Designer based in San Francisco Bay Area. Her broad background in UX, Visual Design, Psychology, Marketing and Entrepreneurship has helped various startups to launch several digital products from scratch. It has also allowed her to perform successfully across all industries, especially in the field of software and technology. Vicky is a strong advocate for design and her UX focus is on accessibility and inclusivity design. Her goals include inspiring students to pursue design by mentoring high school and college design students through her UX workshops, UX panels, and UX related events. She also mentors and is involved in many hackathons to help raise awareness on why good UX matters. In her spare time, Vicky enjoys the outdoors, fitness, and partaking in all things California. "
+  },
+  "Xiaoxia": {
+    "image": "xiaoxia liao.jpg",
+    "description": "I'm a senior software engineer at National Center for Supercomputing Applications, where I currently work on projects involving advance data analytics. In the past, I've also developed software for both commercial industry and scientific community. I am a master of computer science graduate here at UofI."
   }
 }

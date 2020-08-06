@@ -81,7 +81,7 @@
     }
 
     .calendar {
-      margin: 0 20px;
+      margin: 0 14.5%;
       margin-top: 25px;
       position: relative;
 
@@ -148,8 +148,8 @@
 
       .hackathon-begins {
         position: absolute;
-        bottom: 22px;
-        right: -7px;
+        bottom: 18px;
+        right: -15px;
         color: #F15D4B;
         font-weight: 500;
         width: 100px;
@@ -206,7 +206,6 @@
       font-weight: 600;
     }
     .timezone {
-      // display: block;
       font-size: .8em;
       color: #37352F;
       font-weight: 500;
@@ -282,6 +281,17 @@
     }
   }
 
+  @media screen and (min-height: 750px) {
+    .guide {
+      --offset-top: 25px;
+    }
+  }
+
+  @media screen and (min-height: 800px) {
+    --top-left-scale: 1;
+  }
+
+
   @media screen and (max-height: 715px), screen and (max-width: 1023px) {
     --top-left-scale: .83;
     .calendar-container {
@@ -303,12 +313,6 @@
 
   @media screen and (max-height: 665px), screen and (max-width: 850px) {
     --top-left-scale: .75
-  }
-
-  @media screen and (min-height: 750px) {
-    .guide {
-      --offset-top: 25px;
-    }
   }
 
   @media screen and (min-width: 2000px) {
