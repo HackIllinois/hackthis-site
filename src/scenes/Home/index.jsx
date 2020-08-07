@@ -39,7 +39,7 @@ const decorations = [
 
 const dots = [
   { top: 150, right: 1049, width: 25, height: 12 },
-  { top: 59, right: 895, width: 11, height: 11 },
+  // { top: 59, right: 895, width: 11, height: 11 },
   { top: 247, right: 740, width: 30, height: 30 },
   { top: 112, right: 620, width: 12, height: 12 },
   { top: 168, right: 279, width: 19, height: 19 },

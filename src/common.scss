@@ -1,5 +1,9 @@
 $mobile-breakpoint: 767px;
 
+:export {
+  mobileBreakpoint: $mobile-breakpoint;
+}
+
 @mixin standard-registration-section {
   margin-left: 50px;
   margin-top: 50px;
