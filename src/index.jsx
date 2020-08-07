@@ -56,6 +56,10 @@ const App = () => {
         <Prizes />
       </Route>
 
+      <Route path="/resources" exact>
+        
+      </Route>
+
       <Route path="/sponsor" exact>
         <StaticFileRedirect to="/documents/sponsorship.pdf" />
       </Route>
