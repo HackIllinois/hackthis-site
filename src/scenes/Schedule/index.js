@@ -41,6 +41,15 @@ const mobileDots = [
   { left: 15, top: 160, width: 7, height: 7 },
 ]
 
+const hourHeight = 100;
+const getBarHeight = (startTime, endTime) => { // note: in seconds
+  if (startTime === endTime) {
+    return hourHeight / 2;
+  }
+  const hours = (endTime - startTime) / 60 / 60;
+  return hours * hourHeight;
+}
+
 const urlRegex = /https?:\/\/((www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*))/g;
 const processLinks = description => description.replace(urlRegex, '<a href="$&" target="_blank" rel="noopener noreferrer">$1</a>');
 const processBullets = description => description.replace(/•/g, '<span style="font-family: Calibri, Verdana, Tahoma, Impact, sans-serif">•</span>');
@@ -148,7 +157,10 @@ const Schedule = () => {
                 )}
               </div>
 
-              <div className={styles['color-line']} style={{ backgroundColor: eventTypes[eventType].color }} />
+              <div
+                className={styles['color-line']}
+                style={{ backgroundColor: eventTypes[eventType].color, height: getBarHeight(startTime, endTime) }}
+              />
               
               <div>
                 <div className={styles.name}>{name}</div>
