@@ -1,14 +1,19 @@
 [
   {
-    "title": "Mental Health Guide",
-    "link": ""
-  },
-  {
-    "title": "General Resources at UIUC",
-    "link": ""
-  },
-  {
-    "title": "COVID-19 Tips",
-    "link": ""
+    "name":"Health and Wellness",
+    "resources": [
+      {
+        "title": "Mental Health Guide",
+        "link": ""
+      },
+      {
+        "title": "General Resources at UIUC",
+        "link": ""
+      },
+      {
+        "title": "COVID-19 Tips",
+        "link": ""
+      }
+    ]
   }
 ]

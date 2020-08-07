@@ -23,7 +23,7 @@ const Mentors = () => {
 
   return (
     <div className={styles.mentors}>
-      <NavBar light blueLink mobileBreakpoint={900} />
+      <NavBar light blueLink mobileBreakpoint={1023} />
 
       <img className={clsx(styles.decoration, styles['top-left'])} src={topLeft} alt="" />
       <img className={clsx(styles.decoration, styles['bottom-right'])} src={bottomRight} alt="" />

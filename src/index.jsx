@@ -13,6 +13,7 @@ import MentorAvailability from 'scenes/MentorAvailability';
 import Mentors from 'scenes/Mentors';
 import Schedule from 'scenes/Schedule';
 import Prizes from 'scenes/Prizes';
+import Resources from 'scenes/Resources';
 
 ReactGA.initialize('UA-169912882-1', {
   testMode: process.env.NODE_ENV !== 'production'
@@ -57,7 +58,7 @@ const App = () => {
       </Route>
 
       <Route path="/resources" exact>
-        
+        <Resources />
       </Route>
 
       <Route path="/sponsor" exact>
