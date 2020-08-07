@@ -1,0 +1,54 @@
+{
+  "general": {
+    "title": "General",
+    "color": "#46959F",
+    "prizes": [
+      {
+        "name": "Most Popular—Attendees’ choice",
+        "description": "The attendees’ choice award! Attendees, vote on your favorite project after the submission deadline!",
+        "value": 250
+      },
+      {
+        "name": "HackThis Staff Choice",
+        "description": "The staff choice award, voted on by our one and only HackThis staff!",
+        "value": 250
+      }
+    ]
+  },
+  "speciality": {
+    "title": "Speciality",
+    "color": "#E8AECC",
+    "prizes": [
+      {
+        "name": "Best Accessibility / Disability Project",
+        "description": "An accessible education tool geared towards solving an educational problem for those with disabilities. Find the disability guidelines in our hacker guide or at <a href=\"https://web.accessibility.duke.edu/learn/wcag-guidelines/developer\" target=\"_blank\" rel=\"noopener noreferrer\">this</a> link - we will be judging accessibility projects based on this.",
+        "value": 300
+      },
+      {
+        "name": "Best Tool for Students (Any Age)",
+        "description": "Best educational tool for students, designed by students!<br><br>The tool can be fixing any issue, from scheduling to video conferencing to mental health!",
+        "value": 300
+      },
+      {
+        "name": "Best Tool for Educators",
+        "description": "An educational tool for educators, designed by students.<br><br>Your audience is educators, which includes issues like student engagement, or effective virtual classroom communication!",
+        "value": 300
+      },
+      {
+        "name": "Best Data Visualization (Data Science)",
+        "description": "Using any dataset, present the best visualization of a current education related issue!<br><br>This <b>cannot</b> be the same project as submitted to the data science challenge.",
+        "value": 300
+      },
+      {
+        "name": "Open Educational Category",
+        "description": "Do you have a submission that is an education hack, but doesn’t fall under any of the other categories? Submit here!",
+        "value": 300
+      },
+      {
+        "name": "Best Beginner Project",
+        "description": "Any educational project created by self-identified beginners. Tag yourself and your team as a beginner at the beginning of our hackathon to qualify for this category!",
+        "value": 300
+      }
+    ]
+  }
+}

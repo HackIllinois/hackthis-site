@@ -5,25 +5,41 @@ import clsx from 'clsx';
 import styles from './style.module.scss';
 import logo from 'assets/logo.svg';
 import logoLight from 'assets/logo_light.svg';
-import menuIcon from 'assets/menu_icon.svg';
+import { mobileBreakpoint } from 'common.scss';
+import { useEffect } from 'react';
+import MenuIcon from './MenuIcon';
+
+const defaultMobileBreakpoint = parseFloat(mobileBreakpoint);
 
 const links = [
   { text: 'Mentors', to: '/mentors' },
-  // { text: 'Prizes', to: '/prizes' },
+  { text: 'Prizes', to: '/prizes' },
   { text: 'Schedule', to: '/schedule' },
-  // { text: 'Guides and Resources', to: '/resources' },
+  // { text: 'Resources', to: '/resources' },
 ];
 
 const linksWithHome = [{ text: 'Home', to: '/' }].concat(links);
 
-const NavBar = ({ dark, light, blueLink }) => {
+const NavBar = ({ dark, light, blueLink, blueMenu, mobileBreakpoint = defaultMobileBreakpoint }) => {
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isSpecialMobile, setIsSpecialMobile] = useState(false);
+
+  useEffect(() => {
+    const callback = () => {
+      setIsMobile(window.innerWidth <= mobileBreakpoint);
+      setIsSpecialMobile(window.innerWidth > defaultMobileBreakpoint && window.innerWidth <= mobileBreakpoint);
+    }
+    window.addEventListener('resize', callback); // TODO: debounce maybe?
+    callback();
+    return () => window.removeEventListener('resize', callback);
+  }, [mobileBreakpoint]);
 
   const navLinkColor = blueLink ? '#3C519C' : 'white';
 
   return (
     <header>
-      <nav className={styles.navbar}>
+      <nav className={clsx(styles.navbar, isMobile && styles.mobile)}>
         <Link to="/">
           <img className={styles.logo} src={light ? logoLight : logo} alt="HackThis Logo" />
           <img className={styles.logoMobile} src={dark ? logo : logoLight} alt="HackThis Logo" />
@@ -51,7 +67,7 @@ const NavBar = ({ dark, light, blueLink }) => {
           onClick={() => setIsSideNavOpen(true)}
           aria-label="Open Side Nav"
         >
-          <img src={menuIcon} alt="Side Nav Toggle" />
+          <MenuIcon color={(blueMenu || isSpecialMobile) ? '#3C519C' : 'white'} />
         </button>
       </nav>
 
