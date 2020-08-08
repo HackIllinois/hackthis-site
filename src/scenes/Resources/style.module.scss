@@ -1,8 +1,12 @@
+@import 'common.scss';
 
 .resources-page {
-  // min-height: 800px;
   position: relative;
   padding-top: 1px;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 
   .decoration {
     position: absolute;
@@ -43,6 +47,10 @@
     }
   }
 
+  .category-select {
+    display: none;
+  }
+
   .container {
     margin-top: 250px;
 
@@ -50,7 +58,7 @@
       h2 {
         text-align: center;
         font-weight: 600;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
       }
 
       .resources {
@@ -60,15 +68,14 @@
 
         .resource {
           text-decoration: none;
-          background-color: #C4C4C4;
           border-radius: 40px;
           overflow: hidden;
           position: relative;
-          // height: 300px;
-          // padding-top: 100%;
           width: 300px;
           margin: 0 10px;
           filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.25));
+          background-repeat: no-repeat;
+          background-size: cover;
 
           &:after {
             content: "";
@@ -94,6 +101,9 @@
             position: absolute;
             bottom: 0;
             width: 100%;
+            &.mobile {
+              display: none;
+            }
           }
         }
       }
@@ -107,6 +117,60 @@
 
       .resources .resource h3 {
         padding-bottom: 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    .decoration {
+      display: none;
+      &.top-left {
+        display: block;
+        width: 103%;
+        left: 0;
+        transform: none;
+      }
+    }
+
+    .category-select {
+      display: block;
+      margin: 0 30px;
+      margin-top: 80px;
+    }
+
+    .container {
+      margin-top: 25px;
+      padding: 0 25px;
+
+      .category {
+        h2 {
+          display: none;
+        }
+
+        .resources {
+          flex-direction: column;
+          max-width: 400px;
+          margin: 0 auto;
+
+          .resource {
+            width: auto;
+            align-self: stretch;
+            margin: 20px 0;
+
+            &:after {
+              padding-bottom: 70%;
+            }
+
+            .wave {
+              display: none;
+              &.mobile {
+                display: block;
+                width: 400px;
+                
+              }
+            }
+          }
+        }
       }
     }
   }
