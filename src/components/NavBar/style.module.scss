@@ -75,10 +75,24 @@
     cursor: pointer;
   }
 
-  // @media screen and (max-width: $mobile-breakpoint) {
   &.mobile {
     padding: 20px 20px;
 
+    .nav-link {
+      display: none;
+    }
+
+    .side-nav-toggle {
+      display: block;
+
+      svg {
+        width: 40px;
+        height: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile-breakpoint) {
     .logo {
       display: none;
     }
@@ -88,16 +102,9 @@
       transform: scale(1.25);
     }
 
-    .nav-link {
-      display: none;
-    }
-
-    .side-nav-toggle {
-      display: block;
-
-      img {
-        width: 35px;
-      }
+    &.mobile .side-nav-toggle svg {
+      width: 33px;
+      // height: auto;
     }
   }
 
@@ -108,7 +115,7 @@
       transform: scale(1);
     }
 
-    .side-nav-toggle img {
+    &.mobile .side-nav-toggle svg {
       width: 28px;
     }
   }

@@ -15,7 +15,7 @@ const links = [
   { text: 'Mentors', to: '/mentors' },
   { text: 'Prizes', to: '/prizes' },
   { text: 'Schedule', to: '/schedule' },
-  // { text: 'Resources', to: '/resources' },
+  { text: 'Resources', to: '/resources' },
 ];
 
 const linksWithHome = [{ text: 'Home', to: '/' }].concat(links);
