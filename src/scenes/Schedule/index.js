@@ -46,12 +46,25 @@ const processLinks = description => description.replace(urlRegex, '<a href="$&" 
 const processBullets = description => description.replace(/•/g, '<span style="font-family: Calibri, Verdana, Tahoma, Impact, sans-serif">•</span>');
 const processEventDescription = description => processLinks(processBullets(description));
 
+const formatDate = date => `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+
 const Schedule = () => {
   const [eventsByDay, setEventsByDay] = useState(null);
   const [selectedDay, setSelectedDay] = useState(0);
 
   useEffect(() => {
-    getEvents().then(events => setEventsByDay(sortEventsIntoDays(events)));
+    getEvents().then(events => {
+      const sorted = sortEventsIntoDays(events)
+      setEventsByDay(sorted);
+
+      // if today is one of the event dates, set the selected date to today
+      const today = formatDate(new Date());
+      sorted.forEach((day, i) => {
+        if (formatDate(day.date) === today) {
+          setSelectedDay(i);
+        }
+      })
+    });
   }, []);
 
   const handleCalendarDateClick = index => {
