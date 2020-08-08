@@ -23,5 +23,10 @@
     "image": "waitwhile_black.svg",
     "link": "https://waitwhile.com/",
     "width": "40%"
+  },
+  {
+    "image": "qualcomm.svg",
+    "link": "https://www.qualcomm.com/",
+    "width": "60%"
   }
 ]

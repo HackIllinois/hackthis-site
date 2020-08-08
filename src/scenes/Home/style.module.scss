@@ -1027,7 +1027,6 @@
 
     .section-title {
       position: relative;
-      top: 7vw;
       width: 80%;
       margin: auto;
       color: #3C519C;
@@ -1046,13 +1045,13 @@
 
     .box {
       position: absolute;
-      top: min(27vw, 300px);
+      top: min(20vw, 225px);
       left: 50%;
       transform: translateX(-50%);
-      width: 65%;
+      width: 70%;
       max-width: 730px;
-      height: 40vw;
-      max-height: 450px;
+      height: 60vw;
+      max-height: 680px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
@@ -1062,12 +1061,12 @@
       border-radius: 40px;
 
       .sponsor {
-        margin: min(2.2vw, 25px) 0;
+        margin: min(2.5vw, 30px) 0;
         display: flex;
         justify-content: center;
         align-items: center;
         img {
-          width: 75%;
+          width: 80%;
         }
       }
     }
@@ -1075,8 +1074,8 @@
     @media screen and (max-width: 1023px) {
       .box {
         width: 70%;
-        height: 43vw;
-        top: 26vw;
+        height: 62vw;
+        top: 20vw;
         .sponsor {
           img {
             width: 80%;
@@ -1105,9 +1104,9 @@
         width: 85%;
       }
       .box {
-        top: 25vw;
+        top: 20vw;
         width: 80%;
-        height: 47vw;
+        height: 63vw;
         .dot {
           display: none;
         }
