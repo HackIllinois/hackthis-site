@@ -46,7 +46,7 @@
       },
       {
         "name": "Best Beginner Project",
-        "description": "Any educational project created by self-identified beginners. Tag yourself and your team as a beginner at the beginning of our hackathon to qualify for this category!",
+        "description": "Any educational project created by self-identified beginners.",
         "value": 300
       }
     ]
