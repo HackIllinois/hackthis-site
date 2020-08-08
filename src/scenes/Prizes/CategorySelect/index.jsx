@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 
-const CategorySelect = ({ color, ...props }) => {
+const CategorySelect = ({ color, textColor = 'black', isDisabled, ...props }) => {
   const customStyles = {
     control: base => ({
       ...base,
@@ -17,7 +17,7 @@ const CategorySelect = ({ color, ...props }) => {
     }),
     singleValue: base => ({
       ...base,
-      color: 'black',
+      color: textColor,
       fontWeight: 600,
       width: '100%',
       marginLeft: 20,
@@ -29,6 +29,7 @@ const CategorySelect = ({ color, ...props }) => {
       ...base,
       color: 'white',
       cursor: 'pointer',
+      visibility: isDisabled ? 'hidden' : 'visible',
     }),
     menu: base => ({
       ...base,
@@ -59,6 +60,7 @@ const CategorySelect = ({ color, ...props }) => {
       styles={customStyles}
       hideSelectedOptions={true}
       isSearchable={false}
+      isDisabled={isDisabled}
       {...props}
     />
   )
