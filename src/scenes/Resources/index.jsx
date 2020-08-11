@@ -39,7 +39,6 @@ const Resources = () => {
         value={{ value: selectedCategory, label: categories[selectedCategory].name }}
         color="#4295A0"
         textColor="white"
-        isDisabled // TODO: remove when there are more categories
       />
 
       <div className={styles.container}>
