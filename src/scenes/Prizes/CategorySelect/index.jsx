@@ -39,7 +39,9 @@ const CategorySelect = ({ color, textColor = 'black', isDisabled, ...props }) =>
     }),
     menuList: base => ({
       ...base,
-      padding: 0,
+      paddingTop: 0,
+      paddingBottom: 10,
+      backgroundColor: color,
     }),
     option: base => ({
       ...base,
@@ -48,7 +50,10 @@ const CategorySelect = ({ color, textColor = 'black', isDisabled, ...props }) =>
       fontSize: '1em',
       fontWeight: 600,
       paddingLeft: 28,
-      height: 50,
+      height: 40,
+      color: textColor,
+      display: 'flex',
+      alignItems: 'center',
       '&:active': {
         backgroundColor: color,
       },
