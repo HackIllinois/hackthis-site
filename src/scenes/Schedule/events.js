@@ -10,11 +10,12 @@
   ...
 ]
 */
+
 export const sortEventsIntoDays = events => {
   // separate events by day into a map like so {"2/28/2019": [], "3/1/2019": [], ...}
   const eventsByDay = new Map();
   events.forEach(event => {
-    const dateString = new Date(event.startTime * 1000).toLocaleDateString();
+    const dateString = new Date(event.startTime * 1000).toLocaleDateString('en-US');
     if (eventsByDay.has(dateString)) {
       eventsByDay.get(dateString).push(event);
     } else {
