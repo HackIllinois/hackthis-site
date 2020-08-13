@@ -84,6 +84,7 @@
       margin: 0 14.5%;
       margin-top: 25px;
       position: relative;
+      transform-origin: top;
 
       .rings {
         width: 100%;
@@ -148,8 +149,10 @@
 
       .hackathon-begins {
         position: absolute;
-        bottom: 18px;
-        right: -15px;
+        // bottom: 18px;
+        // right: -15px;
+        bottom: 15px;
+        right: -18px;
         color: #F15D4B;
         font-weight: 500;
         width: 100px;
@@ -157,6 +160,11 @@
         transform: rotate(-17deg);
       }
     }
+  }
+
+  &.three-weeks .calendar-container .calendar {
+    margin-top: 15px;
+    transform: scale(.9);
   }
 
   .guide {
@@ -406,6 +414,22 @@
       }
     }
 
+    &.three-weeks {
+      --mobile-decoration-height: 320px;
+
+      .calendar-container {
+        font-size: .85em;
+
+        .week {
+          margin: 0px auto;
+        }
+      }
+
+      .guide {
+        top: 190px;
+      }
+    }
+
     .events-section {
       margin: 0 40px;
       margin-top: calc(var(--mobile-decoration-height) + 30px);
@@ -424,6 +448,9 @@
 
   @media screen and (max-width: 500px) {
     --mobile-decoration-height: 290px;
+    &.three-weeks {
+      --mobile-decoration-height: 310px;
+    }
 
     .calendar-container {
       font-size: .9em;
