@@ -88,7 +88,7 @@ const Schedule = () => {
   const timezone = /\((.*)\)/.exec(new Date().toString())[1];
 
   return (
-    <div className={styles.schedule}>
+    <div className={clsx(styles.schedule, weeks.length > 2 && styles['three-weeks'])}>
       <NavBar light blueLink />
 
       <div className={styles['top-left-decoration']}>
