@@ -1,0 +1,599 @@
+{
+  "events": [
+    {
+      "id": "1153f725f911d892546cd30c08338874",
+      "name": "Opening Ceremony",
+      "description": "Join us as we begin HackThis 2020! Looking forward to seeing you all there!\n\nhttps://youtu.be/0gxEPzdEqt0",
+      "startTime": 1596844800,
+      "endTime": 1596844800,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "OTHER"
+    },
+    {
+      "id": "13a4f8bacdb0b45ac7a4fd5407bec886",
+      "name": "Machine Learning 101 in Python",
+      "description": "Learn the essentials of Machine Learning from Jeffrey Lai, the chair of SIGAI at UIUC and software engineering intern at Facebook AI. You’ll walk away knowing how to work with ML libraries in Python in your own project.\n\nLivestream Link: https://youtu.be/Q97ZEgupAvY",
+      "startTime": 1597014000,
+      "endTime": 1597017600,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "WORKSHOP"
+    },
+    {
+      "id": "2534bd4ad89a586b83eb5a805dbcceb0",
+      "name": "Speed Networking/Team Formation",
+      "description": "Meet people, have conversations, and build connections! Meet your fellow HackThis attendees through a speedy interaction hosted on https://icebreaker.video/events/9lEoE7wGFQMHt69HYqiv!",
+      "startTime": 1596819600,
+      "endTime": 1596825000,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "MINIEVENT"
+    },
+    {
+      "id": "d795599e7cffbdd2841f0eb72b6c33d5",
+      "name": "Technical Workshop: Intro to Web Pt 1",
+      "description": "Hey everyone! Join us for a beginner-friendly workshop where we will go over how to build a basic React app and host it using Vercel now! We will cover useful components from react-bootstrap and styling with HTML/CSS. The workshop will be hosted by Alice Fang and Rem Yang.\n\nhttps://youtu.be/evCLdcoy4Mg",
+      "startTime": 1596852000,
+      "endTime": 1596855600,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "WORKSHOP"
+    },
+    {
+      "id": "be6742d3abc370bd2cfbac06607ea0a8",
+      "name": "Hacking begins!",
+      "description": " ",
+      "startTime": 1596848400,
+      "endTime": 1596848400,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "OTHER"
+    },
+    {
+      "id": "4ac3d257f3fc8a5c7387814527ca4bdd",
+      "name": "Speed Networking/Team Formation",
+      "description": "Meet people, have conversations, and build connections! Meet your fellow HackThis attendees through a speedy interaction hosted on https://icebreaker.video/events/2EFFv34xcb6iM0n4OzQv! ",
+      "startTime": 1596855600,
+      "endTime": 1596861000,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "MINIEVENT"
+    },
+    {
+      "id": "78841c69f636a73cfcd5f36f7e6afd14",
+      "name": "Social Media Challenge #1 - HackThis Talent",
+      "description": "As you start your work week, we would like to present our first social media challenge: HackThis Got Talent! We know all of you are gifted programmers, so here’s an opportunity to showcase your other talents. Dm us with your submissions on Instagram, or tweet and tag us on Twitter! \n\nSubmissions are due on Friday, August 14th at 4pm CST! Enter to win a prize of $50 :)   ",
+      "startTime": 1596895200,
+      "endTime": 1596895200,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "OTHER"
+    },
+    {
+      "id": "a65dd612e185b170749eef0b7bd51f7a",
+      "name": "Super beginner-friendly Product Design Workshop",
+      "description": "Come join a beginner-friendly Product Design workshop hosted by Vicky Vo, UX Designer at Doordash!\nWe'll be covering the fundamentals of UX/Product Design, why UX matters, and how to think like a UX designer through wireframing and a Figma tutorial on how to design web/mobile app screens.\n\nLivestream Link: https://youtu.be/jm15z5GaTN4",
+      "startTime": 1596920400,
+      "endTime": 1596924000,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "WORKSHOP"
+    },
+    {
+      "id": "950a93a6f9ab2a6ba66f96f038834ad9",
+      "name": "Optum Trivia",
+      "description": "Think you know it all? Prove it with Optum Trivia Night where you have the chance to win $150, $100 or $50 worth of Optum Merchandise!\n\nCheck the #announcements channel in Discord for the link to join!",
+      "startTime": 1596942000,
+      "endTime": 1596945600,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "MINIEVENT"
+    },
+    {
+      "id": "404697fb9ba2624586de553a57b424fa",
+      "name": "A Designer's Hackathon Survival Guide",
+      "description": "Join Julia (Hoo Lee Yah) Fernandez in her first workshop that explores the what, who, why, when, where, and how of design. Julia will be covering different essential tools and resources that you and your team can use to your advantage to design smart, not hard. In these 45 minutes, Julia will be answering the following:\n— What the hack is design?\n— Why does design matter?\n— What are the fundamentals of design?\n— Where can we find good design?\n— Who are the designers?\n— How can you use design to win this hackathon?\n\nLivestream Link: https://youtu.be/cJsth1nDoQg",
+      "startTime": 1596909600,
+      "endTime": 1596913200,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "WORKSHOP"
+    },
+    {
+      "id": "2326d215c2f59e262fa081b860082552",
+      "name": "Optum Q&A Session",
+      "description": "Optum is a health services and innovation company whose mission is to help people live healthier lives and to help make the health system work better for everyone. Join them to ask questions and talk about Optum's Technology Development Program (TDP) summer internship and full time opportunities! \n\nCurrent TDP interns and members of the Early Career Program will be available to answer your questions.",
+      "startTime": 1596999600,
+      "endTime": 1597003200,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "OTHER"
+    },
+    {
+      "id": "0cbdb6981f65a1fe384c34669576cd5b",
+      "name": "Karl Mehta",
+      "description": "Tune into our conversation with serial entrepreneur & CEO of EdCast Inc., Karl Mehta! Get to know more about Karl's vision behind his next-generation knowledge platform company & the key to creating a successful start-up\n\nLivestream Link: https://youtu.be/80MQb980Zgw",
+      "startTime": 1597006800,
+      "endTime": 1597010400,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "SPEAKER"
+    },
+    {
+      "id": "3b0779669fe8ca3e976a94677cc11f92",
+      "name": "David Hardy",
+      "description": "Join us for a talk with David Hardy, Managing Partner and Vice President of People and Culture for Education Elements. We’ll hear his thoughts on education inequality and his work to provide all students with a path to success, particularly through remote learning.\n\nLivestream Link: https://youtu.be/0tfIzSPntTU",
+      "startTime": 1597021200,
+      "endTime": 1597024800,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "SPEAKER"
+    },
+    {
+      "id": "f9a9e6ab5220b6fde6fddaea1dd06713",
+      "name": "Pamela Fox",
+      "description": "Computers can completely change the face of education--but will education change for everyone or just a privileged subset? Let's explore how digital education can be made accessible, global, inclusive, and equitable.\n\nLivestream Link: https://youtu.be/KLC0K4-gUMg",
+      "startTime": 1597093200,
+      "endTime": 1597096800,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "SPEAKER"
+    },
+    {
+      "id": "214e78f25a45ca52d5b57b17bbec5e4c",
+      "name": "Bob Ross",
+      "description": "Some say painting requires skill, but we believe anybody can paint. That is why HackThis' first Mini-Event of the week is a painting tutorial with the one and only, Bob Ross! Follow along with him in a YouTube video using your favorite drawing/painting application (such as MS Paint) and put together a masterpiece and submit them for review. As an added bonus, HackThis staff will feature all paintings for this event on our website after the event!\n\nThe submission with the best reception will win $50!",
+      "startTime": 1597107600,
+      "endTime": 1597111200,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "MINIEVENT"
+    },
+    {
+      "id": "a0b4ef7e1d48662f9b3f91b4f167f8a8",
+      "name": "Web Dev Challenge: Submissions Due",
+      "description": "Web Development is one of the most common but most desired forms of software engineering; many of you might be building a web-app for your own project. Regardless of what you’re building, this challenge will be an opportunity for you to not only showcase your web development abilities but also enhance the final project you’re making.\n\nDetails on the event + submission can be found here soon. \n\nThe winning submission will win $100!\n\nFor more detailed information and rules, you can view instructions here: https://go.hackillinois.org/web-dev-challenge",
+      "startTime": 1597121940,
+      "endTime": 1597121940,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "MEAL"
+    },
+    {
+      "id": "4465c00ecb870ba3de2919b592b27e24",
+      "name": "Social Media Challenge #2 - Post Your Setup!",
+      "description": "This social media challenge features your virtual set up. HackThis would like to see your workspace. Everyone has a unique place they enjoy coding, so let’s see how HackThis hackers like to work on their projects! Dm us with your submission on Instagram, or post on Twitter! \n\nSubmissions are due on Friday, August 14th at 4pm CST! Enter to win a prize of $25 :) ",
+      "startTime": 1597154400,
+      "endTime": 1597154400,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "OTHER"
+    },
+    {
+      "id": "4ca9e6d889c295dc86ae36cbabe339bd",
+      "name": "Intro to Data Science in Python",
+      "description": "The sinking of the RMS Titanic was one of the most well-known disasters of the 20th century.  Can we use machine learning to help us understand who survived and who perished with the ship?  This interactive exploration of the dataset will have you programming Python using pandas, ski-learn, and other widely used libraries to take a deep dive into this dataset.  Be sure to have Python 3 installed and we'll nerd out with Titanic data!\n\nLivestream Link: https://youtu.be/wqURYwkgsAs",
+      "startTime": 1597186800,
+      "endTime": 1597190400,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "WORKSHOP"
+    },
+    {
+      "id": "b3eb956ff2f0616bcc59e096dcaba183",
+      "name": "Data Science Challenge: Submissions Due",
+      "description": "We live in an increasingly data-driven world and it’s useful to learn techniques to make sense of the data available to us. This challenge is an opportunity for you to showcase your data analysis skills and present meaningful results on a dataset! We’re excited to see all the amazing results :)  \n\nDetailed instructions + submission link can be found here: https://go.hackillinois.org/data-science-challenge\n\nThe winning team will win $100!",
+      "startTime": 1597208340,
+      "endTime": 1597208340,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "MEAL"
+    },
+    {
+      "id": "16cec7c164bf4381535ac38b00472c6b",
+      "name": "Greg Baugues",
+      "description": "We're excited to have Greg Baugues, Illinois alum and Developer Evangelist at Twilio, be a part of our event! As a mental health advocate, he'll be talking about his own experiences with mental health and working remotely, joined by members of the CS Mental Health Committee on a Panel!\n\nLivestream Link: https://youtu.be/HQXMKi2HXPA",
+      "startTime": 1597280400,
+      "endTime": 1597284000,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "SPEAKER"
+    },
+    {
+      "id": "7919aed294f92e7a679273ffa91df619",
+      "name": "Mini Games Tournament",
+      "description": "HackThis staff presents, a one of a kind mini-event, the Trivial Mini-Games Tournament. This mini-event is formatted as a single-elimination bracket where participants will face off each other from the choice of four popular, simple, and fairly quick mini-games:\n\n    •  Chopsticks\n    •  Tic-Tac-Toe\n    •  Rock Paper Scissors\n    •  !Triangles\n\nJoin to win a prize of $50! ",
+      "startTime": 1597284000,
+      "endTime": 1597291200,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "MINIEVENT"
+    },
+    {
+      "id": "cbb1a05afd48a08e6cd91a429ed5546a",
+      "name": "Shark Tank Challenge",
+      "description": "The Shark Tank workshop is an opportunity for attendees to pitch the products they worked on during HackThis! A panel of judges will evaluate each 2-4 minute pitch for qualities such as product design, implementation, and impact. Participants will bring a business “deal” to our panel, who’ll evaluate the pitch and decide whether or not to invest and each provide a score rating the “business” overall. This is a chance for attendees to demonstrate their entrepreneurial spirit and learn more about other projects!",
+      "startTime": 1597365000,
+      "endTime": 1597370400,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "MEAL"
+    },
+    {
+      "id": "16cea4d320dc4380dcf16604a6404bd3",
+      "name": "Submission office hours",
+      "description": "Ask the HackIllinois staff any questions you have about submitting your projects!",
+      "startTime": 1597370400,
+      "endTime": 1597377600,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "OTHER"
+    },
+    {
+      "id": "52085903ac12ea2db6ea529680cd97f3",
+      "name": "Social Media Challenge #3 - Post Your Projects",
+      "description": "It’s finally Friday! While everyone is adding final touches to their projects, we are presenting our final challenge: Demo your Hack. After you’ve finished your projects, the HackThis community and staff would love to see your hard work, so bring on the demos! ",
+      "startTime": 1597413600,
+      "endTime": 1597413600,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "OTHER"
+    },
+    {
+      "id": "fafa6a2ebff556afee624d2ee46ca33f",
+      "name": "Submission Office hours",
+      "description": "Last chance to ask staff submission-related questions!",
+      "startTime": 1597424400,
+      "endTime": 1597431600,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "OTHER"
+    },
+    {
+      "id": "b61f8a3ba1ec8d1641935d85d6b90443",
+      "name": "Hacking Ends!",
+      "description": " ",
+      "startTime": 1597431600,
+      "endTime": 1597431600,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "OTHER"
+    },
+    {
+      "id": "8b2c228afe3db4b7e7936191057cc649",
+      "name": "Andrew Sutherland - The Quizlet Story",
+      "description": "Want to learn about how a high schooler’s French homework became software used by millions of students and teachers? Come to HackThis’s Keynote Talk with Andrew Sutherland to hear about his story of becoming the CTO and Founder of Quizlet!\n\nLivestream Link: https://youtu.be/vYVuwFqwrgI",
+      "startTime": 1597431600,
+      "endTime": 1597435200,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "SPEAKER"
+    },
+    {
+      "id": "21e9a6d612e2d4881d2ddad03e7dcb09",
+      "name": "Mini-Event",
+      "description": "This Mini-Event is an opportunity for you and your fellow Hackers to enjoy their last few days with each other at HackThis. All attendees will have the opportunity to choose from a list of events during the first three days of HackThis, and after submitting projects on Friday, you all will be able to enjoy an epic event created by HackThis staff but chosen by HackThis hackers.",
+      "startTime": 1597442400,
+      "endTime": 1597446000,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "MINIEVENT"
+    },
+    {
+      "id": "a389a27f07e6db84672c836141b4193c",
+      "name": "Closing Ceremony!",
+      "description": " Livestream Link: https://youtu.be/3OmHF-fl9gk",
+      "startTime": 1597510800,
+      "endTime": 1597514400,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "OTHER"
+    },
+    {
+      "id": "6a9a866f0c077580552a74523af8a184",
+      "name": "MakerGirl",
+      "description": "Elizabeth Engele and Julia Haried, Co-Founders and Executive Directors of MakerGirl, speak on their experiences founding MakerGirl—an initiative dedicated to increasing female involvement in STEM—and pursuing careers in the tech industry. Hear their story and advice!\n\nLivestream Link: https://youtu.be/Mae7Y0LGib4",
+      "startTime": 1597269600,
+      "endTime": 1597273200,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "SPEAKER"
+    },
+    {
+      "id": "3078a3adbcd800e2f0a6a4489ce3f026",
+      "name": "Intro to Web Dev Pt 2 + GraphQL",
+      "description": "Learn about how you can use GraphQL and databases to build your own website! -- Hosted by Aria Malkani, software engineer at Samsara!\n\nLivestream Link: https://youtu.be/QVdDrCemXHA",
+      "startTime": 1596992400,
+      "endTime": 1596996000,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "WORKSHOP"
+    },
+    {
+      "id": "f949f6800adf46e84c6f70ca11f01843",
+      "name": "Qualcomm Q/A with a Recruiter",
+      "description": "Qualcomm is excited to be sponsoring this year's virtual HackIllinois event and to offer this exclusive Q/A with a Campus Recruiter.\n\nThis is your chance to connect directly with Qualcomm's Campus Recruitment team and learn more about how to stand out in this virtual environment.\n\nRSVP here: https://jst.me/wcd5",
+      "startTime": 1597357800,
+      "endTime": 1597361400,
+      "locations": [],
+      "sponsor": "",
+      "eventType": "OTHER"
+    }
+  ],
+  "mentorTimeslots": [
+    {
+      "email": "law21@purdue.edu",
+      "end_date": "2020-08-09T20:00:00.000Z",
+      "id": 1596507010891,
+      "start_date": "2020-08-09T18:00:00.000Z",
+      "text": "Che Kun Law"
+    },
+    {
+      "email": "law21@purdue.edu",
+      "end_date": "2020-08-08T20:00:00.000Z",
+      "id": 1596507010896,
+      "start_date": "2020-08-08T18:00:00.000Z",
+      "text": "Che Kun Law"
+    },
+    {
+      "email": "law21@purdue.edu",
+      "end_date": "2020-08-10T03:00:00.000Z",
+      "id": 1596507010897,
+      "start_date": "2020-08-10T01:00:00.000Z",
+      "text": "Che Kun Law"
+    },
+    {
+      "email": "matthew@hackillinois.org",
+      "end_date": "2020-08-08T01:00:00.000Z",
+      "id": 1596509787083,
+      "start_date": "2020-08-07T23:00:00.000Z",
+      "text": "Matthew Dierker"
+    },
+    {
+      "email": "matthew@hackillinois.org",
+      "end_date": "2020-08-11T02:00:00.000Z",
+      "id": 1596509787089,
+      "start_date": "2020-08-10T17:30:00.000Z",
+      "text": "Matthew Dierker"
+    },
+    {
+      "email": "matthew@hackillinois.org",
+      "end_date": "2020-08-12T02:00:00.000Z",
+      "id": 1596509787090,
+      "start_date": "2020-08-11T23:30:00.000Z",
+      "text": "Matthew Dierker"
+    },
+    {
+      "email": "matthew@hackillinois.org",
+      "end_date": "2020-08-13T19:00:00.000Z",
+      "id": 1596509787091,
+      "start_date": "2020-08-13T16:00:00.000Z",
+      "text": "Matthew Dierker"
+    },
+    {
+      "email": "matthew@hackillinois.org",
+      "end_date": "2020-08-14T05:00:00.000Z",
+      "id": 1596509787092,
+      "start_date": "2020-08-13T23:15:00.000Z",
+      "text": "Matthew Dierker"
+    },
+    {
+      "email": "pwolf@clcillinois.edu",
+      "end_date": "2020-08-11T00:30:00.000Z",
+      "id": 1596514294749,
+      "start_date": "2020-08-10T21:30:00.000Z",
+      "text": "Page Wolf"
+    },
+    {
+      "email": "pwolf@clcillinois.edu",
+      "end_date": "2020-08-12T00:00:00.000Z",
+      "id": 1596514294755,
+      "start_date": "2020-08-11T21:00:00.000Z",
+      "text": "Page Wolf"
+    },
+    {
+      "email": "pwolf@clcillinois.edu",
+      "end_date": "2020-08-12T20:00:00.000Z",
+      "id": 1596514294756,
+      "start_date": "2020-08-12T19:00:00.000Z",
+      "text": "Page Wolf"
+    },
+    {
+      "email": "pwolf@clcillinois.edu",
+      "end_date": "2020-08-13T16:00:00.000Z",
+      "id": 1596514294757,
+      "start_date": "2020-08-13T14:00:00.000Z",
+      "text": "Page Wolf"
+    },
+    {
+      "email": "pwolf@clcillinois.edu",
+      "end_date": "2020-08-08T18:00:00.000Z",
+      "id": 1596514294762,
+      "start_date": "2020-08-08T15:00:00.000Z",
+      "text": "Page Wolf"
+    },
+    {
+      "email": "pwolf@clcillinois.edu",
+      "end_date": "2020-08-09T18:00:00.000Z",
+      "id": 1596514294764,
+      "start_date": "2020-08-09T15:00:00.000Z",
+      "text": "Page Wolf"
+    },
+    {
+      "email": "law21@purdue.edu",
+      "end_date": "2020-08-11T20:00:00.000Z",
+      "id": 1596519549886,
+      "start_date": "2020-08-11T19:00:00.000Z",
+      "text": "Che Kun Law"
+    },
+    {
+      "email": "law21@purdue.edu",
+      "end_date": "2020-08-10T20:00:00.000Z",
+      "id": 1596519549891,
+      "start_date": "2020-08-10T19:00:00.000Z",
+      "text": "Che Kun Law"
+    },
+    {
+      "email": "law21@purdue.edu",
+      "end_date": "2020-08-11T02:00:00.000Z",
+      "id": 1596519549892,
+      "start_date": "2020-08-11T01:00:00.000Z",
+      "text": "Che Kun Law"
+    },
+    {
+      "email": "tamaranf@umich.edu",
+      "end_date": "2020-08-09T21:00:00.000Z",
+      "id": 1596558914871,
+      "start_date": "2020-08-09T18:00:00.000Z",
+      "text": "Tamara Nelson-Fromm"
+    },
+    {
+      "email": "aot2@illinois.edu",
+      "end_date": "2020-08-09T01:15:00.000Z",
+      "id": 1596678623837,
+      "start_date": "2020-08-08T22:15:00.000Z",
+      "text": "Anastasia Olga (Olnancy) Tzirides"
+    },
+    {
+      "email": "aot2@illinois.edu",
+      "end_date": "2020-08-10T00:45:00.000Z",
+      "id": 1596678623842,
+      "start_date": "2020-08-09T22:15:00.000Z",
+      "text": "Anastasia Olga (Olnancy) Tzirides"
+    },
+    {
+      "email": "aot2@illinois.edu",
+      "end_date": "2020-08-11T19:00:00.000Z",
+      "id": 1596678623845,
+      "start_date": "2020-08-11T17:00:00.000Z",
+      "text": "Anastasia Olga (Olnancy) Tzirides"
+    },
+    {
+      "email": "aot2@illinois.edu",
+      "end_date": "2020-08-12T22:00:00.000Z",
+      "id": 1596752880651,
+      "start_date": "2020-08-12T21:00:00.000Z",
+      "text": "Anastasia Olga (Olnancy) Tzirides"
+    },
+    {
+      "email": "aot2@illinois.edu",
+      "end_date": "2020-08-10T21:00:00.000Z",
+      "id": 1596752880652,
+      "start_date": "2020-08-10T19:00:00.000Z",
+      "text": "Anastasia Olga (Olnancy) Tzirides"
+    },
+    {
+      "email": "stuartm3@illinois.edu",
+      "end_date": "2020-08-12T19:00:00.000Z",
+      "id": 1596766666557,
+      "start_date": "2020-08-12T17:00:00.000Z",
+      "text": "Stuart Mattingly"
+    },
+    {
+      "email": "stuartm3@illinois.edu",
+      "end_date": "2020-08-11T21:00:00.000Z",
+      "id": 1596766666559,
+      "start_date": "2020-08-11T20:00:00.000Z",
+      "text": "Stuart Mattingly"
+    },
+    {
+      "email": "stuartm3@illinois.edu",
+      "end_date": "2020-08-09T02:30:00.000Z",
+      "id": 1596766666560,
+      "start_date": "2020-08-09T01:00:00.000Z",
+      "text": "Stuart Mattingly"
+    },
+    {
+      "email": "stuartm3@illinois.edu",
+      "end_date": "2020-08-08T02:30:00.000Z",
+      "id": 1596766666561,
+      "start_date": "2020-08-08T01:00:00.000Z",
+      "text": "Stuart Mattingly, Stumonster"
+    },
+    {
+      "email": "stuartm3@illinois.edu",
+      "end_date": "2020-08-09T22:00:00.000Z",
+      "id": 1596766666562,
+      "start_date": "2020-08-09T21:00:00.000Z",
+      "text": "Stuart Mattingly"
+    },
+    {
+      "email": "stuartm3@illinois.edu",
+      "end_date": "2020-08-11T01:00:00.000Z",
+      "id": 1596766666563,
+      "start_date": "2020-08-10T22:00:00.000Z",
+      "text": "Stuart Mattingly"
+    },
+    {
+      "email": "stuartm3@illinois.edu",
+      "end_date": "2020-08-13T22:30:00.000Z",
+      "id": 1596766666568,
+      "start_date": "2020-08-13T21:00:00.000Z",
+      "text": "Stuart Mattingly"
+    },
+    {
+      "email": "zilles@illinois.edu",
+      "end_date": "2020-08-08T22:00:00.000Z",
+      "id": 1596811971421,
+      "start_date": "2020-08-08T20:00:00.000Z",
+      "text": "Craig Zilles"
+    },
+    {
+      "email": "zilles@illinois.edu",
+      "end_date": "2020-08-10T17:30:00.000Z",
+      "id": 1596811971422,
+      "start_date": "2020-08-10T15:00:00.000Z",
+      "text": "Craig Zilles"
+    },
+    {
+      "email": "uyenvickyvo@gmail.com",
+      "end_date": "2020-08-09T01:00:00.000Z",
+      "id": 1596901257988,
+      "start_date": "2020-08-08T22:30:00.000Z",
+      "text": "Vicky Vo"
+    },
+    {
+      "email": "uyenvickyvo@gmail.com",
+      "end_date": "2020-08-09T05:45:00.000Z",
+      "id": 1596901257989,
+      "start_date": "2020-08-09T01:30:00.000Z",
+      "text": "Vicky Vo"
+    },
+    {
+      "email": "uyenvickyvo@gmail.com",
+      "end_date": "2020-08-10T06:00:00.000Z",
+      "id": 1596901257990,
+      "start_date": "2020-08-09T22:00:00.000Z",
+      "text": "Vicky Vo"
+    },
+    {
+      "email": "haitham.elmengad@gmail.com",
+      "end_date": "2020-08-13T01:00:00.000Z",
+      "id": 1597256144988,
+      "start_date": "2020-08-12T22:00:00.000Z",
+      "text": "Haitham Mengad"
+    },
+    {
+      "email": "haitham.elmengad@gmail.com",
+      "end_date": "2020-08-14T01:00:00.000Z",
+      "id": 1597256144990,
+      "start_date": "2020-08-13T21:30:00.000Z",
+      "text": "Haitham Mengad"
+    },
+    {
+      "email": "silash2@illinois.edu",
+      "end_date": "2020-08-13T21:00:00.000Z",
+      "id": 1597266930218,
+      "start_date": "2020-08-13T19:00:00.000Z",
+      "text": "Silas Hsu"
+    },
+    {
+      "email": "hh11@illinois.edu",
+      "end_date": "2020-08-13T21:00:00.000Z",
+      "id": 1597334733536,
+      "start_date": "2020-08-13T19:00:00.000Z",
+      "text": "Heather Huynh"
+    }
+  ]
+}

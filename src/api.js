@@ -1,3 +1,5 @@
+import savedData from './saved-data.json';
+
 const API = 'https://api.hackillinois.org';
 
 function request(method, endpoint, body) {
@@ -101,16 +103,19 @@ export function refreshToken() {
 }
 
 export function getMentorTimeslots() {
-  return request('GET', '/upload/blobstore/mentor-timeslots/')
-    .then(res => res.data);
+  return Promise.resolve(savedData.mentorTimeslots);
+  // return request('GET', '/upload/blobstore/mentor-timeslots/')
+  //   .then(res => res.data);
 }
 
 export function setMentorTimeslots(data) {
-  return request('PUT', '/upload/blobstore/', { id: 'mentor-timeslots', data })
-    .then(res => res.data);
+  return Promise.reject('Unfortunately mentor availability is no longer editable');
+  // return request('PUT', '/upload/blobstore/', { id: 'mentor-timeslots', data })
+  //   .then(res => res.data);
 }
 
 export function getEvents() {
-  return request('GET', '/event/')
-    .then(res => res.events);
+  return Promise.resolve(savedData.events);
+  // return request('GET', '/event/')
+    // .then(res => log(res.events));
 }
