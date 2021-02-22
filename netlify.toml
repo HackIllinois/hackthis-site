@@ -1,3 +1,6 @@
+[build]
+  environment = { REACT_APP_URL = 'https://hackthis.hackillinois.org' }
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
